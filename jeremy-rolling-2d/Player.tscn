@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://ddhgb6e33v5h3"]
+
+[ext_resource type="Script" uid="uid://di3d223gtt5rv" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://b84xpr6p7tsg8" path="res://Untitled.png" id="1_xhfnw"]
+[ext_resource type="AudioStream" uid="uid://brf1wcwvp3sk4" path="res://freesound_community-land2-43790.mp3" id="2_cxr5p"]
+[ext_resource type="Texture2D" uid="uid://boq8p2pry8y3l" path="res://1053750-200.png" id="3_kne1u"]
+[ext_resource type="AudioStream" uid="uid://bowm1k6db6dbs" path="res://freesound_community-cartoon-jump-6462.mp3" id="4_e80uo"]
+[ext_resource type="AudioStream" uid="uid://cwx7c0xm5b86i" path="res://Rolling.wav" id="6_tdg3f"]
+[ext_resource type="AudioStream" uid="uid://j2iv7f6k7gcl" path="res://651545__nsstudios__wind-draft-loop-3.wav" id="7_dtqjt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
+radius = 130.38405
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kpjcp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xhfnw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
+scale = Vector2(1.365, 1.365)
+mass = 0.094
+physics_material_override = SubResource("PhysicsMaterial_kpjcp")
+gravity_scale = 2.347
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_kpjcp")
+
+[node name="land" type="AudioStreamPlayer" parent="." unique_id=770358525]
+stream = ExtResource("2_cxr5p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457438960]
+shape = SubResource("CircleShape2D_xhfnw")
+
+[node name="Visual" type="Node2D" parent="." unique_id=1690068538]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=1228906302]
+position = Vector2(-0.9999933, -1.0000086)
+scale = Vector2(0.12988281, 0.12988281)
+sprite_frames = SubResource("SpriteFrames_kpjcp")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=67380603]
+target_position = Vector2(136.26373, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1126611926]
+target_position = Vector2(-138.46155, 0)
+
+[node name="jump" type="AudioStreamPlayer" parent="." unique_id=919060653]
+stream = ExtResource("4_e80uo")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=976802197]
+position = Vector2(0, -1)
+zoom = Vector2(0.1, 0.1)
+
+[node name="Rolling" type="AudioStreamPlayer" parent="." unique_id=2120997971]
+stream = ExtResource("6_tdg3f")
+
+[node name="falling" type="AudioStreamPlayer" parent="." unique_id=1536097744]
+stream = ExtResource("7_dtqjt")
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=832494102]
+position = Vector2(-1.5258789e-05, -0.73260057)
+rotation = -0.00014564738
+texture = ExtResource("3_kne1u")
+offset = Vector2(279.515, 0)
