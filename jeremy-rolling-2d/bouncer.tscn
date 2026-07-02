@@ -1,13 +1,26 @@
 [gd_scene format=3 uid="uid://d3l45f0u0mj8c"]
 
 [ext_resource type="Texture2D" uid="uid://cop7dbgdlb3j1" path="res://Untffgditled.png" id="1_38d00"]
+[ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://bouncer.gd" id="1_f2aea"]
 
-[node name="StaticBody2D3" type="StaticBody2D" unique_id=1430862606]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38d00"]
+size = Vector2(93, 1233)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=913262321]
+[node name="Area2D" type="Area2D" unique_id=1251864961]
+script = ExtResource("1_f2aea")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1430862606]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=913262321]
 scale = Vector2(2.1363637, 2.0589395)
 texture = ExtResource("1_38d00")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=892524917]
-scale = Vector2(2.1363637, 2.0589395)
-polygon = PackedVector2Array(-22, -300, -22, 300, 22, 300, 22, -300)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1836257453]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_38d00")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=95211802]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_38d00")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

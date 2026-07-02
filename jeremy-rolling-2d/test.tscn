@@ -6,13 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Untdfgrtyrtdfgitled.png" id="3_ykrsh"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://bouncer.tscn" id="5_ykrsh"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8uh7m"]
-
 [node name="Node2D" type="Node2D" unique_id=1785804454]
-
-[node name="CharacterBody2D" parent="." unique_id=1502867730 instance=ExtResource("1_8uh7m")]
-position = Vector2(-2565, -39)
-physics_material_override = SubResource("PhysicsMaterial_8uh7m")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1507479528]
 show_behind_parent = true
@@ -96,7 +90,9 @@ points = PackedVector2Array(-7971, -17646, -570.8594, -18116.73, 67309, -18132, 
 visible = false
 polygon = PackedVector2Array(-7971, -17646, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 37914, -769, 35184, -2714, 32117, -3014, 29398, -1505, 26275, 667, 25098, 3247, 19713, 3337, 11837, -5081, 4486, -8899, -1213, -8667, -3060, -4472, -2847, 9689, -7740, 9867)
 
-[editable path="CharacterBody2D"]
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_8uh7m")]
+position = Vector2(-1951, -123)
+
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]
 [editable path="StaticBody2D5"]

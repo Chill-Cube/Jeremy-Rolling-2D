@@ -27,7 +27,7 @@ animations = [{
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
 scale = Vector2(1.365, 1.365)
-mass = 0.094
+mass = 0.107
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
 gravity_scale = 2.347
 contact_monitor = true
@@ -60,7 +60,7 @@ stream = ExtResource("4_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=976802197]
 position = Vector2(0, -1)
-zoom = Vector2(0.1, 0.1)
+zoom = Vector2(0.09, 0.09)
 
 [node name="Rolling" type="AudioStreamPlayer" parent="." unique_id=2120997971]
 stream = ExtResource("6_tdg3f")
