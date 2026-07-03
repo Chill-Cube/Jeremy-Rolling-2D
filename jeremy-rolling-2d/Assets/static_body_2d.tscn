@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j7tqwhs4lf7o"]
 
-[ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://static_body_2d.gd" id="1_yjt17"]
+[ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="1_yjt17"]
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=470789971]
 script = ExtResource("1_yjt17")

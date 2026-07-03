@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cwx7c0xm5b86i"
-path="res://.godot/imported/Rolling.wav-103e4fe11d9c532e6f1a559e45578d65.sample"
+path="res://.godot/imported/Rolling.wav-9d1d014ebc9b5b636190d4e32521470c.sample"
 
 [deps]
 
-source_file="res://Rolling.wav"
-dest_files=["res://.godot/imported/Rolling.wav-103e4fe11d9c532e6f1a559e45578d65.sample"]
+source_file="res://Assets/SFX/Rolling.wav"
+dest_files=["res://.godot/imported/Rolling.wav-9d1d014ebc9b5b636190d4e32521470c.sample"]
 
 [params]
 

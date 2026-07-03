@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://d3l45f0u0mj8c"]
 
-[ext_resource type="Texture2D" uid="uid://cop7dbgdlb3j1" path="res://Untffgditled.png" id="1_38d00"]
-[ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://bouncer.gd" id="1_f2aea"]
+[ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://Gimmicks/Scripts/bouncer.gd" id="1_5kbb7"]
+[ext_resource type="Texture2D" uid="uid://cop7dbgdlb3j1" path="res://Assets/Images/Untffgditled.png" id="2_oddqc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38d00"]
 size = Vector2(93, 1229)
 
 [node name="Bouncer" type="StaticBody2D" unique_id=1430862606]
 position = Vector2(-29, 16)
-script = ExtResource("1_f2aea")
+script = ExtResource("1_5kbb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=913262321]
 scale = Vector2(2.1363637, 2.0589395)
-texture = ExtResource("1_38d00")
+texture = ExtResource("2_oddqc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=525528309]
 position = Vector2(-0.5, -0.5)

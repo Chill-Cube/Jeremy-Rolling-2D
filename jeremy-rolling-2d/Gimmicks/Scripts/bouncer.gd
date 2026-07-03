@@ -1,7 +1,7 @@
 class_name Bouncer
-extends Area2D
+extends StaticBody2D
 
-@export var debounce_time := 0.5
+@export var bounce := 400
 var bounced := false
 
 func _ready():

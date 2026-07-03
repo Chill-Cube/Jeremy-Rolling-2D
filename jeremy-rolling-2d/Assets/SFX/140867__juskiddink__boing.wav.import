@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://clpk2dmxyogt4"
-path="res://.godot/imported/140867__juskiddink__boing.wav-45869a7f92b2bd4ac9e89a9c6659aa00.sample"
+path="res://.godot/imported/140867__juskiddink__boing.wav-f6775371652f565d279f9f66ac8e7086.sample"
 
 [deps]
 
-source_file="res://140867__juskiddink__boing.wav"
-dest_files=["res://.godot/imported/140867__juskiddink__boing.wav-45869a7f92b2bd4ac9e89a9c6659aa00.sample"]
+source_file="res://Assets/SFX/140867__juskiddink__boing.wav"
+dest_files=["res://.godot/imported/140867__juskiddink__boing.wav-f6775371652f565d279f9f66ac8e7086.sample"]
 
 [params]
 
