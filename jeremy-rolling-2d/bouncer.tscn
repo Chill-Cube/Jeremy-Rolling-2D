@@ -4,23 +4,17 @@
 [ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://bouncer.gd" id="1_f2aea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38d00"]
-size = Vector2(93, 1233)
+size = Vector2(93, 1229)
 
-[node name="Area2D" type="Area2D" unique_id=1251864961]
+[node name="Bouncer" type="StaticBody2D" unique_id=1430862606]
+position = Vector2(-29, 16)
 script = ExtResource("1_f2aea")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1430862606]
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=913262321]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=913262321]
 scale = Vector2(2.1363637, 2.0589395)
 texture = ExtResource("1_38d00")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1836257453]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=525528309]
 position = Vector2(-0.5, -0.5)
+scale = Vector2(0.9592532, 1)
 shape = SubResource("RectangleShape2D_38d00")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=95211802]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_38d00")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

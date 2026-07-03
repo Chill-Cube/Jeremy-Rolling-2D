@@ -5,11 +5,13 @@
 [ext_resource type="AudioStream" uid="uid://brf1wcwvp3sk4" path="res://freesound_community-land2-43790.mp3" id="2_cxr5p"]
 [ext_resource type="Texture2D" uid="uid://boq8p2pry8y3l" path="res://1053750-200.png" id="3_kne1u"]
 [ext_resource type="AudioStream" uid="uid://bowm1k6db6dbs" path="res://freesound_community-cartoon-jump-6462.mp3" id="4_e80uo"]
+[ext_resource type="AudioStream" uid="uid://clpk2dmxyogt4" path="res://140867__juskiddink__boing.wav" id="5_5ncpa"]
 [ext_resource type="AudioStream" uid="uid://cwx7c0xm5b86i" path="res://Rolling.wav" id="6_tdg3f"]
 [ext_resource type="AudioStream" uid="uid://j2iv7f6k7gcl" path="res://651545__nsstudios__wind-draft-loop-3.wav" id="7_dtqjt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
 friction = 0.0
+bounce = 0.21
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
 radius = 130.38405
@@ -27,9 +29,10 @@ animations = [{
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
 scale = Vector2(1.365, 1.365)
-mass = 0.107
+mass = 0.095
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
 gravity_scale = 2.347
+continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
@@ -55,6 +58,9 @@ target_position = Vector2(-138.46155, 0)
 
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=919060653]
 stream = ExtResource("4_e80uo")
+
+[node name="boing" type="AudioStreamPlayer" parent="." unique_id=1144820005]
+stream = ExtResource("5_5ncpa")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
 

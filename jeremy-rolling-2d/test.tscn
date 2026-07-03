@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://HKPFVHRXsAARYYn.png" id="2_ppyta"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://static_body_2d.tscn" id="3_ppyta"]
 [ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Untdfgrtyrtdfgitled.png" id="3_ykrsh"]
-[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://bouncer.tscn" id="5_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://death.tscn" id="5_ykrsh"]
 
 [node name="Node2D" type="Node2D" unique_id=1785804454]
+scale = Vector2(1.0013193, 0.9960441)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1507479528]
 show_behind_parent = true
@@ -40,7 +41,7 @@ scale = Vector2(11.833557, 32.282738)
 polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935)
 
 [node name="StaticBody2D2" parent="." unique_id=1538916571 instance=ExtResource("3_ppyta")]
-position = Vector2(34157, 9982)
+position = Vector2(33585.69, 10443.3125)
 
 [node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
 position = Vector2(-1643, 0)
@@ -70,13 +71,6 @@ scale = Vector2(1.3199999, 1.32)
 skew = 0.32637656
 texture = ExtResource("3_ykrsh")
 
-[node name="StaticBody2D3" parent="." unique_id=1430862606 instance=ExtResource("5_ykrsh")]
-position = Vector2(1073, -1837)
-
-[node name="StaticBody2D4" parent="." unique_id=943348673 instance=ExtResource("5_ykrsh")]
-position = Vector2(2491, -1925)
-scale = Vector2(1, 1.72)
-
 [node name="StaticBody2D5" parent="." unique_id=1791450517 instance=ExtResource("3_ppyta")]
 position = Vector2(-1604, 4374)
 
@@ -92,6 +86,10 @@ polygon = PackedVector2Array(-7971, -17646, -570.8594, -18116.73, 67309, -18132,
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_8uh7m")]
 position = Vector2(-1951, -123)
+
+[node name="Bouncer" parent="." unique_id=1430862606 instance=ExtResource("5_ykrsh")]
+position = Vector2(27766.367, 15425.02)
+scale = Vector2(74.89813, 2.4382463)
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

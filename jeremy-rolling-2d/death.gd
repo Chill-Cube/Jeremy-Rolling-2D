@@ -1,8 +1,7 @@
-class_name Bouncer
-extends Area2D
+extends StaticBody2D
 
 @export var debounce_time := 0.5
 var bounced := false
 
 func _ready():
-	add_to_group("bouncer")
+	add_to_group("death")
