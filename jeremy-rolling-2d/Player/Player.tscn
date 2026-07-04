@@ -33,7 +33,6 @@ scale = Vector2(1.365, 1.365)
 mass = 0.095
 physics_material_override = SubResource("PhysicsMaterial_kpjcp")
 gravity_scale = 3.188
-custom_integrator = true
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
