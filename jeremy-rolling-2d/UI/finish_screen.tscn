@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c0blupm2tqys1"]
+
+[ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
+[ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=487590026]
+script = ExtResource("1_beg00")
+
+[node name="YouDidIt" type="Label" parent="." unique_id=1548698008]
+offset_left = 335.0
+offset_top = 144.0
+offset_right = 789.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 95
+text = "Finish!!!!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="." unique_id=1751067517]
+offset_left = 347.0
+offset_top = 282.0
+offset_right = 801.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 37
+text = "Time: time"
+vertical_alignment = 1
+
+[node name="Coins" type="Label" parent="." unique_id=1531871834]
+offset_left = 348.0
+offset_top = 332.0
+offset_right = 802.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 37
+text = "Coins: heh"
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="." unique_id=517851245]
+offset_left = 437.0
+offset_top = 414.0
+offset_right = 699.0
+offset_bottom = 476.0
+text = "Retry"
+
+[node name="FinishSFX" type="AudioStreamPlayer" parent="." unique_id=1087380609]
+stream = ExtResource("2_72onr")
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

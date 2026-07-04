@@ -2,37 +2,38 @@ class_name Player
 extends RigidBody2D
 
 @export var click_push_force := 400.0
-@export var base_scale := 0.13
 @export var max_speed := 15000.0
 
-@export var max_pushes := 2
 @export var push_cooldown := 0.6
 
-var pushes_left := 0
+@export var arrow_transparency = 0.7
+
 var push_cooldown_timer := 0.0
-var was_grounded := false
 
 var aim_direction := Vector2.RIGHT
 var input_push := false
 var start_position := Vector2.ZERO
 var camera_pause := false
 
+var level_time := 0.0
+var finished_level := false
+var started_level := false
 
 func _ready() -> void:
 	start_position = global_position
-	pushes_left = max_pushes
 	body_entered.connect(spring)
 
-
 func _process(delta: float) -> void:
-	_update_grounded()
-
 	if push_cooldown_timer > 0.0:
 		push_cooldown_timer -= delta
+	else:
+		$Arrow.modulate.a = 1
+	
+	if not finished_level and started_level:
+		level_time += delta
 
 	_update_aim()
 	_update_visuals()
-
 
 func _physics_process(_delta: float) -> void:
 	_sync_visual_root()
@@ -40,10 +41,8 @@ func _physics_process(_delta: float) -> void:
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
 
-
 func _integrate_forces(_state: PhysicsDirectBodyState2D) -> void:
 	_apply_push()
-
 
 func _update_aim() -> void:
 	var dir := get_global_mouse_position() - global_position
@@ -57,11 +56,9 @@ func _update_aim() -> void:
 		0.15
 	)
 
-
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
 		input_push = true
-
 
 func _apply_push() -> void:
 	if not input_push:
@@ -72,25 +69,13 @@ func _apply_push() -> void:
 	if push_cooldown_timer > 0.0:
 		return
 
-	if pushes_left <= 0:
-		return
-
-	pushes_left -= 1
 	push_cooldown_timer = push_cooldown
+	$Arrow.modulate.a = arrow_transparency
 
 	$jump.play()
 	apply_central_impulse(aim_direction * click_push_force)
-
-
-func _update_grounded() -> void:
-	var grounded := get_contact_count() > 0
-
-	if grounded and not was_grounded:
-		pushes_left = max_pushes
-		push_cooldown_timer = 0.0
-
-	was_grounded = grounded
-
+	
+	if not started_level: started_level = true
 
 func spring(body: Node) -> void:
 	if not body.is_in_group("bouncer"):
@@ -107,12 +92,14 @@ func spring(body: Node) -> void:
 	linear_velocity = linear_velocity.bounce(normal)
 	apply_central_impulse(normal * body.bounce)
 
-
-func _death() -> void:
+func _reset():
 	freeze = true
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0.0
-	rotation = 0
+	$Visual.rotation = 0
+
+func _death() -> void:
+	_reset()
 
 	camera_pause = true
 
@@ -126,13 +113,26 @@ func _death() -> void:
 		camera_pause = false
 	)
 
+func format_time(total_seconds: float) -> String:
+	var minutes: int = int(total_seconds / 60) % 60
+	var seconds: int = int(total_seconds) % 60
+	var milliseconds: int = int((total_seconds - int(total_seconds)) * 1000)
+	
+	return "%02d:%02d:%03d" % [minutes, seconds, milliseconds]
+	# Returns: "01:15:045"
+
+func _finish():
+	_reset()
+	finished_level = true
+
+	$CanvasLayer._show_finish(format_time(level_time), owner.scene_file_path.get_file().get_basename())
 
 func _update_visuals() -> void:
 	var airborne := get_contact_count() == 0
 
 	$Visual.rotation += linear_velocity.x / 50000.0
 
-	if airborne:
+	if airborne and linear_velocity.length():
 		$Rolling.stop()
 
 		if not $falling.playing:
@@ -145,9 +145,6 @@ func _update_visuals() -> void:
 				$Rolling.play()
 		else:
 			$Rolling.stop()
-
-	$Visual/Sprite2D.scale = Vector2.ONE * base_scale
-
 
 func _sync_visual_root() -> void:
 	var target_pos := global_position - linear_velocity * 0.05

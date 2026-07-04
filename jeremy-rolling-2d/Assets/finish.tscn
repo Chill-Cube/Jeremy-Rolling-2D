@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://btqjbow82dx6g"]
+[gd_scene format=3 uid="uid://bgvc0sqn2e4h8"]
 
-[ext_resource type="Script" uid="uid://bmxhu8vee5im1" path="res://Assets/Scripts/death.gd" id="1_swg6o"]
+[ext_resource type="Script" uid="uid://b7q1waq0t0gol" path="res://Assets/Scripts/finish.gd" id="1_v50nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bn1m"]
 size = Vector2(174, 172)
 
-[node name="death" type="Area2D" unique_id=521310803]
-script = ExtResource("1_swg6o")
+[node name="finish" type="Area2D" unique_id=521310803]
+script = ExtResource("1_v50nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1064482431]
 shape = SubResource("RectangleShape2D_0bn1m")
-debug_color = Color(0.9874309, 0, 0.31808007, 0.41960785)
+debug_color = Color(0.9386033, 0.6903889, 0, 0.41960785)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

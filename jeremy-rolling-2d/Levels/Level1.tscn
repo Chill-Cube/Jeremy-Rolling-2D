@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://c73swo7fblll"]
 
 [ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="1_nutv8"]
-[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://Assets/static_body_2d.tscn" id="2_05pb0"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://Assets/ground.tscn" id="2_05pb0"]
 [ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="3_dl8mf"]
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="4_xcayt"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://Assets/death.tscn" id="5_5g41i"]
-[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://Gimmicks/bouncer.tscn" id="6_05pb0"]
+[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://Assets/finish.tscn" id="6_05pb0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nutv8"]
+font_size = 380
 
 [node name="Node2D" type="Node2D" unique_id=1785804454]
 scale = Vector2(1.0013193, 0.9960441)
@@ -85,21 +88,29 @@ visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 37914, -769, 35184, -2714, 32117, -3014, 29398, -1505, 26275, 667, 25098, 3247, 19713, 3337, 11837, -5081, 4486, -8899, -1213, -8667, -3060, -4472, -3402.395, 17950.313, -43522.465, 18166.166)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("4_xcayt")]
+visibility_layer = 8
 position = Vector2(-1951, -123)
 
 [node name="Bouncer" parent="." unique_id=1430862606 instance=ExtResource("5_5g41i")]
-position = Vector2(28800.002, 24645.496)
+position = Vector2(27572.625, 25575.172)
 scale = Vector2(531.0563, 36.206528)
+script = null
 
-[node name="Bouncer2" parent="." unique_id=1263793929 instance=ExtResource("6_05pb0")]
-position = Vector2(2058.2463, -1622.4817)
-scale = Vector2(1, 1.8433368)
-bounce = 600
+[node name="Label" type="Label" parent="." unique_id=801196085]
+visibility_layer = 2
+offset_left = -4048.6587
+offset_top = -1151.5554
+offset_right = 1244.3413
+offset_bottom = 347.44458
+text = "click to push jeremy
+"
+label_settings = SubResource("LabelSettings_nutv8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Bouncer3" parent="." unique_id=1824437571 instance=ExtResource("6_05pb0")]
-position = Vector2(976.7114, -2305.1187)
-scale = Vector2(1, 1.8433368)
-bounce = 600
+[node name="finish" parent="." unique_id=521310803 instance=ExtResource("6_05pb0")]
+position = Vector2(65568.51, 12803.651)
+scale = Vector2(14.923385, 94.79263)
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]
