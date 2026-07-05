@@ -1,8 +1,9 @@
-res://Assets/coin.tscn::3bb7e323740a719beec32c4e48f5b3a4::1783167291::res://.godot/exported/133200997/export-658970986131f823deb74ab9a3b95d7e-coin.scn
 res://Assets/death.tscn::ce80c997bb1c919ed4b78ff635711419::1783168421::res://.godot/exported/133200997/export-920ecf77642fdab48ddde782d3e836e4-death.scn
 res://Assets/finish.tscn::7bc9de4d6d7d5871c7059bafb3e65a6b::1783168402::res://.godot/exported/133200997/export-5561b25535d67978c64d678465d1b57c-finish.scn
 res://Assets/ground.tscn::14c8ffcd1d16fcd6f1b26beec956d9dd::1783097511::res://.godot/exported/133200997/export-03911b3803f29ef2df38010688e507e1-ground.scn
 res://Gimmicks/bouncer.tscn::317fc06618a60f2a2f0fdf12dca94e5b::1783098767::res://.godot/exported/133200997/export-4a0a6bb53029ffceebee27ef336ed51b-bouncer.scn
-res://Levels/Level1.tscn::cdb38865188e288bf0580b059f49ba19::1783211757::res://.godot/exported/133200997/export-76b8bc62749e8cf48c832874a4449e21-Level1.scn
-res://Player/Player.tscn::f7a1c62fae15563cd29f08e173148f76::1783214375::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
-res://UI/finish_screen.tscn::da3ac021546df204c1ba73bcca44259b::1783171083::res://.godot/exported/133200997/export-8d8e0a733427579659f2467fe5da8d3b-finish_screen.scn
+res://Player/Player.tscn::b6ae8c8d97f8e2e780ffac29c69bda83::1783242531::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
+res://UI/finish_screen.tscn::410c53145bc37b63882fc41e340faecc::1783247376::res://.godot/exported/133200997/export-8d8e0a733427579659f2467fe5da8d3b-finish_screen.scn
+res://Assets/lobster_roll.tscn::007db8dd39bebfe203921cb1127d9878::1783247377::res://.godot/exported/133200997/export-bc883d822c94105ba9858a88c7c72a01-lobster_roll.scn
+res://Levels/1-1.tscn::abf7ff77907da1e5632d9e8f1f305cb1::1783247474::res://.godot/exported/133200997/export-f576e42fa10f7e8968063ffe23904d95-1-1.scn
+res://Levels/1-2.tscn::41921be539ee231ad49fad900b56cc4f::1783247549::res://.godot/exported/133200997/export-4a255a92824e885d1b28c7c3f49382a2-1-2.scn

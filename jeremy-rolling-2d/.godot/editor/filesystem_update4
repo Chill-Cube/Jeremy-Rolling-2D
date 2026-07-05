@@ -2,3 +2,6 @@ res://UI/finish_screen.tscn
 res://Levels/1-1.tscn
 res://Player/save_manager.gd
 res://UI/Scripts/finish_screen.gd
+res://Player/player.gd
+res://Player/player_data.gd
+res://Levels/1-2.tscn
