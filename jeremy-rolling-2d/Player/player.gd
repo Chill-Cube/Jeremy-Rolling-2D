@@ -19,7 +19,10 @@ var level_time := 0.0
 var finished_level := false
 var started_level := false
 
+var mobile_first_touch := false
+
 func _ready() -> void:
+	freeze = true
 	start_position = global_position
 	body_entered.connect(spring)
 
@@ -34,9 +37,9 @@ func _process(delta: float) -> void:
 
 	_update_aim()
 	_update_visuals()
+	_sync_visual_root()
 
 func _physics_process(_delta: float) -> void:
-	_sync_visual_root()
 
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
@@ -50,14 +53,12 @@ func _update_aim() -> void:
 	if dir.length() > 0.001:
 		aim_direction = dir.normalized()
 
-	$Arrow.global_rotation = lerp_angle(
-		$Arrow.global_rotation,
-		dir.angle(),
-		0.15
-	)
+	$Arrow.global_rotation = dir.angle()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
+		_update_aim()
+		if freeze: freeze = false
 		input_push = true
 
 func _apply_push() -> void:
@@ -73,6 +74,7 @@ func _apply_push() -> void:
 	$Arrow.modulate.a = arrow_transparency
 
 	$jump.play()
+	
 	apply_central_impulse(aim_direction * click_push_force)
 	
 	if not started_level: started_level = true
@@ -148,7 +150,7 @@ func _update_visuals() -> void:
 
 func _sync_visual_root() -> void:
 	var target_pos := global_position - linear_velocity * 0.05
-	var follow_speed := 0.15
+	var follow_speed := 0.1
 
 	if camera_pause:
 		follow_speed = 0.02

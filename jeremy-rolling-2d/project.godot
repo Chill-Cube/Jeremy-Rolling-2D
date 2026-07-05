@@ -13,7 +13,11 @@ config_version=5
 config/name="jeremy rolling 2d"
 run/main_scene="uid://c73swo7fblll"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://Assets/Images/icon.svg"
+config/icon="uid://b84xpr6p7tsg8"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 

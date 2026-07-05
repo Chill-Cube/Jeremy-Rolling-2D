@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://Assets/finish.tscn" id="6_05pb0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nutv8"]
-font_size = 380
+font_size = 633
 
 [node name="Node2D" type="Node2D" unique_id=1785804454]
 scale = Vector2(1.0013193, 0.9960441)
@@ -37,9 +37,14 @@ scale = Vector2(11.807059, 32.1389)
 polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2370.044, 660.4747, -168.05334, 636.4523)
 
 [node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
+visible = false
+position = Vector2(946.958, 855.9319)
+scale = Vector2(6.162269, 15.474787)
 points = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2370.044, 660.4747, -168.05334, 636.4523, -130.68454, -43.747604)
+width = 15.385
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
+visible = false
 position = Vector2(-1644.2869, -18.145466)
 scale = Vector2(11.833557, 32.282738)
 polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2370.044, 660.4747, -168.05334, 636.4523)
@@ -50,15 +55,17 @@ position = Vector2(33585.69, 10443.3125)
 [node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
 position = Vector2(88.88318, -34.135036)
 scale = Vector2(11.807059, 32.1389)
-polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935)
+polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 969.07324, 188.11838, 1772.9546, 310.22974, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935)
 
 [node name="Line2D" parent="StaticBody2D2" index="1" unique_id=1715767360]
-points = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935, -130.68454, -43.747604)
+visible = false
+points = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 969.07324, 188.11838, 1772.9546, 310.22974, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935, -130.68454, -43.747604)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
+visible = false
 position = Vector2(90.87903, -44.175198)
 scale = Vector2(11.833557, 32.282738)
-polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 1673.575, 286.84863, 1965.6885, 313.88754, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935)
+polygon = PackedVector2Array(-130.68454, -43.747604, 267.6365, -43.623146, 969.07324, 188.11838, 1772.9546, 310.22974, 2149.5615, 313.07855, 2296.7615, 300.38364, 2378.9158, 281.27908, 2378.9158, 393.3862, -111.54343, 391.79935)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=530708029]
 show_behind_parent = true
@@ -75,40 +82,56 @@ skew = 0.32637656
 texture = ExtResource("3_dl8mf")
 
 [node name="StaticBody2D5" parent="." unique_id=1791450517 instance=ExtResource("2_05pb0")]
+visibility_layer = 8
 position = Vector2(-1604, 4374)
 
 [node name="Polygon2D" parent="StaticBody2D5" index="0" unique_id=615349608]
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 37914, -769, 35184, -2714, 32117, -3014, 29398, -1505, 26275, 667, 25098, 3247, 19713, 3337, 11837, -5081, 4486, -8899, -1213, -8667, -3060, -4472, -3402.395, 17950.313, -43522.465, 18166.166)
 
 [node name="Line2D" parent="StaticBody2D5" index="1" unique_id=1715767360]
+visible = false
 points = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 37914, -769, 35184, -2714, 32117, -3014, 29398, -1505, 26275, 667, 25098, 3247, 19713, 3337, 11837, -5081, 4486, -8899, -1213, -8667, -3060, -4472, -3402.395, 17950.313, -43522.465, 18166.166, -42794.426, -17491.893)
+width = 54.235
+default_color = Color(0, 0, 0, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
 visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 37914, -769, 35184, -2714, 32117, -3014, 29398, -1505, 26275, 667, 25098, 3247, 19713, 3337, 11837, -5081, 4486, -8899, -1213, -8667, -3060, -4472, -3402.395, 17950.313, -43522.465, 18166.166)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("4_xcayt")]
-visibility_layer = 8
 position = Vector2(-1951, -123)
+click_push_force = 500.0
 
-[node name="Bouncer" parent="." unique_id=1430862606 instance=ExtResource("5_5g41i")]
-position = Vector2(27572.625, 25575.172)
-scale = Vector2(531.0563, 36.206528)
-script = null
+[node name="death" parent="." unique_id=521310803 instance=ExtResource("5_5g41i")]
+position = Vector2(19612.125, 26489.791)
+scale = Vector2(-586.6929, -56.44403)
 
 [node name="Label" type="Label" parent="." unique_id=801196085]
 visibility_layer = 2
-offset_left = -4048.6587
-offset_top = -1151.5554
-offset_right = 1244.3413
-offset_bottom = 347.44458
+offset_left = -4171.4966
+offset_top = -1805.141
+offset_right = 4463.43
+offset_bottom = -76.14099
+scale = Vector2(0.9786826, 1.2401496)
 text = "click to push jeremy
 "
 label_settings = SubResource("LabelSettings_nutv8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="finish" parent="." unique_id=521310803 instance=ExtResource("6_05pb0")]
+[node name="Label2" type="Label" parent="." unique_id=1400894407]
+visibility_layer = 2
+offset_left = 25135.838
+offset_top = 6388.272
+offset_right = 32822.78
+offset_bottom = 7584.797
+scale = Vector2(0.9786826, 1.2401496)
+text = "push again!!!"
+label_settings = SubResource("LabelSettings_nutv8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="finish" parent="." unique_id=1848441945 instance=ExtResource("6_05pb0")]
 position = Vector2(65568.51, 12803.651)
 scale = Vector2(14.923385, 94.79263)
 
