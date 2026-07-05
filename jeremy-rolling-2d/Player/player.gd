@@ -115,19 +115,11 @@ func _death() -> void:
 		camera_pause = false
 	)
 
-func format_time(total_seconds: float) -> String:
-	var minutes: int = int(total_seconds / 60) % 60
-	var seconds: int = int(total_seconds) % 60
-	var milliseconds: int = int((total_seconds - int(total_seconds)) * 1000)
-	
-	return "%02d:%02d:%03d" % [minutes, seconds, milliseconds]
-	# Returns: "01:15:045"
-
 func _finish():
 	_reset()
 	finished_level = true
 
-	$CanvasLayer._show_finish(format_time(level_time), owner.scene_file_path.get_file().get_basename())
+	$CanvasLayer._show_finish(level_time, owner.scene_file_path.get_file().get_basename())
 
 func _update_visuals() -> void:
 	var airborne := get_contact_count() == 0

@@ -5,3 +5,6 @@ res://Assets/Scripts/lobster_roll.gd
 res://Assets/lobster_roll.tscn
 res://Player/Player.tscn
 res://Player/player.gd
+res://Levels/level_data.gd
+res://Player/player_data.gd
+res://Player/save_manager.gd

@@ -39,6 +39,16 @@ theme_override_font_sizes/font_size = 37
 text = "Time: time"
 vertical_alignment = 1
 
+[node name="BestTime" type="Label" parent="Panel" unique_id=134304391]
+layout_mode = 0
+offset_left = 154.30226
+offset_top = 211.0
+offset_right = 608.30225
+offset_bottom = 262.0
+theme_override_font_sizes/font_size = 37
+text = "Best Time: time"
+vertical_alignment = 1
+
 [node name="Retry" type="Button" parent="Panel" unique_id=517851245]
 layout_mode = 0
 offset_left = 244.30226
@@ -66,21 +76,23 @@ text = "Back to Menu"
 [node name="FinishSFX" type="AudioStreamPlayer" parent="Panel" unique_id=1087380609]
 stream = ExtResource("2_72onr")
 
-[node name="BarHarborRevised" type="Sprite2D" parent="Panel" unique_id=895104947]
+[node name="Lobsters" type="Node2D" parent="Panel" unique_id=1232955957]
+
+[node name="BarHarborRevised" type="Sprite2D" parent="Panel/Lobsters" unique_id=895104947]
 visible = false
-position = Vector2(192, 327)
+position = Vector2(192, 360.54755)
 scale = Vector2(0.4210329, 0.42065078)
 texture = ExtResource("3_72onr")
 
-[node name="BarHarborRevised2" type="Sprite2D" parent="Panel" unique_id=957737743]
+[node name="BarHarborRevised2" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
 visible = false
-position = Vector2(385, 324)
+position = Vector2(389, 358.54755)
 scale = Vector2(0.42103302, 0.4206509)
 texture = ExtResource("3_72onr")
 
-[node name="BarHarborRevised3" type="Sprite2D" parent="Panel" unique_id=993707944]
+[node name="BarHarborRevised3" type="Sprite2D" parent="Panel/Lobsters" unique_id=993707944]
 visible = false
-position = Vector2(592, 316)
+position = Vector2(593, 358.54752)
 scale = Vector2(0.42103547, 0.42065334)
 texture = ExtResource("3_72onr")
 
