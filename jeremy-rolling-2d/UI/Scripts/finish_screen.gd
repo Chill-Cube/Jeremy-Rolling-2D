@@ -19,6 +19,8 @@ func update_save(time: float, current_level: String):
 	level_data.completed = true
 	if level_data.best_time > time:
 		level_data.best_time = time
+		
+	SaveManager.save_to_file()
 	
 func _show_finish(time: float, current_level: String):
 	if visible: return
@@ -35,10 +37,7 @@ func _show_finish(time: float, current_level: String):
 
 	for i in children.size():
 		var ui : Sprite2D = children[i]
-		
-		print(ui, i, level_data.collectables[i])
-		if level_data.collectables[i] == true:
-			ui.visible = true
+		ui.modulate.a = 1.0 if level_data.collectables[i] else 0.5
 	
 	$Panel/Time.text = "Time: " + format_time(time) 
 	$Panel/BestTime.text = "Best Time: " + format_time(level_data.best_time)
