@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boisut54aceer"
-path="res://.godot/imported/bar-harbor-revised.webp-c865fa1d26cc0df5e0e004686a4cf6c9.ctex"
+path="res://.godot/imported/bar-harbor-revised.webp-1ec3cc4785cb470bf77d91cfb5552486.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bar-harbor-revised.webp"
-dest_files=["res://.godot/imported/bar-harbor-revised.webp-c865fa1d26cc0df5e0e004686a4cf6c9.ctex"]
+source_file="res://Assets/Images/bar-harbor-revised.webp"
+dest_files=["res://.godot/imported/bar-harbor-revised.webp-1ec3cc4785cb470bf77d91cfb5552486.ctex"]
 
 [params]
 

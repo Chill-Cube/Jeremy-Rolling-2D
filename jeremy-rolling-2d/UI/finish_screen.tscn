@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
-[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/bar-harbor-revised.webp" id="3_72onr"]
+[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="3_72onr"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=487590026]
 script = ExtResource("1_beg00")
