@@ -1,2 +1,3 @@
 res://UI/finish_screen.tscn
 res://UI/Scripts/finish_screen.gd
+res://Levels/Level1.tscn
