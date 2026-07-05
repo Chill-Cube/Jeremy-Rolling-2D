@@ -2,46 +2,94 @@
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
+[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/bar-harbor-revised.webp" id="3_72onr"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=487590026]
 script = ExtResource("1_beg00")
 
-[node name="YouDidIt" type="Label" parent="." unique_id=1548698008]
-offset_left = 335.0
-offset_top = 144.0
-offset_right = 789.0
-offset_bottom = 274.0
+[node name="Panel" type="Panel" parent="." unique_id=126799448]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = -3.0
+offset_right = -217.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YouDidIt" type="Label" parent="Panel" unique_id=1548698008]
+layout_mode = 0
+offset_left = 142.30226
+offset_top = 43.0
+offset_right = 596.30225
+offset_bottom = 173.0
 theme_override_font_sizes/font_size = 95
 text = "Finish!!!!!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Time" type="Label" parent="." unique_id=1751067517]
-offset_left = 347.0
-offset_top = 282.0
-offset_right = 801.0
-offset_bottom = 333.0
+[node name="Time" type="Label" parent="Panel" unique_id=1751067517]
+layout_mode = 0
+offset_left = 154.30226
+offset_top = 163.0
+offset_right = 608.30225
+offset_bottom = 214.0
 theme_override_font_sizes/font_size = 37
 text = "Time: time"
 vertical_alignment = 1
 
-[node name="Coins" type="Label" parent="." unique_id=1531871834]
-offset_left = 348.0
-offset_top = 332.0
-offset_right = 802.0
-offset_bottom = 383.0
+[node name="Reward" type="Label" parent="Panel" unique_id=111764196]
+layout_mode = 0
+offset_left = 146.00002
+offset_top = 408.0
+offset_right = 600.0
+offset_bottom = 459.0
 theme_override_font_sizes/font_size = 37
-text = "Coins: heh"
+text = "+200 coins"
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Retry" type="Button" parent="." unique_id=517851245]
-offset_left = 437.0
-offset_top = 414.0
-offset_right = 699.0
-offset_bottom = 476.0
+[node name="Retry" type="Button" parent="Panel" unique_id=517851245]
+layout_mode = 0
+offset_left = 244.30226
+offset_top = 477.0
+offset_right = 506.30225
+offset_bottom = 519.0
 text = "Retry"
 
-[node name="FinishSFX" type="AudioStreamPlayer" parent="." unique_id=1087380609]
+[node name="NextLevel" type="Button" parent="Panel" unique_id=309091510]
+layout_mode = 0
+offset_left = 244.30226
+offset_top = 530.0
+offset_right = 506.30225
+offset_bottom = 571.0
+text = "Next Level"
+
+[node name="Menu" type="Button" parent="Panel" unique_id=1121550469]
+layout_mode = 0
+offset_left = 244.30226
+offset_top = 581.0
+offset_right = 506.30225
+offset_bottom = 622.0
+text = "Back to Menu"
+
+[node name="FinishSFX" type="AudioStreamPlayer" parent="Panel" unique_id=1087380609]
 stream = ExtResource("2_72onr")
 
-[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[node name="BarHarborRevised" type="Sprite2D" parent="Panel" unique_id=895104947]
+position = Vector2(192, 327)
+scale = Vector2(0.4210329, 0.42065078)
+texture = ExtResource("3_72onr")
+
+[node name="BarHarborRevised2" type="Sprite2D" parent="Panel" unique_id=957737743]
+position = Vector2(385, 324)
+scale = Vector2(0.42103302, 0.4206509)
+texture = ExtResource("3_72onr")
+
+[node name="BarHarborRevised3" type="Sprite2D" parent="Panel" unique_id=993707944]
+position = Vector2(592, 316)
+scale = Vector2(0.42103547, 0.42065334)
+texture = ExtResource("3_72onr")
+
+[connection signal="pressed" from="Panel/Retry" to="." method="_on_retry_pressed"]
