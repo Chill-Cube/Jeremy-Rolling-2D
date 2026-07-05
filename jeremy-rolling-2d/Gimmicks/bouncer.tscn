@@ -2,19 +2,33 @@
 
 [ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://Gimmicks/Scripts/bouncer.gd" id="1_5kbb7"]
 [ext_resource type="Texture2D" uid="uid://cop7dbgdlb3j1" path="res://Assets/Images/Untffgditled.png" id="2_oddqc"]
+[ext_resource type="Texture2D" uid="uid://ci3quff5blgi6" path="res://Assets/Images/Untffgditled - Copy.png" id="3_oddqc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38d00"]
-size = Vector2(93, 1229)
+size = Vector2(115.71503, 1235)
 
-[node name="Bouncer" type="StaticBody2D" unique_id=1430862606]
-position = Vector2(-29, 16)
+[node name="Area2D" type="Area2D" unique_id=1949349700]
 script = ExtResource("1_5kbb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=913262321]
+position = Vector2(-29, 16)
 scale = Vector2(2.1363637, 2.0589395)
 texture = ExtResource("2_oddqc")
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1539451030]
+position = Vector2(-82.49999, 16)
+scale = Vector2(0.38636354, 2.0589395)
+texture = ExtResource("3_oddqc")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=525528309]
-position = Vector2(-0.5, -0.5)
+position = Vector2(-17.5, 18.5)
+rotation = -0.004842146
 scale = Vector2(0.9592532, 1)
 shape = SubResource("RectangleShape2D_38d00")
+debug_color = Color(0, 0.6, 0.69803923, 0.08235294)
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=539538295]
+position = Vector2(-557, 2)
+target_position = Vector2(1153, -2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

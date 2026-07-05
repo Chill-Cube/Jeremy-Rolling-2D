@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dera8cammk5sq"]
+
+[ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_edjvg"]
+[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://Gimmicks/bouncer.tscn" id="2_l7lmr"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://Assets/ground.tscn" id="3_l7lmr"]
+
+[node name="13" type="Node2D" unique_id=150014906]
+
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_edjvg")]
+position = Vector2(-1, 0)
+
+[node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("2_l7lmr")]
+position = Vector2(-167, 475)
+rotation = -1.1496946
+
+[node name="Area2D3" parent="." unique_id=674902144 instance=ExtResource("2_l7lmr")]
+position = Vector2(8376, 792.99976)
+rotation = -1.1060718
+bounce_force = 700.0
+
+[node name="Area2D4" parent="." unique_id=1946404680 instance=ExtResource("2_l7lmr")]
+position = Vector2(10037, -348.00003)
+rotation = 1.6104858
+bounce_force = 700.0
+
+[node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("3_l7lmr")]
+position = Vector2(-6852, 2446)
+
+[node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
+polygon = PackedVector2Array(17342, -5022, 17317, -3516, 17305, -1287, 17245, 822, 16757, 1990, 15946, 3432, 15100, 4076, 13682, 4564, 12752, 4815, 11334, 5101, 9129, 5244, 7186, 5172, 5935, 4672, 5530, 4255, 5387, 6853, 5537, 7795, 18340, 7833, 20374, 6969, 21526, 2804, 21161, -4010, 21296, -6486, 20969, -7484, 15518, -7407, 12107, -6320, 9194, -5310, 7392, -5008, 5589, -4734, 3598, -3991, 2773, -3703, 2735, -267, 15444, -391, 15412, -700, 6094, -824, 5518, -1150, 5096, -2666, 5230, -3434, 7997, -4762, 10204, -5210, 12280, -6017, 14386, -6352, 17226, -6390)
+
+[node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
+points = PackedVector2Array(17342, -5022, 17317, -3516, 17305, -1287, 17245, 822, 16757, 1990, 15946, 3432, 15100, 4076, 13682, 4564, 12752, 4815, 11334, 5101, 9129, 5244, 7186, 5172, 5935, 4672, 5530, 4255, 5387, 6853, 5537, 7795, 18340, 7833, 20374, 6969, 21526, 2804, 21161, -4010, 21296, -6486, 20969, -7484, 15518, -7407, 12107, -6320, 9194, -5310, 7392, -5008, 5589, -4734, 3598, -3991, 2773, -3703, 2735, -267, 15444, -391, 15412, -700, 6094, -824, 5518, -1150, 5096, -2666, 5230, -3434, 7997, -4762, 10204, -5210, 12280, -6017, 14386, -6352, 17226, -6390, 17342, -5022)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(17342, -5022, 17317, -3516, 17305, -1287, 17245, 822, 16757, 1990, 15946, 3432, 15100, 4076, 13682, 4564, 12752, 4815, 11334, 5101, 9129, 5244, 7186, 5172, 5935, 4672, 5530, 4255, 5387, 6853, 5537, 7795, 18340, 7833, 20374, 6969, 21526, 2804, 21161, -4010, 21296, -6486, 20969, -7484, 15518, -7407, 12107, -6320, 9194, -5310, 7392, -5008, 5589, -4734, 3598, -3991, 2773, -3703, 2735, -267, 15444, -391, 15412, -700, 6094, -824, 5518, -1150, 5096, -2666, 5230, -3434, 7997, -4762, 10204, -5210, 12280, -6017, 14386, -6352, 17226, -6390)
+
+[node name="StaticBody2D2" parent="." unique_id=804303405 instance=ExtResource("3_l7lmr")]
+position = Vector2(-14571, 8211)
+
+[node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
+polygon = PackedVector2Array(10888, -2177, 8407, -2221, 6806, -1745, 5408, -966, 3893, 303, 2740, 1183, 1644, 2019, 144, 2654, -1356, 2740, -3923, 2726, -4081, 6288, 10960, 6187)
+
+[node name="Line2D" parent="StaticBody2D2" index="1" unique_id=1715767360]
+points = PackedVector2Array(10888, -2177, 8407, -2221, 6806, -1745, 5408, -966, 3893, 303, 2740, 1183, 1644, 2019, 144, 2654, -1356, 2740, -3923, 2726, -4081, 6288, 10960, 6187, 10888, -2177)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(10888, -2177, 8407, -2221, 6806, -1745, 5408, -966, 3893, 303, 2740, 1183, 1644, 2019, 144, 2654, -1356, 2740, -3923, 2726, -4081, 6288, 10960, 6187)
+
+[editable path="StaticBody2D"]
+[editable path="StaticBody2D2"]

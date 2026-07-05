@@ -9,3 +9,7 @@ res://Player/Player.tscn
 res://Assets/Scripts/static_body_2d.gd
 res://Assets/finish.tscn
 res://Assets/scroll.gd
+res://Gimmicks/bouncer.tscn
+res://Gimmicks/Scripts/bouncer.gd
+res://Player/PhysicsMaterials/normal.tres
+res://Levels/1-3.tscn

@@ -8,9 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://Assets/finish.tscn" id="6_8bomq"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://Assets/lobster_roll.tscn" id="7_xwijh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_nutv8"]
-font_size = 633
-
 [node name="Node2D" type="Node2D" unique_id=1785804454]
 scale = Vector2(1.0013193, 0.9960441)
 
@@ -64,36 +61,13 @@ visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 41286.65, 546.46533, 38909.78, -1350.0371, 35184, -2714, 32117, -3014, 29398, -1505, 26366.332, 3281.2837, 24025.42, 4850.4917, 21938.174, 4913.7417, 19513.373, 3727.0474, 4175.607, -6594.7847, 1856.6665, -7376.8784, -1440.9828, -7188.132, -2923.0273, -5317.733, -2591.4648, -4086.8638, -3402.395, 17950.313, -43522.465, 18166.166)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("4_536hm")]
-position = Vector2(-2134.1843, 52.20652)
+position = Vector2(-1544.9617, 76.30176)
+rotation = 0.002722048
 click_push_force = 500.0
 
 [node name="death" parent="." unique_id=521310803 instance=ExtResource("5_1mbfu")]
 position = Vector2(19421.377, 26477.742)
 scale = Vector2(-586.6929, -56.44403)
-
-[node name="Label" type="Label" parent="." unique_id=801196085]
-visibility_layer = 2
-offset_left = -4208.4478
-offset_top = -2357.3254
-offset_right = 4426.479
-offset_bottom = -628.32544
-scale = Vector2(0.9786826, 1.2401496)
-text = "click to push jeremy"
-label_settings = SubResource("LabelSettings_nutv8")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="." unique_id=1400894407]
-visibility_layer = 2
-offset_left = 25135.838
-offset_top = 6388.272
-offset_right = 32822.78
-offset_bottom = 7584.797
-scale = Vector2(0.9786826, 1.2401496)
-text = "push again!!!"
-label_settings = SubResource("LabelSettings_nutv8")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="finish" parent="." unique_id=1848441945 instance=ExtResource("6_8bomq")]
 position = Vector2(65808.19, 12651.046)
@@ -105,7 +79,7 @@ scale = Vector2(1.585, 1.585)
 order = 1
 
 [node name="Area2D2" parent="." unique_id=1416952229 instance=ExtResource("7_xwijh")]
-position = Vector2(36992.19, 4246.8)
+position = Vector2(36344.047, 4492.773)
 scale = Vector2(2.58, 2.575)
 order = 2
 

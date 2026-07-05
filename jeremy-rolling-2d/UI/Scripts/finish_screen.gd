@@ -6,6 +6,31 @@ var level := ""
 func _ready() -> void:
 	pass # Replace with function body.
 	
+func get_next_level(current_level: String) -> String:
+	var dir := DirAccess.open("res://Levels")
+	if dir == null:
+		return ""
+
+	var levels: Array[String] = []
+
+	dir.list_dir_begin()
+	while true:
+		var file := dir.get_next()
+		if file == "":
+			break
+
+		if file.ends_with(".tscn"):
+			levels.append(file.get_basename())
+
+	dir.list_dir_end()
+
+	levels.sort()
+
+	var index := levels.find(current_level)
+	if index == -1 or index == levels.size() - 1:
+		return ""
+
+	return levels[index + 1]
 
 func format_time(total_seconds: float) -> String:
 	var minutes: int = int(total_seconds / 60) % 60
@@ -44,3 +69,7 @@ func _show_finish(time: float, current_level: String):
 
 func _on_retry_pressed() -> void:
 	get_tree().change_scene_to_file("res://Levels/"+level+".tscn")
+
+func _on_next_level_pressed() -> void:
+	var next_level := get_next_level(level)
+	get_tree().change_scene_to_file("res://Levels/%s.tscn" % next_level)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddhgb6e33v5h3"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://b1eisw352x7g0" path="res://Player/PhysicsMaterials/normal.tres" id="1_0j2ni"]
 [ext_resource type="Script" uid="uid://di3d223gtt5rv" path="res://Player/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://b84xpr6p7tsg8" path="res://Assets/Images/Untitled.png" id="1_xhfnw"]
 [ext_resource type="AudioStream" uid="uid://brf1wcwvp3sk4" path="res://Assets/SFX/freesound_community-land2-43790.mp3" id="2_cxr5p"]
@@ -9,10 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://clpk2dmxyogt4" path="res://Assets/SFX/140867__juskiddink__boing.wav" id="5_5ncpa"]
 [ext_resource type="AudioStream" uid="uid://cwx7c0xm5b86i" path="res://Assets/SFX/Rolling.wav" id="6_tdg3f"]
 [ext_resource type="AudioStream" uid="uid://j2iv7f6k7gcl" path="res://Assets/SFX/651545__nsstudios__wind-draft-loop-3.wav" id="7_dtqjt"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kpjcp"]
-friction = 0.0
-bounce = 0.21
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
 radius = 126.43
@@ -30,7 +27,7 @@ animations = [{
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
 mass = 0.095
-physics_material_override = SubResource("PhysicsMaterial_kpjcp")
+physics_material_override = ExtResource("1_0j2ni")
 gravity_scale = 3.188
 contact_monitor = true
 max_contacts_reported = 1

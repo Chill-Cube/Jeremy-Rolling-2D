@@ -24,7 +24,6 @@ var mobile_first_touch := false
 func _ready() -> void:
 	freeze = true
 	start_position = global_position
-	body_entered.connect(spring)
 
 func _process(delta: float) -> void:
 	if push_cooldown_timer > 0.0:
@@ -79,20 +78,11 @@ func _apply_push() -> void:
 	
 	if not started_level: started_level = true
 
-func spring(body: Node) -> void:
-	if not body.is_in_group("bouncer"):
-		return
-
-	var state := PhysicsServer2D.body_get_direct_state(get_rid())
-	if state.get_contact_count() == 0:
-		return
-
-	var normal := state.get_contact_local_normal(0)
-
+func _spring(normal: Vector2, bounce_force: float) -> void:
 	$boing.play()
-
+	angular_velocity = 0.0
 	linear_velocity = linear_velocity.bounce(normal)
-	apply_central_impulse(normal * body.bounce)
+	apply_central_impulse(normal * bounce_force)
 
 func _reset():
 	freeze = true
