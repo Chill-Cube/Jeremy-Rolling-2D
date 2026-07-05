@@ -5,3 +5,4 @@ res://UI/Scripts/finish_screen.gd
 res://Player/player.gd
 res://Player/player_data.gd
 res://Levels/1-2.tscn
+res://Player/Player.tscn
