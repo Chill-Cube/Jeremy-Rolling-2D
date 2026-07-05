@@ -1,15 +1,27 @@
 [gd_scene format=3 uid="uid://bgvc0sqn2e4h8"]
 
 [ext_resource type="Script" uid="uid://b7q1waq0t0gol" path="res://Assets/Scripts/finish.gd" id="1_v50nn"]
+[ext_resource type="Texture2D" uid="uid://dxqv5470oj075" path="res://Assets/Images/Frame 1 (1).png" id="2_ya6g1"]
+[ext_resource type="Script" uid="uid://cs8d6ku7valo1" path="res://Assets/scroll.gd" id="3_jm80v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bn1m"]
-size = Vector2(174, 172)
+size = Vector2(174, 2723)
 
 [node name="finish" type="Area2D" unique_id=521310803]
 script = ExtResource("1_v50nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1064482431]
+position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_0bn1m")
 debug_color = Color(0.9386033, 0.6903889, 0, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=420037060]
+modulate = Color(1, 1, 1, 0.17254902)
+texture_repeat = 2
+scale = Vector2(0.087, 0.080372535)
+texture = ExtResource("2_ya6g1")
+region_enabled = true
+region_rect = Rect2(9.024414, -9.362671, 2012.8706, 34291.2)
+script = ExtResource("3_jm80v")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

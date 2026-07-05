@@ -11,11 +11,13 @@ func _process(_delta):
 
 	# Update collision automatically
 	collision.polygon = polygon.polygon
+	collision.global_position = polygon.global_position
 
 	# Draw outline
 	var points := PackedVector2Array(polygon.polygon)
 	points.append(polygon.polygon[0])
 
+	line.transform = polygon.transform
 	line.points = points
 
 func update_collision() -> void:

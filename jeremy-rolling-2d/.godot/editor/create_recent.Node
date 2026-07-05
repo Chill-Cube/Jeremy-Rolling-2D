@@ -1,3 +1,5 @@
+Sprite2D
+Polygon2D
 Node2D
 Parallax2D
 CollisionShape2D
@@ -7,5 +9,4 @@ CanvasLayer
 Button
 Label
 Container
-Sprite2D
 Area2D
