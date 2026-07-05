@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c73swo7fblll"]
+[gd_scene format=3 uid="uid://cdp11ns36ti03"]
 
 [ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="1_eioh3"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://Assets/ground.tscn" id="2_riloj"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="4_536hm"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://Assets/death.tscn" id="5_1mbfu"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://Assets/finish.tscn" id="6_8bomq"]
-[ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://Assets/lobster_roll.tscn" id="7_xwijh"]
+[ext_resource type="PackedScene" path="res://Assets/lobster_roll.tscn" id="7_xwijh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nutv8"]
 font_size = 633
