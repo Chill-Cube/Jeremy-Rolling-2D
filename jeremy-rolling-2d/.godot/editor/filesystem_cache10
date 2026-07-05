@@ -6,7 +6,7 @@ death.tscn::PackedScene::3753587766457670632::1783168421::0::1::::<><><>0<>0<><>
 finish.tscn::PackedScene::2851072727953811827::1783168402::0::1::::<><><>0<>0<><>::uid://b7q1waq0t0gol::::res://Assets/Scripts/finish.gd
 ground.tscn::PackedScene::698943043621610122::1783097511::0::1::::<><><>0<>0<><>::uid://baf28w23d8pt8::::res://Assets/Scripts/static_body_2d.gd
 lobster_roll.tscn::PackedScene::4437047770912650726::1783238547::0::1::::<><><>0<>0<><>::uid://chiuotlrxatr4::::res://Assets/Scripts/lobster_roll.gd<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp<>uid://y8h4ljm344b5::::res://Assets/SFX/lobster_get.wav
-::res://Assets/Images/::1783240908
+::res://Assets/Images/::1783240909
 1053750-200.png::CompressedTexture2D::3404126428468697739::1783097245::1783097492::1::::<><><>0<>0<>f8dacb5919065f74d81567c96815ac0d<>res://.godot/imported/1053750-200.png-4925ee07e74f249c4c666a6a315f4287.ctex::
 bar-harbor-revised.webp::CompressedTexture2D::3386709184011422809::1783215406::1783237901::1::::<><><>0<>0<>5459d112f2779c6b75d432cf4d2bd7d9<>res://.godot/imported/bar-harbor-revised.webp-1ec3cc4785cb470bf77d91cfb5552486.ctex::
 ddUntitled.png::CompressedTexture2D::6161729606353973091::1783097245::1783097552::1::::<><><>0<>0<>653e5985654ba6d7c0fd2633befbeb85<>res://.godot/imported/ddUntitled.png-74f768ee1c5849359d1f1aa3ecaf5bb0.ctex::
@@ -42,13 +42,13 @@ export_presets.cfg::TextFile::-1::1783171746::0::1::::<><><>0<>0<><>::
 index.apple-touch-icon.png::CompressedTexture2D::517248822859515676::1783171746::1783171810::1::::<><><>0<>0<>d0f5c39d470562fe02744676cb6dbdde<>res://.godot/imported/index.apple-touch-icon.png-9bebb6a3cddef74122800a525cbc66ee.ctex::
 index.icon.png::CompressedTexture2D::8904066110120813278::1783171746::1783171810::1::::<><><>0<>0<>78120f03e8124399811c759a81672c41<>res://.godot/imported/index.icon.png-c6a9639c3f0d781ef0ebe3037419cdd5.ctex::
 index.png::CompressedTexture2D::8354303432263098417::1783171746::1783171810::1::::<><><>0<>0<>f78b2fca1f4070fafd06d72e7ea36568<>res://.godot/imported/index.png-14437ade0b337db3088a30b6090dfdc0.ctex::
-::res://Levels/::1783240598
-Level1.tscn::PackedScene::208171174095359365::1783240598::0::1::::<><><>0<>0<><>::uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://j7tqwhs4lf7o::::res://Assets/ground.tscn<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://btqjbow82dx6g::::res://Assets/death.tscn<>uid://bgvc0sqn2e4h8::::res://Assets/finish.tscn<>uid://b4hlr78grhtco::::res://Assets/lobster_roll.tscn
+::res://Levels/::1783241145
+Level1.tscn::PackedScene::208171174095359365::1783241145::0::1::::<><><>0<>0<><>::uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://j7tqwhs4lf7o::::res://Assets/ground.tscn<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://btqjbow82dx6g::::res://Assets/death.tscn<>uid://bgvc0sqn2e4h8::::res://Assets/finish.tscn<>uid://b4hlr78grhtco::::res://Assets/lobster_roll.tscn
 ::res://Player/::1783240663
 player.gd::GDScript::7778807206394730071::1783240663::0::1::::Player<>RigidBody2D<><>0<>0<><>::
 Player.tscn::PackedScene::7384646949735864170::1783240663::0::1::::<><><>0<>0<><>::uid://di3d223gtt5rv::::res://Player/player.gd<>uid://b84xpr6p7tsg8::::res://Assets/Images/Untitled.png<>uid://brf1wcwvp3sk4::::res://Assets/SFX/freesound_community-land2-43790.mp3<>uid://c0blupm2tqys1::::res://UI/finish_screen.tscn<>uid://boq8p2pry8y3l::::res://Assets/Images/1053750-200.png<>uid://bowm1k6db6dbs::::res://Assets/SFX/freesound_community-cartoon-jump-6462.mp3<>uid://clpk2dmxyogt4::::res://Assets/SFX/140867__juskiddink__boing.wav<>uid://cwx7c0xm5b86i::::res://Assets/SFX/Rolling.wav<>uid://j2iv7f6k7gcl::::res://Assets/SFX/651545__nsstudios__wind-draft-loop-3.wav
-::res://UI/::1783237900
-finish_screen.tscn::PackedScene::6530331246530309742::1783237900::0::1::::<><><>0<>0<><>::uid://dg17lts3q64pt::::res://UI/Scripts/finish_screen.gd<>uid://docc33ruml1ol::::res://UI/Audio/626950__maikkihapsis__tadaa.wav<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp
+::res://UI/::1783241574
+finish_screen.tscn::PackedScene::6530331246530309742::1783241574::0::1::::<><><>0<>0<><>::uid://dg17lts3q64pt::::res://UI/Scripts/finish_screen.gd<>uid://docc33ruml1ol::::res://UI/Audio/626950__maikkihapsis__tadaa.wav<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp
 ::res://UI/Audio/::1783169694
 626950__maikkihapsis__tadaa.wav::AudioStreamWAV::8146207551575432615::1783169692::1783169694::1::::<><><>0<>0<>ac3066293ed4452cd6975aba8a733869<>res://.godot/imported/626950__maikkihapsis__tadaa.wav-feff6424cacc0712a6aff8683155f496.sample::
 ::res://UI/Images/::1783169638

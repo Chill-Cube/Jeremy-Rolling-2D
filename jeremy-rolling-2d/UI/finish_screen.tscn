@@ -39,17 +39,6 @@ theme_override_font_sizes/font_size = 37
 text = "Time: time"
 vertical_alignment = 1
 
-[node name="Reward" type="Label" parent="Panel" unique_id=111764196]
-layout_mode = 0
-offset_left = 146.00002
-offset_top = 408.0
-offset_right = 600.0
-offset_bottom = 459.0
-theme_override_font_sizes/font_size = 37
-text = "+200 coins"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Retry" type="Button" parent="Panel" unique_id=517851245]
 layout_mode = 0
 offset_left = 244.30226
@@ -78,16 +67,19 @@ text = "Back to Menu"
 stream = ExtResource("2_72onr")
 
 [node name="BarHarborRevised" type="Sprite2D" parent="Panel" unique_id=895104947]
+visible = false
 position = Vector2(192, 327)
 scale = Vector2(0.4210329, 0.42065078)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Panel" unique_id=957737743]
+visible = false
 position = Vector2(385, 324)
 scale = Vector2(0.42103302, 0.4206509)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Panel" unique_id=993707944]
+visible = false
 position = Vector2(592, 316)
 scale = Vector2(0.42103547, 0.42065334)
 texture = ExtResource("3_72onr")
