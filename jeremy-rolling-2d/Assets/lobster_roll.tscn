@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b4hlr78grhtco"]
+
+[ext_resource type="Script" uid="uid://chiuotlrxatr4" path="res://Assets/Scripts/lobster_roll.gd" id="1_ihe44"]
+[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="2_6tvut"]
+[ext_resource type="AudioStream" uid="uid://y8h4ljm344b5" path="res://Assets/SFX/lobster_get.wav" id="3_s4u4s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2n6k"]
+radius = 141.0
+
+[node name="Area2D" type="Area2D" unique_id=1547374501]
+script = ExtResource("1_ihe44")
+
+[node name="BarHarborRevised" type="Sprite2D" parent="." unique_id=682169842]
+position = Vector2(39, -9.536743e-07)
+scale = Vector2(0.6442992, 0.64429927)
+texture = ExtResource("2_6tvut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2081854112]
+position = Vector2(-5, 0)
+shape = SubResource("CircleShape2D_q2n6k")
+
+[node name="LobsterGet" type="AudioStreamPlayer" parent="." unique_id=868096822]
+stream = ExtResource("3_s4u4s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
