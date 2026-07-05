@@ -3,3 +3,5 @@ res://UI/Scripts/finish_screen.gd
 res://Levels/Level1.tscn
 res://Assets/Scripts/lobster_roll.gd
 res://Assets/lobster_roll.tscn
+res://Player/Player.tscn
+res://Player/player.gd
