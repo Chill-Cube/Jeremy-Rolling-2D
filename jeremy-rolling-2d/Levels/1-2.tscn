@@ -56,11 +56,11 @@ skew = -0.010697007
 bounce_force = 700.0
 
 [node name="Area2D6" parent="." unique_id=493151301 instance=ExtResource("7_6ibt4")]
-position = Vector2(43318, -343.99915)
-rotation = 3.501086
-scale = Vector2(1.9333241, 1.4789206)
+position = Vector2(43290.996, -199.0011)
+rotation = 3.4217527
+scale = Vector2(2.1438978, 1.4504849)
 skew = -0.010697007
-bounce_force = 800.0
+bounce_force = 1000.0
 
 [node name="Area2D5" parent="." unique_id=1195147078 instance=ExtResource("7_6ibt4")]
 position = Vector2(51212.004, 4325.9995)
@@ -127,7 +127,7 @@ repeat_times = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=979128457]
 texture_repeat = 2
-position = Vector2(61.342464, 57.733227)
+position = Vector2(60.315647, 68.600174)
 scale = Vector2(3.825, 3.825)
 texture = ExtResource("1_etngm")
 offset = Vector2(0, -5.46)
