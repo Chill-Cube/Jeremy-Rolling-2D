@@ -118,27 +118,14 @@ scale = Vector2(-586.6929, -56.44403)
 
 [node name="Label" type="Label" parent="." unique_id=801196085]
 visibility_layer = 2
-offset_left = -4141.536
-offset_top = -2685.624
-offset_right = 4913.464
-offset_bottom = -90.62402
+offset_left = -3306.6375
+offset_top = -3655.4607
+offset_right = 5748.3623
+offset_bottom = 671.5393
 scale = Vector2(0.9786826, 1.2401496)
 text = "drop down
 (trsut me😎😎😎)
 "
-label_settings = SubResource("LabelSettings_nutv8")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="Label" unique_id=805325565]
-visibility_layer = 2
-layout_mode = 0
-offset_left = -2957.2222
-offset_top = 5421.6025
-offset_right = 6097.778
-offset_bottom = 8016.6025
-scale = Vector2(0.9786826, 1.2401496)
-text = "ge tout"
 label_settings = SubResource("LabelSettings_nutv8")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -235,8 +222,20 @@ position = Vector2(5068.3135, 12025.572)
 order = 2
 
 [node name="Area2D3" parent="." unique_id=631288704 instance=ExtResource("8_p56ml")]
-position = Vector2(15628.382, 15792.474)
+position = Vector2(14861.394, 16119.768)
 order = 3
+
+[node name="Label2" type="Label" parent="." unique_id=805325565]
+visibility_layer = 2
+offset_left = -7035.718
+offset_top = 4037.974
+offset_right = 2019.2822
+offset_bottom = 6632.974
+scale = Vector2(0.9786826, 1.2401496)
+text = "ge tout"
+label_settings = SubResource("LabelSettings_nutv8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [editable path="StaticBody2D3"]
 [editable path="StaticBody2D"]
