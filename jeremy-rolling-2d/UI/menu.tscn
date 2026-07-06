@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://dp0lgsqsc5uj8"]
 
-[ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
+[ext_resource type="Script" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
 [ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="1_wfiwe"]
-[ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/level_teleport.gd" id="2_kfjwn"]
+[ext_resource type="Script" path="res://UI/level_teleport.gd" id="2_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://bdmejy08y3b1p" path="res://Assets/Images/Untdfgdfgitled.png" id="4_qmqfe"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1086129096]
+[node name="CanvasLayer2" type="CanvasLayer" unique_id=1086129096]
 
 [node name="Control" type="Control" parent="." unique_id=1636746392]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 34.0
@@ -52,19 +53,16 @@ offset_right = 96.0
 offset_bottom = 129.0
 
 [node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=983988865]
-visible = false
 position = Vector2(19.500002, 121.30914)
 scale = Vector2(0.069158874, 0.07380465)
 texture = ExtResource("1_wfiwe")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=385711263]
-visible = false
 position = Vector2(54, 121.30914)
 scale = Vector2(0.069158874, 0.07380465)
 texture = ExtResource("1_wfiwe")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=854980464]
-visible = false
 position = Vector2(88, 121.30914)
 scale = Vector2(0.069158874, 0.07380465)
 texture = ExtResource("1_wfiwe")

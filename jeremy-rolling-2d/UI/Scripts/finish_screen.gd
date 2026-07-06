@@ -3,9 +3,6 @@ extends CanvasLayer
 
 var level := ""
 
-func _ready() -> void:
-	pass # Replace with function body.
-	
 func get_next_level(current_level: String) -> String:
 	var dir := DirAccess.open("res://Levels")
 	if dir == null:
@@ -32,6 +29,9 @@ func get_next_level(current_level: String) -> String:
 
 	return levels[index + 1]
 
+func _ready() -> void:
+	pass # Replace with function body.
+
 func format_time(total_seconds: float) -> String:
 	var minutes: int = int(total_seconds / 60) % 60
 	var seconds: int = int(total_seconds) % 60
@@ -52,6 +52,9 @@ func _show_finish(time: float, current_level: String):
 	
 	visible = true
 	$Panel/FinishSFX.play()
+	
+	if get_next_level(current_level) == "":
+		$Panel/NextLevel.visible = false
 	
 	update_save(time, current_level)
 	
