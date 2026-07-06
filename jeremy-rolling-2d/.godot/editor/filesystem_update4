@@ -13,3 +13,4 @@ res://UI/menu.tscn
 res://Levels/1-5.tscn
 res://UI/untitled.gd
 res://UI/Scripts/level_select.gd
+res://UI/level_teleport.gd
