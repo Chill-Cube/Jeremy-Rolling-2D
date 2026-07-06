@@ -73,3 +73,7 @@ func _on_retry_pressed() -> void:
 func _on_next_level_pressed() -> void:
 	var next_level := get_next_level(level)
 	get_tree().change_scene_to_file("res://Levels/%s.tscn" % next_level)
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/menu.tscn")
