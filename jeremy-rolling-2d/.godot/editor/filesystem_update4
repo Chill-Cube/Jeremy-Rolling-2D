@@ -16,3 +16,4 @@ res://UI/Scripts/level_select.gd
 res://UI/level_teleport.gd
 res://Effects/explosion.tscn
 res://Effects/trail.tscn
+res://Assets/Music/zone_1.tscn
