@@ -49,6 +49,7 @@ left={
 
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=4096.0
+2d/solver/solver_iterations=32
 
 [rendering]
 
