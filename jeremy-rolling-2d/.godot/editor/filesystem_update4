@@ -15,3 +15,4 @@ res://UI/untitled.gd
 res://UI/Scripts/level_select.gd
 res://UI/level_teleport.gd
 res://Effects/explosion.tscn
+res://Effects/trail.tscn

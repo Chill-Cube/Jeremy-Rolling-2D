@@ -38,7 +38,18 @@ func _process(delta: float) -> void:
 	_update_visuals()
 	_sync_visual_root()
 
+
+func is_grounded() -> bool:
+	var bodies = get_colliding_bodies()
+	if bodies.size() > 0:
+		return true
+	return false
+
 func _physics_process(_delta: float) -> void:
+
+	$Trail.emitting = true if is_grounded() and linear_velocity.length() > 500 else false
+	$Trail.direction.x = -100 if linear_velocity.x > 0 else 100
+	$Trail.position.x = -38.0 if linear_velocity.x > 0 else 38.0
 
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
