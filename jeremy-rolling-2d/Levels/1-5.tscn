@@ -25,7 +25,7 @@ repeat_times = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=518487452]
 texture_repeat = 2
-position = Vector2(214.2828, -286.01956)
+position = Vector2(219.52403, -290.50522)
 scale = Vector2(3.8354402, 3.8536832)
 texture = ExtResource("1_s5ius")
 offset = Vector2(0, -5.46)
@@ -141,7 +141,7 @@ scale = Vector2(1.0204972, 2.0478854)
 bounce_force = 1500.0
 
 [node name="Bouncer8" parent="." unique_id=149238771 instance=ExtResource("7_vj0fj")]
-position = Vector2(7832.6655, 15588.668)
+position = Vector2(7901.5747, 15450.118)
 rotation = 0.82072306
 scale = Vector2(-1.4733505, 2.865169)
 
