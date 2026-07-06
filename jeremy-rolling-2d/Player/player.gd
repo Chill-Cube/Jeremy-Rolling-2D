@@ -33,6 +33,10 @@ func _process(delta: float) -> void:
 	
 	if not finished_level and started_level:
 		level_time += delta
+		
+	$Trail.emitting = true if is_grounded() and linear_velocity.length() > 500 else false
+	$Trail.direction.x = -100 if linear_velocity.x > 0 else 100
+	$Trail.position.x = -38.0 if linear_velocity.x > 0 else 38.0
 
 	_update_aim()
 	_update_visuals()
@@ -46,11 +50,6 @@ func is_grounded() -> bool:
 	return false
 
 func _physics_process(_delta: float) -> void:
-
-	$Trail.emitting = true if is_grounded() and linear_velocity.length() > 500 else false
-	$Trail.direction.x = -100 if linear_velocity.x > 0 else 100
-	$Trail.position.x = -38.0 if linear_velocity.x > 0 else 38.0
-
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
 

@@ -52,9 +52,12 @@ left={
 
 [physics]
 
+2d/run_on_separate_thread=true
+common/physics_ticks_per_second=240
+common/physics_jitter_fix=0.0
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=4096.0
-2d/solver/solver_iterations=32
+2d/solver/solver_iterations=64
 
 [rendering]
 
