@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c6l3f0ot2wsto"]
+
+[ext_resource type="PackedScene" uid="uid://da0yowdtaf55m" path="res://level_kit/Platforms/flat_ground.tscn" id="1_7a6no"]
+[ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="2_vltqg"]
+[ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="3_in5bo"]
+[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="4_3p67q"]
+[ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="5_vltqg"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="6_in5bo"]
+[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="7_3p67q"]
+
+[node name="14" type="Node2D" unique_id=112435437]
+
+[node name="StaticBody2D" parent="." unique_id=1246453588 instance=ExtResource("1_7a6no")]
+position = Vector2(855.99994, 125)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1491505039]
+position = Vector2(0, -0.91604805)
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="MeshInstance2D" parent="StaticBody2D" index="1" unique_id=641065394]
+position = Vector2(0, 303.8804)
+scale = Vector2(20, 627.7608)
+
+[node name="StaticBody2D2" parent="." unique_id=1828716321 instance=ExtResource("1_7a6no")]
+position = Vector2(788.00006, -2373)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D8" parent="." unique_id=790646808 instance=ExtResource("1_7a6no")]
+position = Vector2(-10953, 157.00021)
+rotation = -0.39486238
+scale = Vector2(660.2843, 11.998171)
+
+[node name="StaticBody2D6" parent="." unique_id=2035776715 instance=ExtResource("1_7a6no")]
+position = Vector2(-10169, -1536.9999)
+rotation = -0.37815994
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D7" parent="." unique_id=1777852623 instance=ExtResource("1_7a6no")]
+position = Vector2(-10169, -3236.0002)
+rotation = -0.37815994
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D3" parent="." unique_id=1150569909 instance=ExtResource("1_7a6no")]
+position = Vector2(788.00006, -5305)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D9" parent="." unique_id=590498125 instance=ExtResource("1_7a6no")]
+position = Vector2(12150.999, -5305)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D10" parent="." unique_id=680919409 instance=ExtResource("1_7a6no")]
+position = Vector2(15094, -2782.0007)
+scale = Vector2(-626.25726, 999.5811)
+
+[node name="StaticBody2D4" parent="." unique_id=250612659 instance=ExtResource("1_7a6no")]
+position = Vector2(-38895.996, 4397.9995)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D11" parent="." unique_id=1249054085 instance=ExtResource("1_7a6no")]
+position = Vector2(-38895.996, 4397.9995)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D12" parent="." unique_id=238757972 instance=ExtResource("1_7a6no")]
+position = Vector2(-39829, 1628.9999)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="StaticBody2D13" parent="." unique_id=1174248934 instance=ExtResource("1_7a6no")]
+position = Vector2(775, -3629.9998)
+scale = Vector2(569.3845, 11.998171)
+
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("2_vltqg")]
+position = Vector2(-9, -161)
+gravity_scale = 1.788
+click_push_force = 500.0
+push_cooldown = 1.0
+
+[node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("3_in5bo")]
+position = Vector2(-5090, -273)
+order = 1
+
+[node name="Area2D2" parent="." unique_id=1949349700 instance=ExtResource("4_3p67q")]
+position = Vector2(-5365, -646)
+
+[node name="Area2D3" parent="." unique_id=100775937 instance=ExtResource("4_3p67q")]
+position = Vector2(8222, -1122.9996)
+rotation = -2.6235588
+
+[node name="Area2D4" parent="." unique_id=1629273631 instance=ExtResource("3_in5bo")]
+position = Vector2(715, -4098)
+order = 2
+
+[node name="death" parent="." unique_id=521310803 instance=ExtResource("5_vltqg")]
+position = Vector2(12774, 7880)
+scale = Vector2(219.93307, 79.0363)
+
+[node name="death3" parent="." unique_id=1070840991 instance=ExtResource("5_vltqg")]
+position = Vector2(-27346, 14522.999)
+scale = Vector2(219.93307, 79.0363)
+
+[node name="death2" parent="." unique_id=2055337026 instance=ExtResource("5_vltqg")]
+position = Vector2(-15103.001, 9213)
+rotation = -0.38034245
+scale = Vector2(127.33307, 51.196297)
+
+[node name="StaticBody2D5" parent="." unique_id=470789971 instance=ExtResource("6_in5bo")]
+position = Vector2(-26176, 2509)
+
+[node name="Polygon2D" parent="StaticBody2D5" index="0" unique_id=615349608]
+polygon = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570)
+
+[node name="Line2D" parent="StaticBody2D5" index="1" unique_id=1715767360]
+points = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570, 8442, -966)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570)
+
+[node name="Area2D5" parent="." unique_id=1791908608 instance=ExtResource("3_in5bo")]
+position = Vector2(-34383, 1204)
+order = 3
+
+[node name="finish" parent="." unique_id=1435496558 instance=ExtResource("7_3p67q")]
+position = Vector2(-45492.004, 2120.0002)
+scale = Vector2(10.765, 10.765)
+
+[editable path="StaticBody2D"]
+[editable path="StaticBody2D5"]

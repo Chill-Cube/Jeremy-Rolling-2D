@@ -95,12 +95,11 @@ func _death() -> void:
 
 	camera_pause = true
 
+	freeze = true
 	var tween := get_tree().create_tween()
 	tween.tween_property(self, "global_position", start_position, 0.25)
 
 	tween.finished.connect(func():
-		freeze = false
-
 		await get_tree().create_timer(2.0).timeout
 		camera_pause = false
 	)

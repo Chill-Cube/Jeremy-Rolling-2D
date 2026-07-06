@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dera8cammk5sq"]
 
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_edjvg"]
-[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://Gimmicks/bouncer.tscn" id="2_l7lmr"]
-[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://Assets/ground.tscn" id="3_l7lmr"]
-[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://Assets/finish.tscn" id="4_8dwgt"]
+[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="2_l7lmr"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="3_l7lmr"]
+[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="4_8dwgt"]
 
 [node name="13" type="Node2D" unique_id=150014906]
 
