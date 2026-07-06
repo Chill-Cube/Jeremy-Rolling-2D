@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://da0yowdtaf55m" path="res://level_kit/Platforms/flat_ground.tscn" id="1_7a6no"]
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="2_vltqg"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="3_in5bo"]
+[ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="3_jqgxd"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="4_3p67q"]
+[ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="4_g3ls4"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="5_vltqg"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="6_in5bo"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="7_3p67q"]
@@ -71,9 +73,41 @@ scale = Vector2(569.3845, 11.998171)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("2_vltqg")]
 position = Vector2(-9, -161)
-gravity_scale = 1.788
-click_push_force = 500.0
+gravity_scale = 2.142
+click_push_force = 550.0
 push_cooldown = 1.0
+
+[node name="Parallax2D" type="Parallax2D" parent="RigidBody2D" unique_id=1571674631]
+show_behind_parent = true
+z_index = -2
+scale = Vector2(26.295, 26.410372)
+scroll_scale = Vector2(4.315, 4.315)
+scroll_offset = Vector2(0, 23002.996)
+repeat_size = Vector2(800, 597.715)
+autoscroll = Vector2(0.565, 0.36)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/Parallax2D" unique_id=801122609]
+texture_repeat = 2
+position = Vector2(60.315647, 68.600174)
+scale = Vector2(3.825, 3.825)
+texture = ExtResource("3_jqgxd")
+offset = Vector2(0, -5.46)
+
+[node name="Parallax2D2" type="Parallax2D" parent="RigidBody2D" unique_id=1644335217]
+show_behind_parent = true
+scale = Vector2(26.295, 26.295)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(0, 3.765)
+repeat_times = 100
+screen_offset = Vector2(-13.605, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="RigidBody2D/Parallax2D2" unique_id=1707499676]
+texture_repeat = 2
+position = Vector2(6.824662, 256.61505)
+scale = Vector2(1.9, 1.9)
+skew = 0.41538838
+texture = ExtResource("4_g3ls4")
 
 [node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("3_in5bo")]
 position = Vector2(-5090, -273)
