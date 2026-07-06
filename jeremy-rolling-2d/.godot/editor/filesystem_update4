@@ -18,3 +18,6 @@ res://Effects/explosion.tscn
 res://Effects/trail.tscn
 res://Assets/Music/zone_1.tscn
 res://Levels/1-6.tscn
+res://Levels/level_list.gd
+res://level_list.gd
+res://Levels/generate_level_list.gd

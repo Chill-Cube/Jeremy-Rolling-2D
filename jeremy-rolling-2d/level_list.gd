@@ -1,0 +1,11 @@
+extends RefCounted
+class_name LevelList
+
+const LEVELS: Array[String] = [
+	"1-1",
+	"1-2",
+	"1-3",
+	"1-4",
+	"1-5",
+	"1-6",
+]

@@ -4,9 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="2_l7lmr"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="3_l7lmr"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="4_8dwgt"]
-[ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="4_wbclw"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="5_3cmlg"]
-[ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="5_nhjsr"]
 
 [node name="13" type="Node2D" unique_id=150014906]
 
@@ -32,38 +30,6 @@ position = Vector2(-6852, 2446)
 
 [node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
 polygon = PackedVector2Array(17342, -5022, 17317, -3516, 17305, -1287, 17245, 822, 16757, 1990, 15946, 3432, 15100, 4076, 13682, 4564, 12752, 4815, 11334, 5101, 9129, 5244, 7186, 5172, 5935, 4672, 5530, 4255, 5387, 6853, 5537, 7795, 18340, 7833, 20374, 6969, 21526, 2804, 21161, -4010, 21296, -6486, 21375, -7558, 20995, -8783, 16054, -8740, 12972, -8783, 10185, -8614, 8052, -8381, 5983, -8360, 3069, -8128, -1386, -7600, -12912, -7426, -29174, 5014, -28995, 5617, -28721, 6516, -27506, 5932, -23692, 5896, -20995, 5893, -18102, 5682, -15864, 5513, -13563, 5449, -12745, 5638, -11161, 6546, -9704, 6820, -7614, 6905, -5756, 5343, -3658, 3779, -1591, 2107, 35, 923, 3333, 830, 4796, -262, 15444, -391, 15412, -700, 6094, -824, 5518, -1150, 5096, -2666, 5230, -3434, 7997, -4762, 10204, -5210, 12280, -6017, 14386, -6352, 17226, -6390)
-
-[node name="Parallax2D" type="Parallax2D" parent="StaticBody2D/Polygon2D" index="0" unique_id=1874778181]
-show_behind_parent = true
-z_index = -2
-scale = Vector2(26.295, 26.410372)
-scroll_scale = Vector2(4.315, 4.315)
-scroll_offset = Vector2(0, 23002.996)
-repeat_size = Vector2(800, 597.715)
-autoscroll = Vector2(0.565, 0.36)
-repeat_times = 100
-
-[node name="Sprite2D" parent="StaticBody2D/Polygon2D/Parallax2D" index="0"]
-texture_repeat = 2
-position = Vector2(60.315647, 68.600174)
-scale = Vector2(3.825, 3.825)
-texture = ExtResource("4_wbclw")
-offset = Vector2(0, -5.46)
-
-[node name="Parallax2D2" type="Parallax2D" parent="StaticBody2D/Polygon2D" index="1" unique_id=994897459]
-show_behind_parent = true
-scale = Vector2(26.295, 26.295)
-repeat_size = Vector2(1000, 0)
-autoscroll = Vector2(0, 3.765)
-repeat_times = 100
-screen_offset = Vector2(-13.605, 0)
-
-[node name="Sprite2D2" parent="StaticBody2D/Polygon2D/Parallax2D2" index="0"]
-texture_repeat = 2
-position = Vector2(6.824662, 256.61505)
-scale = Vector2(1.9, 1.9)
-skew = 0.41538838
-texture = ExtResource("5_nhjsr")
 
 [node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
 points = PackedVector2Array(17342, -5022, 17317, -3516, 17305, -1287, 17245, 822, 16757, 1990, 15946, 3432, 15100, 4076, 13682, 4564, 12752, 4815, 11334, 5101, 9129, 5244, 7186, 5172, 5935, 4672, 5530, 4255, 5387, 6853, 5537, 7795, 18340, 7833, 20374, 6969, 21526, 2804, 21161, -4010, 21296, -6486, 21375, -7558, 20995, -8783, 16054, -8740, 12972, -8783, 10185, -8614, 8052, -8381, 5983, -8360, 3069, -8128, -1386, -7600, -12912, -7426, -29174, 5014, -28995, 5617, -28721, 6516, -27506, 5932, -23692, 5896, -20995, 5893, -18102, 5682, -15864, 5513, -13563, 5449, -12745, 5638, -11161, 6546, -9704, 6820, -7614, 6905, -5756, 5343, -3658, 3779, -1591, 2107, 35, 923, 3333, 830, 4796, -262, 15444, -391, 15412, -700, 6094, -824, 5518, -1150, 5096, -2666, 5230, -3434, 7997, -4762, 10204, -5210, 12280, -6017, 14386, -6352, 17226, -6390, 17342, -5022)
@@ -144,6 +110,24 @@ order = 2
 position = Vector2(-33881, 10722)
 scale = Vector2(1.605, 1.605)
 order = 3
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=986091236]
+show_behind_parent = true
+z_index = -2
+scale = Vector2(26.295, 26.410372)
+scroll_scale = Vector2(4.315, 4.315)
+scroll_offset = Vector2(0, 23002.996)
+repeat_size = Vector2(800, 597.715)
+autoscroll = Vector2(0.565, 0.36)
+repeat_times = 100
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1220884792]
+show_behind_parent = true
+scale = Vector2(26.295, 26.295)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(0, 3.765)
+repeat_times = 100
+screen_offset = Vector2(-13.605, 0)
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

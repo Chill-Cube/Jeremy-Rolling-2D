@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dp0lgsqsc5uj8"]
 
-[ext_resource type="Script" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
+[ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
 [ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="1_wfiwe"]
 [ext_resource type="Script" path="res://UI/level_teleport.gd" id="2_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://bdmejy08y3b1p" path="res://Assets/Images/Untdfgdfgitled.png" id="4_qmqfe"]
