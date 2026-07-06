@@ -18,38 +18,6 @@ click_push_force = 550.0
 max_speed = 17000.0
 push_cooldown = 1.0
 
-[node name="Parallax2D" type="Parallax2D" parent="RigidBody2D" unique_id=26951406]
-show_behind_parent = true
-z_index = -2
-scale = Vector2(26.295, 26.410372)
-scroll_scale = Vector2(4.315, 4.315)
-scroll_offset = Vector2(0, 23002.996)
-repeat_size = Vector2(800, 597.715)
-autoscroll = Vector2(0.565, 0.36)
-repeat_times = 100
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D/Parallax2D" unique_id=1672400609]
-texture_repeat = 2
-position = Vector2(60.805878, 12.881463)
-scale = Vector2(3.825, 3.825)
-texture = ExtResource("2_ynibb")
-offset = Vector2(0, -5.46)
-
-[node name="Parallax2D2" type="Parallax2D" parent="RigidBody2D" unique_id=1483753767]
-show_behind_parent = true
-scale = Vector2(26.295, 26.295)
-repeat_size = Vector2(1000, 0)
-autoscroll = Vector2(0, 3.765)
-repeat_times = 100
-screen_offset = Vector2(-13.605, 0)
-
-[node name="Sprite2D2" type="Sprite2D" parent="RigidBody2D/Parallax2D2" unique_id=1877826484]
-texture_repeat = 2
-position = Vector2(6.824662, 256.61505)
-scale = Vector2(1.9, 1.9)
-skew = 0.41538838
-texture = ExtResource("3_c65wt")
-
 [node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_lo6iw")]
 position = Vector2(802, 1670)
 
@@ -151,6 +119,38 @@ order = 1
 [node name="finish" parent="." unique_id=868129391 instance=ExtResource("7_4k5i8")]
 position = Vector2(123531, 18675)
 scale = Vector2(16.955, 16.955)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=26951406]
+show_behind_parent = true
+z_index = -2
+scale = Vector2(26.295, 26.410372)
+scroll_scale = Vector2(4.315, 4.315)
+scroll_offset = Vector2(0, 23002.996)
+repeat_size = Vector2(800, 597.715)
+autoscroll = Vector2(0.565, 0.36)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1672400609]
+texture_repeat = 2
+position = Vector2(60.805878, 12.881463)
+scale = Vector2(3.825, 3.825)
+texture = ExtResource("2_ynibb")
+offset = Vector2(0, -5.46)
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1483753767]
+show_behind_parent = true
+scale = Vector2(26.295, 26.295)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(0, 3.765)
+repeat_times = 100
+screen_offset = Vector2(-13.605, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=1877826484]
+texture_repeat = 2
+position = Vector2(6.824662, 256.61505)
+scale = Vector2(1.9, 1.9)
+skew = 0.41538838
+texture = ExtResource("3_c65wt")
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]
