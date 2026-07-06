@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://brf1wcwvp3sk4" path="res://Assets/SFX/freesound_community-land2-43790.mp3" id="2_cxr5p"]
 [ext_resource type="PackedScene" uid="uid://c0blupm2tqys1" path="res://UI/finish_screen.tscn" id="2_j23h2"]
 [ext_resource type="Texture2D" uid="uid://boq8p2pry8y3l" path="res://Assets/Images/1053750-200.png" id="3_kne1u"]
+[ext_resource type="PackedScene" uid="uid://dw4mhn7xl7x7d" path="res://Effects/explosion.tscn" id="3_v0k0e"]
 [ext_resource type="AudioStream" uid="uid://bowm1k6db6dbs" path="res://Assets/SFX/freesound_community-cartoon-jump-6462.mp3" id="4_e80uo"]
 [ext_resource type="AudioStream" uid="uid://clpk2dmxyogt4" path="res://Assets/SFX/140867__juskiddink__boing.wav" id="5_5ncpa"]
 [ext_resource type="AudioStream" uid="uid://cwx7c0xm5b86i" path="res://Assets/SFX/Rolling.wav" id="6_tdg3f"]
@@ -24,6 +25,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Curve" id="Curve_v0k0e"]
+_data = [Vector2(0.011869438, 1), 0.0, 0.0, 0, 0, Vector2(0.29721358, 0.17945552), 0.0, 0.0, 0, 0, Vector2(0.9999999, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
 mass = 0.095
@@ -49,6 +54,18 @@ shape = SubResource("CircleShape2D_xhfnw")
 position = Vector2(-0.9999933, -1.0000086)
 scale = Vector2(0.12988281, 0.12988281)
 sprite_frames = SubResource("SpriteFrames_kpjcp")
+
+[node name="Explosion" parent="Visual" unique_id=1058601225 instance=ExtResource("3_v0k0e")]
+position = Vector2(2.9999998, 1.0000076)
+rotation = -1.6065121
+amount = 60
+lifetime = 2.5599999999999996
+speed_scale = 7.25
+initial_velocity_min = 77.38
+initial_velocity_max = 148.26
+scale_amount_min = 96.84
+scale_amount_max = 215.89
+scale_amount_curve = SubResource("Curve_v0k0e")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=67380603]
 target_position = Vector2(136.26373, 0)

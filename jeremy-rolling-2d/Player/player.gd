@@ -71,6 +71,7 @@ func _apply_push() -> void:
 
 	push_cooldown_timer = push_cooldown
 	$Arrow.modulate.a = arrow_transparency
+	$Visual/Explosion.emitting = true
 
 	$jump.play()
 	
