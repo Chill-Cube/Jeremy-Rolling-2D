@@ -1,6 +1,6 @@
-res://Player/Player.tscn::7bb43231afd0ebce10c79782495013dd::1783403211::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
+res://Player/Player.tscn::b64a6c8c884b133214bfc4d193d020bf::1783419055::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
 res://UI/finish_screen.tscn::9efc4d19c0cdf203efc0159b8dd6ed76::1783403236::res://.godot/exported/133200997/export-8d8e0a733427579659f2467fe5da8d3b-finish_screen.scn
-res://Levels/1-1.tscn::87fc995c8161f06f9fa433eb513802dc::1783400669::res://.godot/exported/133200997/export-f576e42fa10f7e8968063ffe23904d95-1-1.scn
+res://Levels/1-1.tscn::bfae44b796f84f3862e0c375c9c1f238::1783423304::res://.godot/exported/133200997/export-f576e42fa10f7e8968063ffe23904d95-1-1.scn
 res://Levels/1-2.tscn::7d753ea87d907a2234bcb1608f9727cd::1783350456::res://.godot/exported/133200997/export-4a255a92824e885d1b28c7c3f49382a2-1-2.scn
 res://addons/trail_2d/test.tscn::f25c2e2c73ea7b6c75de62b772a3f061::1783328163::res://.godot/exported/133200997/export-126eba02f733ba670d2839b6dd0fe89e-test.scn
 res://Assets/Music/zone_1.tscn::3c1f37d58944ec49c1479b2cba6020ad::1783350593::res://.godot/exported/133200997/export-e8c77d0cbf08b9d94a33a05f2608fbe4-zone_1.scn
@@ -9,7 +9,7 @@ res://Effects/trail.tscn::fca16b714a569407d1d73fdcc76dbc82::1783328405::res://.g
 res://Levels/1-3.tscn::672f2ff5dce899385746f8c9d57331ea::1783401030::res://.godot/exported/133200997/export-01db937501241779294398c2e67f9ca6-1-3.scn
 res://Levels/1-4.tscn::3818e141f3b65c8fff5908f8696d06a2::1783401026::res://.godot/exported/133200997/export-13d86f0e0c0bc6cffc1ad9850223bc5b-1-4.scn
 res://Levels/1-5.tscn::42a3cc8ac4a1b14dba7aeeb1f0e87948::1783350454::res://.godot/exported/133200997/export-2f99ceb8382a4883d7d79a87cb6a7812-1-5.scn
-res://Levels/1-6.tscn::00666314effdf367285d1e86a15791a2::1783355998::res://.godot/exported/133200997/export-dbc7653aa87ccc9282540dfdea59b230-1-6.scn
+res://Levels/1-6.tscn::87230456860818b81de58ce269578328::1783420076::res://.godot/exported/133200997/export-dbc7653aa87ccc9282540dfdea59b230-1-6.scn
 res://level_kit/Gimmicks/bouncer.tscn::16fe92c349c5e4b2ae35ca92cc1d9153::1783305145::res://.godot/exported/133200997/export-091f81ba8b20624a252bcb39c11df9b9-bouncer.scn
 res://level_kit/Platforms/flat_ground.tscn::4450fafb6b5ec86310ab3099a6f37ae8::1783307527::res://.godot/exported/133200997/export-f18b6422ea4eaa5fbc405b2647e94dd7-flat_ground.scn
 res://level_kit/Platforms/ground.tscn::14c8ffcd1d16fcd6f1b26beec956d9dd::1783097511::res://.godot/exported/133200997/export-d4c8af1d7f0e4b1ca264f42c2a110aac-ground.scn
@@ -19,3 +19,5 @@ res://level_kit/lobster_roll.tscn::86e63138ce722d3bfb24cd64ba3e0b5c::1783402624:
 res://Player/PhysicsMaterials/bounce.tres::f893662c1a4cc0810f376faf73f343d5::1783261541::res://.godot/exported/133200997/export-b65d94b2dd86e4c073a940eb2255e26f-bounce.res
 res://Player/PhysicsMaterials/normal.tres::6d1195f6a85dd76a23f246c960a10b71::1783262497::res://.godot/exported/133200997/export-199960c73a9fc8a134090680ffa70e95-normal.res
 res://UI/menu.tscn::33696022e7a5963085bd3d90b06a13a5::1783355640::res://.godot/exported/133200997/export-4bbc89b9befb86f8560106fa1a99abde-menu.scn
+res://Assets/Textures/new_compressed_texture_2d.tres::f3ac4a86913ef1aff266e79a51b9e328::1783416435::res://.godot/exported/133200997/export-c223bbef948bf34d0e3c2bb4f30d130b-new_compressed_texture_2d.res
+res://Levels/cpu_particles_2d.tscn::ee3ec0936ecad93d65d5887654190d82::1783422428::res://.godot/exported/133200997/export-8938253c5e862198a91ee0e56d29b947-cpu_particles_2d.scn

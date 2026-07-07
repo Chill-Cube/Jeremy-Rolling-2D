@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cydd1wuc0roq1"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" unique_id=490536070]
+scale = Vector2(420.56003, 7.2800007)
+amount = 10000
+lifetime = 4.22
+speed_scale = 0.48
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 31.055)
+angular_velocity_min = -106.7
+angular_velocity_max = 616.04
+scale_amount_min = 24.81
+scale_amount_max = 54.57
