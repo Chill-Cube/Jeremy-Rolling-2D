@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="3_l7lmr"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="4_8dwgt"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="5_3cmlg"]
+[ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="6_4hq73"]
+[ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="7_nhjsr"]
+[ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="8_c5kay"]
 
 [node name="13" type="Node2D" unique_id=150014906]
 
@@ -55,13 +58,16 @@ polygon = PackedVector2Array(10888, -2177, 8407, -2221, 6806, -1745, 5408, -966,
 position = Vector2(-32077, 10864)
 
 [node name="Polygon2D" parent="StaticBody2D3" index="0" unique_id=615349608]
+position = Vector2(-681, -18)
 polygon = PackedVector2Array(-485, -36, 187, 734, 8055, 792, 8055, -7)
 
 [node name="Line2D" parent="StaticBody2D3" index="1" unique_id=1715767360]
+position = Vector2(-681, -18)
 points = PackedVector2Array(-485, -36, 187, 734, 8055, 792, 8055, -7, -485, -36)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D3" index="2" unique_id=1552637217]
 visible = false
+position = Vector2(-681, -18)
 polygon = PackedVector2Array(-485, -36, 187, 734, 8055, 792, 8055, -7)
 
 [node name="StaticBody2D4" parent="." unique_id=1458523080 instance=ExtResource("3_l7lmr")]
@@ -128,6 +134,39 @@ repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(0, 3.765)
 repeat_times = 100
 screen_offset = Vector2(-13.605, 0)
+
+[node name="death" parent="." unique_id=1172270365 instance=ExtResource("6_4hq73")]
+position = Vector2(11110, 15445)
+scale = Vector2(541.8102, -39.622776)
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=866409378]
+show_behind_parent = true
+scale = Vector2(26.295, 26.410372)
+scroll_scale = Vector2(4.315, 4.315)
+repeat_size = Vector2(800, 597.715)
+autoscroll = Vector2(0.565, 0.36)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=1858261177]
+texture_repeat = 2
+position = Vector2(219.52403, -290.50522)
+scale = Vector2(3.8354402, 3.8536832)
+texture = ExtResource("7_nhjsr")
+offset = Vector2(0, -5.46)
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=738821783]
+show_behind_parent = true
+scale = Vector2(26.295, 26.295)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(0, 3.765)
+repeat_times = 100
+screen_offset = Vector2(-13.605, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=752478419]
+texture_repeat = 2
+scale = Vector2(1.3199999, 1.32)
+skew = 0.32637656
+texture = ExtResource("8_c5kay")
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

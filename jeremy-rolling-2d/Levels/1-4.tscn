@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="5_vltqg"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="6_in5bo"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="7_3p67q"]
+[ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="8_jqgxd"]
+[ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="9_g3ls4"]
 
 [node name="14" type="Node2D" unique_id=112435437]
 
@@ -66,25 +68,27 @@ position = Vector2(-39829, 1628.9999)
 scale = Vector2(569.3845, 11.998171)
 
 [node name="StaticBody2D13" parent="." unique_id=1174248934 instance=ExtResource("1_7a6no")]
-position = Vector2(775, -3629.9998)
-scale = Vector2(569.3845, 11.998171)
+position = Vector2(568, -3631.0002)
+scale = Vector2(548.94836, 11.998171)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("2_vltqg")]
 position = Vector2(-9, -161)
-gravity_scale = 2.142
-click_push_force = 550.0
-push_cooldown = 1.0
+click_push_force = 600.0
+push_cooldown = 0.7
+
+[node name="Camera2D" parent="RigidBody2D/Node2D" parent_id_path=PackedInt32Array(658010438, 2112882716) index="0" unique_id=976802197]
+zoom = Vector2(0.145, 0.145)
 
 [node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("3_in5bo")]
-position = Vector2(-5090, -273)
+position = Vector2(-4534, -258)
 order = 1
 
 [node name="Area2D2" parent="." unique_id=1949349700 instance=ExtResource("4_3p67q")]
-position = Vector2(-5365, -646)
+position = Vector2(-4852, -632)
 
 [node name="Area2D3" parent="." unique_id=100775937 instance=ExtResource("4_3p67q")]
-position = Vector2(8222, -1122.9996)
-rotation = -2.6235588
+position = Vector2(8363, -1237.0001)
+rotation = -2.607893
 
 [node name="Area2D4" parent="." unique_id=1629273631 instance=ExtResource("3_in5bo")]
 position = Vector2(715, -4098)
@@ -107,13 +111,13 @@ scale = Vector2(127.33307, 51.196297)
 position = Vector2(-26176, 2509)
 
 [node name="Polygon2D" parent="StaticBody2D5" index="0" unique_id=615349608]
-polygon = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570)
+polygon = PackedVector2Array(8519, -367, 8257, 9, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4511, 1458, 5058, 910, 5525, 459, 6354, 8, 7234, -311)
 
 [node name="Line2D" parent="StaticBody2D5" index="1" unique_id=1715767360]
-points = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570, 8442, -966)
+points = PackedVector2Array(8519, -367, 8257, 9, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4511, 1458, 5058, 910, 5525, 459, 6354, 8, 7234, -311, 8519, -367)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
-polygon = PackedVector2Array(8442, -966, 8353, -200, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4418, 1337, 4919, 764, 5304, 334, 6119, -203, 6979, -570)
+polygon = PackedVector2Array(8519, -367, 8257, 9, 8247, 386, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4511, 1458, 5058, 910, 5525, 459, 6354, 8, 7234, -311)
 
 [node name="Area2D5" parent="." unique_id=1791908608 instance=ExtResource("3_in5bo")]
 position = Vector2(-34383, 1204)
@@ -141,5 +145,35 @@ autoscroll = Vector2(0, 3.765)
 repeat_times = 100
 screen_offset = Vector2(-13.605, 0)
 
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=558387318]
+show_behind_parent = true
+scale = Vector2(26.295, 26.410372)
+scroll_scale = Vector2(4.315, 4.315)
+repeat_size = Vector2(800, 597.715)
+autoscroll = Vector2(0.565, 0.36)
+repeat_times = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=1304883238]
+texture_repeat = 2
+position = Vector2(219.52403, -290.50522)
+scale = Vector2(3.8354402, 3.8536832)
+texture = ExtResource("8_jqgxd")
+offset = Vector2(0, -5.46)
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=408588938]
+show_behind_parent = true
+scale = Vector2(26.295, 26.295)
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(0, 3.765)
+repeat_times = 100
+screen_offset = Vector2(-13.605, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D4" unique_id=1795755121]
+texture_repeat = 2
+scale = Vector2(1.3199999, 1.32)
+skew = 0.32637656
+texture = ExtResource("9_g3ls4")
+
 [editable path="StaticBody2D"]
+[editable path="RigidBody2D"]
 [editable path="StaticBody2D5"]

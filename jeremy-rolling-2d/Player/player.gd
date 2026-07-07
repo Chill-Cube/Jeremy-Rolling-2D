@@ -7,6 +7,11 @@ extends RigidBody2D
 @export var push_cooldown := 0.6
 
 @export var arrow_transparency = 0.7
+@export var respawn_time := 0.5
+
+var follow_speed := 0.1
+@export var normal_follow := 0.1
+@export var death_follow := 0.01
 
 var push_cooldown_timer := 0.0
 
@@ -40,7 +45,6 @@ func _process(delta: float) -> void:
 
 	_update_aim()
 	_update_visuals()
-	_sync_visual_root()
 
 
 func is_grounded() -> bool:
@@ -49,7 +53,15 @@ func is_grounded() -> bool:
 		return true
 	return false
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:	
+	var target_pos := global_position - linear_velocity * 0.05
+	follow_speed = death_follow if camera_pause else normal_follow
+
+	$Node2D.global_position = $Node2D.global_position.lerp(
+		target_pos,
+		follow_speed
+	) 
+	
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
 
@@ -69,6 +81,9 @@ func _input(event: InputEvent) -> void:
 		_update_aim()
 		if freeze and not finished_level: freeze = false
 		input_push = true
+	
+	if event.is_action_pressed("menu"):
+		get_tree().change_scene_to_file("res://UI/menu.tscn")
 
 func _apply_push() -> void:
 	if not input_push:
@@ -108,10 +123,9 @@ func _death() -> void:
 
 	freeze = true
 	var tween := get_tree().create_tween()
-	tween.tween_property(self, "global_position", start_position, 0.25)
+	tween.tween_property(self, "global_position", start_position, respawn_time)
 
 	tween.finished.connect(func():
-		await get_tree().create_timer(2.0).timeout
 		camera_pause = false
 	)
 
@@ -139,15 +153,3 @@ func _update_visuals() -> void:
 				$Rolling.play()
 		else:
 			$Rolling.stop()
-
-func _sync_visual_root() -> void:
-	var target_pos := global_position - linear_velocity * 0.05
-	var follow_speed := 0.1
-
-	if camera_pause:
-		follow_speed = 0.02
-
-	$Node2D.global_position = $Node2D.global_position.lerp(
-		target_pos,
-		follow_speed
-	)

@@ -51,6 +51,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 mass = 0.095
 physics_material_override = ExtResource("1_0j2ni")
 gravity_scale = 3.188
+lock_rotation = true
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
@@ -98,6 +99,7 @@ stream = ExtResource("4_e80uo")
 stream = ExtResource("5_5ncpa")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
+top_level = true
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=976802197]
 position = Vector2(0, -1)

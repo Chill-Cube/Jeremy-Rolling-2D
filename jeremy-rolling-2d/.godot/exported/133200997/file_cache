@@ -6,10 +6,10 @@ res://addons/trail_2d/test.tscn::f25c2e2c73ea7b6c75de62b772a3f061::1783328163::r
 res://Assets/Music/zone_1.tscn::3c1f37d58944ec49c1479b2cba6020ad::1783350593::res://.godot/exported/133200997/export-e8c77d0cbf08b9d94a33a05f2608fbe4-zone_1.scn
 res://Effects/explosion.tscn::89a1a4e15763d541814275e532fe69d0::1783325217::res://.godot/exported/133200997/export-40585d20f6923bf9947889883f3f2710-explosion.scn
 res://Effects/trail.tscn::fca16b714a569407d1d73fdcc76dbc82::1783328405::res://.godot/exported/133200997/export-8f7c90ab1fb3d3d6997759db9247016f-trail.scn
-res://Levels/1-3.tscn::3c596b82b4f6680007839e22494a87c2::1783354230::res://.godot/exported/133200997/export-01db937501241779294398c2e67f9ca6-1-3.scn
-res://Levels/1-4.tscn::d69cf2b83727ced2c0f3b8e506c46776::1783354240::res://.godot/exported/133200997/export-13d86f0e0c0bc6cffc1ad9850223bc5b-1-4.scn
+res://Levels/1-3.tscn::055525be3f3f9fb46be7305b5bfda9c2::1783356070::res://.godot/exported/133200997/export-01db937501241779294398c2e67f9ca6-1-3.scn
+res://Levels/1-4.tscn::3f20c209df88f46bcf236dba75060e32::1783356064::res://.godot/exported/133200997/export-13d86f0e0c0bc6cffc1ad9850223bc5b-1-4.scn
 res://Levels/1-5.tscn::42a3cc8ac4a1b14dba7aeeb1f0e87948::1783350454::res://.godot/exported/133200997/export-2f99ceb8382a4883d7d79a87cb6a7812-1-5.scn
-res://Levels/1-6.tscn::00666314effdf367285d1e86a15791a2::1783355733::res://.godot/exported/133200997/export-dbc7653aa87ccc9282540dfdea59b230-1-6.scn
+res://Levels/1-6.tscn::00666314effdf367285d1e86a15791a2::1783355998::res://.godot/exported/133200997/export-dbc7653aa87ccc9282540dfdea59b230-1-6.scn
 res://level_kit/Gimmicks/bouncer.tscn::16fe92c349c5e4b2ae35ca92cc1d9153::1783305145::res://.godot/exported/133200997/export-091f81ba8b20624a252bcb39c11df9b9-bouncer.scn
 res://level_kit/Platforms/flat_ground.tscn::4450fafb6b5ec86310ab3099a6f37ae8::1783307527::res://.godot/exported/133200997/export-f18b6422ea4eaa5fbc405b2647e94dd7-flat_ground.scn
 res://level_kit/Platforms/ground.tscn::14c8ffcd1d16fcd6f1b26beec956d9dd::1783097511::res://.godot/exported/133200997/export-d4c8af1d7f0e4b1ca264f42c2a110aac-ground.scn
