@@ -138,7 +138,7 @@ func _finish():
 func _update_visuals() -> void:
 	var airborne := get_contact_count() == 0
 
-	$Visual.rotation += linear_velocity.x / 50000.0
+	$Visual.rotation += linear_velocity.x / 20000.0
 
 	if airborne and linear_velocity.length():
 		$Rolling.stop()

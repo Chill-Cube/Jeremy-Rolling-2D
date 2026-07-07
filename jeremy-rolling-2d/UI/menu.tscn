@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dp0lgsqsc5uj8"]
 
 [ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
-[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="1_wfiwe"]
 [ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/level_teleport.gd" id="2_kfjwn"]
+[ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="4_qmqfe"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="5_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="6_dte3n"]
@@ -61,24 +61,25 @@ scale = Vector2(0.20220451, 0.20220451)
 
 [node name="Lobster" type="GridContainer" parent="Control/GridContainer/Template" unique_id=1265826213]
 layout_mode = 0
+offset_left = -3.0
 offset_top = -6.0
-offset_right = 96.0
+offset_right = 98.0
 offset_bottom = 129.0
 
 [node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=983988865]
 position = Vector2(19.500002, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=385711263]
 position = Vector2(54, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=854980464]
 position = Vector2(88, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=883742794]
 z_index = -3
@@ -110,13 +111,12 @@ texture = ExtResource("4_qmqfe")
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1996354721]
 z_index = 3
 scale = Vector2(1.31, 1.31)
-scroll_offset = Vector2(-233, 203.00002)
+scroll_offset = Vector2(-233, 203)
 repeat_size = Vector2(456.675, 0)
 autoscroll = Vector2(2.9, 0)
 repeat_times = 14
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=859477226]
-modulate = Color(1, 1, 1, 0.53333336)
 texture_repeat = 2
 position = Vector2(6.805, 251.125)
 scale = Vector2(0.22, 0.22)

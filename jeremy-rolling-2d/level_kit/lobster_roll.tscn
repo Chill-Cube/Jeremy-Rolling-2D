@@ -2,19 +2,19 @@
 
 [ext_resource type="Script" uid="uid://chiuotlrxatr4" path="res://Assets/Scripts/lobster_roll.gd" id="1_ihe44"]
 [ext_resource type="AudioStream" uid="uid://c6v30ytmfrvq3" path="res://Assets/SFX/353067__jofae__bite-cartoon-style.mp3" id="2_0ypq3"]
-[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="2_6tvut"]
 [ext_resource type="PackedScene" uid="uid://dw4mhn7xl7x7d" path="res://Effects/explosion.tscn" id="2_pn5yd"]
 [ext_resource type="Texture2D" uid="uid://bfci2u6e21gph" path="res://Assets/Images/Untidfgdfgled.png" id="3_l704s"]
 [ext_resource type="AudioStream" uid="uid://daxdutn4lnq1l" path="res://Assets/SFX/517147__olliebacon__bite.wav" id="3_rbrea"]
 [ext_resource type="AudioStream" uid="uid://y8h4ljm344b5" path="res://Assets/SFX/lobster_get.wav" id="3_s4u4s"]
 [ext_resource type="AudioStream" uid="uid://xg88i1arkb1i" path="res://Assets/SFX/608645__theplax__crunch-5.wav" id="4_fdh3c"]
+[ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="7_rbrea"]
 [ext_resource type="AudioStream" uid="uid://vv6bsp5nkgp5" path="res://Assets/SFX/Cartoon Chomp Sound Effect - be professional.wav" id="9_rbrea"]
 
 [sub_resource type="Gradient" id="Gradient_mf4it"]
 colors = PackedColorArray(0.41598046, 0.41598043, 0.4159804, 1, 1, 1, 1, 0.7647059)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q2n6k"]
-radius = 141.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdh3c"]
+size = Vector2(249.30553, 166.66664)
 
 [node name="Area2D" type="Area2D" unique_id=1547374501]
 scale = Vector2(1.44, 1.44)
@@ -50,14 +50,15 @@ color = Color(0.553446, 0.196675, 0.09405204, 1)
 color_ramp = SubResource("Gradient_mf4it")
 
 [node name="BarHarborRevised" type="Sprite2D" parent="." unique_id=682169842]
-position = Vector2(-3.8146973e-06, 0)
-scale = Vector2(0.68, 0.68)
-texture = ExtResource("2_6tvut")
+position = Vector2(7.6293945e-06, 3.8146973e-06)
+scale = Vector2(0.120915405, 0.120915405)
+texture = ExtResource("7_rbrea")
 offset = Vector2(60.685, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2081854112]
-position = Vector2(-5, 0)
-shape = SubResource("CircleShape2D_q2n6k")
+position = Vector2(7.291667, -3.472224)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_fdh3c")
 
 [node name="LobsterGet" type="AudioStreamPlayer" parent="." unique_id=868096822]
 stream = ExtResource("3_s4u4s")

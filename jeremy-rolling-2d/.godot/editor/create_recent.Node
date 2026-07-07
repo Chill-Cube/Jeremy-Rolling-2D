@@ -1,5 +1,5 @@
-Parallax2D
 Polygon2D
+Parallax2D
 CPUParticles2D
 Node2D
 TextureRect
@@ -12,4 +12,3 @@ Container
 Panel
 CanvasLayer
 MeshInstance2D
-CollisionShape2D
