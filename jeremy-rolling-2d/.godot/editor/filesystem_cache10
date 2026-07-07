@@ -1,6 +1,6 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1783401172
-export_presets.cfg::TextFile::-1::1783356180::0::1::::<><><>0<>0<><>::
+::res://::1783404319
+export_presets.cfg::TextFile::-1::1783404319::0::1::::<><><>0<>0<><>::
 level_list.gd::GDScript::9123797199151055371::1783355594::0::1::::LevelList<>RefCounted<><>0<>0<><>::
 ::res://addons/::1783328163
 ::res://addons/trail_2d/::1783328163
@@ -9,7 +9,7 @@ plugin.cfg::TextFile::-1::1783328163::0::1::::<><><>0<>0<><>::
 test.tscn::PackedScene::3600885721114100154::1783328163::0::1::::<><><>0<>0<><>::res://addons/trail_2d/trail_2d.gd
 trail_2d.gd::GDScript::8946793087926592289::1783328163::0::1::::<>Line2D<><>0<>0<><>::
 trail_2d_plugin.gd::GDScript::3829332889948083667::1783328163::0::1::::<>EditorPlugin<><>0<>1<><>::
-::res://Assets/::1783350593
+::res://Assets/::1783416261
 scroll.gd::GDScript::6104603086955708402::1783259074::0::1::::<>Sprite2D<><>0<>0<><>::
 ::res://Assets/Images/::1783332689
 1053750-200.png::CompressedTexture2D::3404126428468697739::1783097245::1783097492::1::::<><><>0<>0<>f8dacb5919065f74d81567c96815ac0d<>res://.godot/imported/1053750-200.png-4925ee07e74f249c4c666a6a315f4287.ctex::
@@ -33,13 +33,13 @@ layer2.mp3::AudioStreamMP3::2709021831599456660::1783350593::1783350609::1::::<>
 layer3.mp3::AudioStreamMP3::926002489783187405::1783350593::1783350609::1::::<><><>0<>0<>dced17b912ae32216a418cb06bbd862f<>res://.godot/imported/layer3.mp3-b0d39179257f32acfecc9a6b398f3640.mp3str::
 zone_1.tscn::PackedScene::8741581698285101025::1783350593::0::1::::<><><>0<>0<><>::uid://u4c7s7d7fcj7::::res://Assets/Music/ZONE_1.wav
 ZONE_1.wav::AudioStreamWAV::1463823402052182882::1783350593::1783401304::1::::<><><>0<>0<>d2db904702f353e455f0cad07abae9c3<>res://.godot/imported/ZONE_1.wav-c3d9b1b728b3693ca2f0a31a877d831e.sample::
-::res://Assets/Scripts/::1783402524
+::res://Assets/Scripts/::1783417005
 arrow.gd::GDScript::5968362156280420464::1783097245::0::1::::<>Sprite2D<><>0<>0<><>::
 death.gd::GDScript::3276629996420051010::1783168827::0::1::::<>Area2D<><>0<>0<><>::
 finish.gd::GDScript::4667111679332066199::1783168860::0::1::::<>Area2D<><>0<>0<><>::
-lobster_roll.gd::GDScript::5281918651594566651::1783402524::0::1::::LobsterRoll<>Area2D<><>0<>0<><>::
-static_body_2d.gd::GDScript::2398442060967894363::1783257300::0::1::::<>StaticBody2D<><>0<>1<><>::
-::res://Assets/SFX/::1783402470
+lobster_roll.gd::GDScript::5281918651594566651::1783402624::0::1::::LobsterRoll<>Area2D<><>0<>0<><>::
+static_body_2d.gd::GDScript::2398442060967894363::1783417005::0::1::::<>StaticBody2D<><>0<>1<><>::
+::res://Assets/SFX/::1783402590
 140867__juskiddink__boing.wav::AudioStreamWAV::5576539877263899915::1783097245::1783097476::1::::<><><>0<>0<>95581457ce8087c2a60e109f6ac94fe5<>res://.godot/imported/140867__juskiddink__boing.wav-f6775371652f565d279f9f66ac8e7086.sample::
 353067__jofae__bite-cartoon-style.mp3::AudioStreamMP3::6993793464109831848::1783401161::1783401172::1::::<><><>0<>0<>2269c25b5b5bd24cfc65a12b4c57d37f<>res://.godot/imported/353067__jofae__bite-cartoon-style.mp3-8b271a89e84d4007d345f515daeca9fa.mp3str::
 517147__olliebacon__bite.wav::AudioStreamWAV::7206961625638042807::1783401161::1783401172::1::::<><><>0<>0<>bb485904c4a6a1f6e947a8aae8e92a34<>res://.godot/imported/517147__olliebacon__bite.wav-76c847c1f0ed8a2fef871673ae2a25ba.sample::
@@ -50,11 +50,18 @@ freesound_community-cartoon-jump-6462.mp3::AudioStreamMP3::3415256413030897256::
 freesound_community-land2-43790.mp3::AudioStreamMP3::3591570983595494313::1783097245::1783097476::1::::<><><>0<>0<>fef658680545f91fde66f9c45535cdf1<>res://.godot/imported/freesound_community-land2-43790.mp3-7696aa0e999afe6001319b7c2dec9a6b.mp3str::
 lobster_get.wav::AudioStreamWAV::1753134112413264284::1783402588::1783402590::1::::<><><>0<>0<>7cb08052654e343c3fb4b8a101882eac<>res://.godot/imported/lobster_get.wav-0b2b7242da45e47bb63f507562fa6131.sample::
 Rolling.wav::AudioStreamWAV::6366424480322274898::1783097245::1783097476::1::::<><><>0<>0<>55ce626ce988ebbfaea49d7286287db2<>res://.godot/imported/Rolling.wav-9d1d014ebc9b5b636190d4e32521470c.sample::
+::res://Assets/Textures/::1783418684
+IMG_2813.png::CompressedTexture2D::649156144663133053::1783418684::1783418686::1::::<><><>0<>0<>4d1a9168f70f50b78df1c7b90e2cbcc7<>res://.godot/imported/IMG_2813.png-70b1dac50c0a30f8ea3121b3d903ec43.ctex::
+new_compressed_texture_2d.tres::CompressedTexture2D::6025088662944891358::1783416435::0::1::::<><><>0<>0<><>::
+Untitled_Artwork 2.png::CompressedTexture2D::1975139770396336708::1783416307::1783416308::1::::<><><>0<>0<>6f1eb7750b01ef2b50f69e678e4e5e65<>res://.godot/imported/Untitled_Artwork 2.png-0179955580fa9fcc3ba160e16b6ab9b6.ctex::
+Untitled_Artwork 3.png::CompressedTexture2D::2685860008144027877::1783417106::1783417107::1::::<><><>0<>0<>087412ba3cc5ab625985bb9c07a4c45f<>res://.godot/imported/Untitled_Artwork 3.png-1d95f8f0686f40bf420f56b436404fab.ctex::
+Untitled_Artwork 4.png::CompressedTexture2D::6925863085636952714::1783417789::1783417789::1::::<><><>0<>0<>bfc768fbeaba25d5e52188438d8c1e8d<>res://.godot/imported/Untitled_Artwork 4.png-5f7731047b7856f974eba22de4bc3571.ctex::
+Untitled_Artwork 5.png::CompressedTexture2D::7549789096419350567::1783418368::1783418370::1::::<><><>0<>0<>aa9803f526c2bc26f37d8be610b487f6<>res://.godot/imported/Untitled_Artwork 5.png-c643215d7e9a096df7082cf435a9d1f5.ctex::
 ::res://Effects/::1783328405
 explosion.tscn::PackedScene::8764025403752573999::1783325217::0::1::::<><><>0<>0<><>::
 trail.tscn::PackedScene::7410824704642680949::1783328405::0::1::::<><><>0<>0<><>::
-::res://Levels/::1783401030
-1-1.tscn::PackedScene::208171174095359365::1783400669::0::1::::<><><>0<>0<><>::uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn
+::res://Levels/::1783418321
+1-1.tscn::PackedScene::208171174095359365::1783418321::0::1::::<><><>0<>0<><>::uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn<>uid://dftf6nor8oalr::::res://Assets/Textures/Untitled_Artwork 5.png
 1-2.tscn::PackedScene::5731858299675222772::1783350456::0::1::::<><><>0<>0<><>::uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn<>uid://d3l45f0u0mj8c::::res://level_kit/Gimmicks/bouncer.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn
 1-3.tscn::PackedScene::7475170884257700220::1783401030::0::1::::<><><>0<>0<><>::uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://d3l45f0u0mj8c::::res://level_kit/Gimmicks/bouncer.tscn<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png
 1-4.tscn::PackedScene::6973114015838104732::1783401026::0::1::::<><><>0<>0<><>::uid://da0yowdtaf55m::::res://level_kit/Platforms/flat_ground.tscn<>uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn<>uid://d3l45f0u0mj8c::::res://level_kit/Gimmicks/bouncer.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn<>uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png
@@ -62,10 +69,10 @@ trail.tscn::PackedScene::7410824704642680949::1783328405::0::1::::<><><>0<>0<><>
 1-6.tscn::PackedScene::483891775714319416::1783355998::0::1::::<><><>0<>0<><>::uid://ddhgb6e33v5h3::::res://Player/Player.tscn<>uid://j7tqwhs4lf7o::::res://level_kit/Platforms/ground.tscn<>uid://dlogqqyrkfsxy::::res://Assets/Images/HKPFVHRXsAARYYn.png<>uid://b1wogehkbjv43::::res://Assets/Images/Untdfgrtyrtdfgitled.png<>uid://d3l45f0u0mj8c::::res://level_kit/Gimmicks/bouncer.tscn<>uid://btqjbow82dx6g::::res://level_kit/death.tscn<>uid://b4hlr78grhtco::::res://level_kit/lobster_roll.tscn<>uid://da0yowdtaf55m::::res://level_kit/Platforms/flat_ground.tscn<>uid://bgvc0sqn2e4h8::::res://level_kit/finish.tscn
 generate_level_list.gd::GDScript::4928546281526182697::1783355708::0::1::::<>EditorScript<><>0<>1<><>::
 level_data.gd::GDScript::8858350234025180957::1783247376::0::1::::LevelData<>Resource<><>0<>0<><>::
-::res://level_kit/::1783402524
+::res://level_kit/::1783402624
 death.tscn::PackedScene::3753587766457670632::1783168421::0::1::::<><><>0<>0<><>::uid://bmxhu8vee5im1::::res://Assets/Scripts/death.gd
 finish.tscn::PackedScene::2851072727953811827::1783259074::0::1::::<><><>0<>0<><>::uid://b7q1waq0t0gol::::res://Assets/Scripts/finish.gd<>uid://dxqv5470oj075::::res://Assets/Images/Frame 1 (1).png<>uid://cs8d6ku7valo1::::res://Assets/scroll.gd
-lobster_roll.tscn::PackedScene::4437047770912650726::1783402524::0::1::::<><><>0<>0<><>::uid://chiuotlrxatr4::::res://Assets/Scripts/lobster_roll.gd<>uid://c6v30ytmfrvq3::::res://Assets/SFX/353067__jofae__bite-cartoon-style.mp3<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp<>uid://dw4mhn7xl7x7d::::res://Effects/explosion.tscn<>uid://bfci2u6e21gph::::res://Assets/Images/Untidfgdfgled.png<>uid://daxdutn4lnq1l::::res://Assets/SFX/517147__olliebacon__bite.wav<>uid://y8h4ljm344b5::::res://Assets/SFX/lobster_get.wav<>uid://xg88i1arkb1i::::res://Assets/SFX/608645__theplax__crunch-5.wav<>uid://vv6bsp5nkgp5::::res://Assets/SFX/Cartoon Chomp Sound Effect - be professional.wav
+lobster_roll.tscn::PackedScene::4437047770912650726::1783402624::0::1::::<><><>0<>0<><>::uid://chiuotlrxatr4::::res://Assets/Scripts/lobster_roll.gd<>uid://c6v30ytmfrvq3::::res://Assets/SFX/353067__jofae__bite-cartoon-style.mp3<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp<>uid://dw4mhn7xl7x7d::::res://Effects/explosion.tscn<>uid://bfci2u6e21gph::::res://Assets/Images/Untidfgdfgled.png<>uid://daxdutn4lnq1l::::res://Assets/SFX/517147__olliebacon__bite.wav<>uid://y8h4ljm344b5::::res://Assets/SFX/lobster_get.wav<>uid://xg88i1arkb1i::::res://Assets/SFX/608645__theplax__crunch-5.wav<>uid://vv6bsp5nkgp5::::res://Assets/SFX/Cartoon Chomp Sound Effect - be professional.wav
 ::res://level_kit/Gimmicks/::1783305145
 bouncer.tscn::PackedScene::9149072497025702968::1783305145::0::1::::<><><>0<>0<><>::uid://dri781ftvwn0f::::res://level_kit/Gimmicks/Scripts/bouncer.gd<>uid://cop7dbgdlb3j1::::res://Assets/Images/Untffgditled.png<>uid://ci3quff5blgi6::::res://Assets/Images/Untffgditled - Copy.png
 ::res://level_kit/Gimmicks/Assets/::1783097441
@@ -74,16 +81,16 @@ bouncer.gd::GDScript::8370990664149062827::1783263543::0::1::::<>Area2D<><>0<>0<
 ::res://level_kit/Platforms/::1783307527
 flat_ground.tscn::PackedScene::7212354864883482952::1783307527::0::1::::<><><>0<>0<><>::
 ground.tscn::PackedScene::698943043621610122::1783097511::0::1::::<><><>0<>0<><>::uid://baf28w23d8pt8::::res://Assets/Scripts/static_body_2d.gd
-::res://Player/::1783400946
+::res://Player/::1783403211
 player.gd::GDScript::7778807206394730071::1783400946::0::1::::Player<>RigidBody2D<><>0<>0<><>::
-Player.tscn::PackedScene::7384646949735864170::1783400897::0::1::::<><><>0<>0<><>::uid://b1eisw352x7g0::::res://Player/PhysicsMaterials/normal.tres<>uid://di3d223gtt5rv::::res://Player/player.gd<>uid://b84xpr6p7tsg8::::res://Assets/Images/Untitled.png<>uid://brf1wcwvp3sk4::::res://Assets/SFX/freesound_community-land2-43790.mp3<>uid://c0blupm2tqys1::::res://UI/finish_screen.tscn<>uid://boq8p2pry8y3l::::res://Assets/Images/1053750-200.png<>uid://dw4mhn7xl7x7d::::res://Effects/explosion.tscn<>uid://bowm1k6db6dbs::::res://Assets/SFX/freesound_community-cartoon-jump-6462.mp3<>uid://clpk2dmxyogt4::::res://Assets/SFX/140867__juskiddink__boing.wav<>uid://cwx7c0xm5b86i::::res://Assets/SFX/Rolling.wav<>uid://j2iv7f6k7gcl::::res://Assets/SFX/651545__nsstudios__wind-draft-loop-3.wav<>uid://ddt4g2myhow3f::::res://Effects/trail.tscn<>uid://bfci2u6e21gph::::res://Assets/Images/Untidfgdfgled.png<>uid://d0p5m0ruqfnd6::::res://addons/trail_2d/trail_2d.gd
+Player.tscn::PackedScene::7384646949735864170::1783403211::0::1::::<><><>0<>0<><>::uid://b1eisw352x7g0::::res://Player/PhysicsMaterials/normal.tres<>uid://di3d223gtt5rv::::res://Player/player.gd<>uid://b84xpr6p7tsg8::::res://Assets/Images/Untitled.png<>uid://brf1wcwvp3sk4::::res://Assets/SFX/freesound_community-land2-43790.mp3<>uid://c0blupm2tqys1::::res://UI/finish_screen.tscn<>uid://boq8p2pry8y3l::::res://Assets/Images/1053750-200.png<>uid://dw4mhn7xl7x7d::::res://Effects/explosion.tscn<>uid://bowm1k6db6dbs::::res://Assets/SFX/freesound_community-cartoon-jump-6462.mp3<>uid://clpk2dmxyogt4::::res://Assets/SFX/140867__juskiddink__boing.wav<>uid://cwx7c0xm5b86i::::res://Assets/SFX/Rolling.wav<>uid://j2iv7f6k7gcl::::res://Assets/SFX/651545__nsstudios__wind-draft-loop-3.wav<>uid://ddt4g2myhow3f::::res://Effects/trail.tscn<>uid://bfci2u6e21gph::::res://Assets/Images/Untidfgdfgled.png<>uid://d0p5m0ruqfnd6::::res://addons/trail_2d/trail_2d.gd
 player_data.gd::GDScript::2922217491657085502::1783247376::0::1::::PlayerData<>Resource<><>0<>0<><>::
 save_manager.gd::GDScript::7051552953713430547::1783247376::0::1::::<>Node<><>0<>0<><>::
 ::res://Player/PhysicsMaterials/::1783262497
 bounce.tres::PhysicsMaterial::2582198982137366489::1783261541::0::1::::<><><>0<>0<><>::
 normal.tres::PhysicsMaterial::4220107209698913805::1783262497::0::1::::<><><>0<>0<><>::
-::res://UI/::1783355640
-finish_screen.tscn::PackedScene::6530331246530309742::1783314365::0::1::::<><><>0<>0<><>::uid://dg17lts3q64pt::::res://UI/Scripts/finish_screen.gd<>uid://docc33ruml1ol::::res://UI/Audio/626950__maikkihapsis__tadaa.wav<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp
+::res://UI/::1783403236
+finish_screen.tscn::PackedScene::6530331246530309742::1783403236::0::1::::<><><>0<>0<><>::uid://dg17lts3q64pt::::res://UI/Scripts/finish_screen.gd<>uid://docc33ruml1ol::::res://UI/Audio/626950__maikkihapsis__tadaa.wav<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp
 level_teleport.gd::GDScript::4786187859674817992::1783314365::0::1::::<>Button<><>0<>0<><>::
 menu.tscn::PackedScene::8264383722144029939::1783355640::0::1::::<><><>0<>0<><>::uid://bjv5cwqjxeh45::::res://UI/Scripts/level_select.gd<>uid://boisut54aceer::::res://Assets/Images/bar-harbor-revised.webp<>res://UI/level_teleport.gd<>uid://bdmejy08y3b1p::::res://Assets/Images/Untdfgdfgitled.png
 untitled.gd::GDScript::6284520487205459805::1783314365::0::1::::<>Sprite2D<><>0<>0<><>::
