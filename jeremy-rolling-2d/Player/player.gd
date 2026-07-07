@@ -10,7 +10,7 @@ extends RigidBody2D
 @export var respawn_time := 0.5
 
 var follow_speed := 0.1
-@export var normal_follow := 0.1
+@export var normal_follow := 0.05
 @export var death_follow := 0.01
 
 var push_cooldown_timer := 0.0

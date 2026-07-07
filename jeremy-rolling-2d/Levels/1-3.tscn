@@ -153,6 +153,7 @@ position = Vector2(219.52403, -290.50522)
 scale = Vector2(3.8354402, 3.8536832)
 texture = ExtResource("7_nhjsr")
 offset = Vector2(0, -5.46)
+metadata/_edit_lock_ = true
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=738821783]
 show_behind_parent = true
