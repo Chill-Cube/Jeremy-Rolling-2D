@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
-[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="3_72onr"]
+[ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_72onr"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=487590026]
+[node name="finish_screen" type="CanvasLayer" unique_id=487590026]
 script = ExtResource("1_beg00")
 
 [node name="Panel" type="Panel" parent="." unique_id=126799448]
@@ -20,9 +20,9 @@ grow_vertical = 2
 
 [node name="YouDidIt" type="Label" parent="Panel" unique_id=1548698008]
 layout_mode = 0
-offset_left = 142.30226
+offset_left = 152.00002
 offset_top = 43.0
-offset_right = 596.30225
+offset_right = 606.0
 offset_bottom = 173.0
 theme_override_font_sizes/font_size = 95
 text = "Finish!!!!!!!"
@@ -31,22 +31,24 @@ vertical_alignment = 1
 
 [node name="Time" type="Label" parent="Panel" unique_id=1751067517]
 layout_mode = 0
-offset_left = 154.30226
+offset_left = 147.00002
 offset_top = 163.0
-offset_right = 608.30225
+offset_right = 601.0
 offset_bottom = 214.0
 theme_override_font_sizes/font_size = 37
 text = "Time: time"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BestTime" type="Label" parent="Panel" unique_id=134304391]
 layout_mode = 0
-offset_left = 154.30226
+offset_left = 147.00002
 offset_top = 211.0
-offset_right = 608.30225
+offset_right = 601.0
 offset_bottom = 262.0
 theme_override_font_sizes/font_size = 37
 text = "Best Time: time"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Retry" type="Button" parent="Panel" unique_id=517851245]
@@ -78,19 +80,19 @@ stream = ExtResource("2_72onr")
 
 [node name="Lobsters" type="Node2D" parent="Panel" unique_id=1232955957]
 
-[node name="BarHarborRevised" type="Sprite2D" parent="Panel/Lobsters" unique_id=895104947]
-position = Vector2(192, 360.54755)
-scale = Vector2(0.4210329, 0.42065078)
+[node name="BarHarborRevised1" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
+position = Vector2(379.57208, 360.99997)
+scale = Vector2(0.08943763, 0.08935646)
 texture = ExtResource("3_72onr")
 
-[node name="BarHarborRevised2" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
-position = Vector2(389, 358.54755)
-scale = Vector2(0.42103302, 0.4206509)
+[node name="BarHarborRevised2" type="Sprite2D" parent="Panel/Lobsters" unique_id=220461462]
+position = Vector2(154.5721, 362.99997)
+scale = Vector2(0.08943763, 0.08935646)
 texture = ExtResource("3_72onr")
 
-[node name="BarHarborRevised3" type="Sprite2D" parent="Panel/Lobsters" unique_id=993707944]
-position = Vector2(593, 358.54752)
-scale = Vector2(0.42103547, 0.42065334)
+[node name="BarHarborRevised3" type="Sprite2D" parent="Panel/Lobsters" unique_id=264422850]
+position = Vector2(605.5721, 361)
+scale = Vector2(0.08943763, 0.08935646)
 texture = ExtResource("3_72onr")
 
 [connection signal="pressed" from="Panel/Retry" to="." method="_on_retry_pressed"]

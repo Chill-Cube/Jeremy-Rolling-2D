@@ -1,5 +1,9 @@
-Trail2D
+Polygon2D
+Parallax2D
 CPUParticles2D
+Node2D
+TextureRect
+Trail2D
 GridContainer
 Label
 Button
@@ -8,8 +12,3 @@ Container
 Panel
 CanvasLayer
 MeshInstance2D
-CollisionShape2D
-StaticBody2D
-RayCast2D
-Area2D
-Sprite2D

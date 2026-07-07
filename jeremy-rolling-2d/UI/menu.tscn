@@ -1,22 +1,34 @@
 [gd_scene format=3 uid="uid://dp0lgsqsc5uj8"]
 
 [ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
-[ext_resource type="Texture2D" uid="uid://boisut54aceer" path="res://Assets/Images/bar-harbor-revised.webp" id="1_wfiwe"]
-[ext_resource type="Script" path="res://UI/level_teleport.gd" id="2_kfjwn"]
-[ext_resource type="Texture2D" uid="uid://bdmejy08y3b1p" path="res://Assets/Images/Untdfgdfgitled.png" id="4_qmqfe"]
+[ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/level_teleport.gd" id="2_kfjwn"]
+[ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_kfjwn"]
+[ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="4_qmqfe"]
+[ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="5_kfjwn"]
+[ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="6_dte3n"]
+
+[sub_resource type="Gradient" id="Gradient_536hm"]
+offsets = PackedFloat32Array(0, 0.6744186, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49863547, 0.5829519, 0.9366737, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e05sn"]
+gradient = SubResource("Gradient_536hm")
 
 [node name="CanvasLayer2" type="CanvasLayer" unique_id=1086129096]
 
 [node name="Control" type="Control" parent="." unique_id=1636746392]
+z_index = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 34.0
+offset_left = 26.0
 offset_top = 133.0
-offset_right = -28.0
+offset_right = -36.0
 offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_e05sn")
 
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=1860454881]
@@ -37,6 +49,7 @@ columns = 5
 
 [node name="Template" type="Button" parent="Control/GridContainer" unique_id=2003414951]
 visible = false
+z_index = 2
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
@@ -48,29 +61,91 @@ scale = Vector2(0.20220451, 0.20220451)
 
 [node name="Lobster" type="GridContainer" parent="Control/GridContainer/Template" unique_id=1265826213]
 layout_mode = 0
+offset_left = -3.0
 offset_top = -6.0
-offset_right = 96.0
+offset_right = 98.0
 offset_bottom = 129.0
 
 [node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=983988865]
 position = Vector2(19.500002, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=385711263]
 position = Vector2(54, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=854980464]
 position = Vector2(88, 121.30914)
-scale = Vector2(0.069158874, 0.07380465)
-texture = ExtResource("1_wfiwe")
+scale = Vector2(0.013, 0.014)
+texture = ExtResource("3_kfjwn")
 
-[node name="Untdfgdfgitled" type="Sprite2D" parent="." unique_id=1552844759]
-z_index = -2
-position = Vector2(593, 379)
-scale = Vector2(1.905, 1.905)
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=883742794]
+z_index = -3
+layout_mode = 0
+offset_left = 1148.0
+offset_top = -160.00002
+offset_right = 7351.38
+offset_bottom = 6209.92
+rotation = 1.5707964
+scale = Vector2(0.116, 0.188)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_e05sn")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1788709645]
+z_index = -1
+scroll_offset = Vector2(4, -35)
+repeat_size = Vector2(456.675, 0)
+autoscroll = Vector2(2.9, 0)
+repeat_times = 14
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" unique_id=1332045298]
+modulate = Color(1, 1, 1, 0.53333336)
+texture_repeat = 2
+position = Vector2(9.674995, 282)
+scale = Vector2(0.22, 0.22)
+skew = 0.41538838
 texture = ExtResource("4_qmqfe")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1996354721]
+z_index = 3
+scale = Vector2(1.31, 1.31)
+scroll_offset = Vector2(-233, 203)
+repeat_size = Vector2(456.675, 0)
+autoscroll = Vector2(2.9, 0)
+repeat_times = 14
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=859477226]
+texture_repeat = 2
+position = Vector2(6.805, 251.125)
+scale = Vector2(0.22, 0.22)
+skew = 0.41538838
+texture = ExtResource("4_qmqfe")
+
+[node name="CPUParticles2D" parent="." unique_id=490536070 instance=ExtResource("5_kfjwn")]
+z_index = -1
+position = Vector2(551, -50.999996)
+rotation = -0.0065419674
+scale = Vector2(48.78496, 1.3686401)
+lifetime = 172.89
+speed_scale = 0.1
+emission_rect_extents = Vector2(10, 34.775)
+scale_amount_min = 0.0
+scale_amount_max = 13.21
+
+[node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=1417480819]
+modulate = Color(0.76474124, 0.7554347, 0.8028953, 1)
+z_index = -1
+position = Vector2(338, 332.00003)
+scale = Vector2(0.36094573, 0.36094573)
+texture = ExtResource("6_dte3n")
+
+[node name="UntitledArfgftwork3" type="Sprite2D" parent="." unique_id=1609539368]
+modulate = Color(0.9207, 0.94495505, 0.99, 1)
+z_index = -1
+position = Vector2(821, 433)
+scale = Vector2(-0.409, 0.276)
+texture = ExtResource("6_dte3n")
 
 [connection signal="pressed" from="Control/GridContainer/Template" to="Control/GridContainer/Template" method="_on_pressed"]

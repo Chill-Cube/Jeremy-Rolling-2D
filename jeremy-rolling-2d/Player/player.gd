@@ -10,7 +10,7 @@ extends RigidBody2D
 @export var respawn_time := 0.5
 
 var follow_speed := 0.1
-@export var normal_follow := 0.1
+@export var normal_follow := 0.05
 @export var death_follow := 0.01
 
 var push_cooldown_timer := 0.0
@@ -138,7 +138,7 @@ func _finish():
 func _update_visuals() -> void:
 	var airborne := get_contact_count() == 0
 
-	$Visual.rotation += linear_velocity.x / 50000.0
+	$Visual.rotation += linear_velocity.x / 20000.0
 
 	if airborne and linear_velocity.length():
 		$Rolling.stop()
