@@ -151,3 +151,9 @@ script = ExtResource("14_dm7nj")
 metadata/_custom_type_script = "uid://d0p5m0ruqfnd6"
 
 [node name="CanvasLayer2" parent="." unique_id=223765944 instance=ExtResource("15_3mea3")]
+
+[node name="SwipeTrail" type="Node2D" parent="." unique_id=1674186080]
+
+[node name="Trail2D" type="Line2D" parent="SwipeTrail" unique_id=1193631001]
+script = ExtResource("14_dm7nj")
+metadata/_custom_type_script = "uid://d0p5m0ruqfnd6"

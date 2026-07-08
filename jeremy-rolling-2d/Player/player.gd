@@ -87,8 +87,9 @@ func _input(event: InputEvent) -> void:
 	
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
-	else:
+	elif event is InputEventGesture:
 		get_node("Arrow").hide()
+		get_node("SwipeTrail").position = event.position
 
 func _apply_push() -> void:
 	if not input_push:
