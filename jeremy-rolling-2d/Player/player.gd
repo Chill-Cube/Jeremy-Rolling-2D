@@ -38,6 +38,7 @@ func _process(delta: float) -> void:
 	
 	if not finished_level and started_level:
 		level_time += delta
+		$CanvasLayer2._update_timer(level_time)
 		
 	$Trail.emitting = true if is_grounded() and linear_velocity.length() > 500 else false
 	$Trail.direction.x = -100 if linear_velocity.x > 0 else 100
@@ -132,7 +133,8 @@ func _death() -> void:
 func _finish():
 	_reset()
 	finished_level = true
-
+	
+	$CanvasLayer2.visible = false
 	$CanvasLayer._show_finish(level_time, owner.scene_file_path.get_file().get_basename())
 
 func _update_visuals() -> void:

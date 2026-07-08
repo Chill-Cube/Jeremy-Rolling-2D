@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://owl4h2mopbnp"]
 
+[ext_resource type="Script" uid="uid://cc3jkwkqac7mx" path="res://UI/hud.gd" id="1_bytes"]
 [ext_resource type="Texture2D" uid="uid://c5vc46buvajk0" path="res://UI/Images/time-9-256(1).png" id="1_ne75i"]
 
 [sub_resource type="FontVariation" id="FontVariation_bytes"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=223765944]
+[node name="HUD" type="CanvasLayer" unique_id=223765944]
+script = ExtResource("1_bytes")
 
-[node name="Panel" type="Panel" parent="." unique_id=1876686139]
+[node name="Timer" type="Panel" parent="." unique_id=1876686139]
 z_index = -1
 offset_left = 451.0
 offset_top = 595.0
@@ -14,33 +16,36 @@ offset_right = 705.0
 offset_bottom = 629.0
 metadata/_edit_lock_ = true
 
-[node name="Time9256" type="Sprite2D" parent="Panel" unique_id=198953075]
-position = Vector2(73.625, 17.375002)
+[node name="Time9256" type="Sprite2D" parent="Timer" unique_id=198953075]
+position = Vector2(66.625, 17.375002)
 scale = Vector2(0.09863275, 0.09863275)
 texture = ExtResource("1_ne75i")
 
-[node name="Label" type="Label" parent="Panel" unique_id=1316552657]
+[node name="Label" type="Label" parent="Timer" unique_id=1316552657]
 layout_mode = 0
-offset_left = 98.625
+offset_left = 91.625
 offset_top = 1.0
-offset_right = 265.625
+offset_right = 241.0
 offset_bottom = 35.0
 theme_override_fonts/font = SubResource("FontVariation_bytes")
 theme_override_font_sizes/font_size = 24
 text = "00:00.00"
 
-[node name="Button" type="Button" parent="." unique_id=1143406962]
-offset_left = 13.0
-offset_top = 596.0
-offset_right = 66.0
-offset_bottom = 628.0
+[node name="Menu" type="Button" parent="." unique_id=1143406962]
+offset_left = 15.0
+offset_top = 597.0
+offset_right = 68.0
+offset_bottom = 629.0
 text = "Menu
 "
 
-[node name="Button2" type="Button" parent="." unique_id=610021239]
-offset_left = 1065.0
-offset_top = 596.0
-offset_right = 1135.0
-offset_bottom = 628.0
-text = "Settings
+[node name="Retry" type="Button" parent="." unique_id=394586980]
+offset_left = 1085.0
+offset_top = 599.0
+offset_right = 1138.0
+offset_bottom = 631.0
+text = "Retry
 "
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

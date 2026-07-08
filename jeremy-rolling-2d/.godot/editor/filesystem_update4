@@ -2,3 +2,5 @@ res://Levels/1-2.tscn
 res://UI/hud.tscn
 res://Player/Player.tscn
 res://Levels/1-4.tscn
+res://UI/hud.gd
+res://Player/player.gd
