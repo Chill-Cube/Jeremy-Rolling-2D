@@ -24,7 +24,7 @@ func update_save(time: float, current_level: String) -> void:
 	level_data.completed = true
 
 	if time < level_data.best_time:
-		
+		$Panel/Time2.visible = true
 		level_data.best_time = time
 
 	SaveManager.save_to_file()
