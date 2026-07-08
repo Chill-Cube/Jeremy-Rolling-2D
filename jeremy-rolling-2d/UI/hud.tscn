@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://owl4h2mopbnp"]
+
+[ext_resource type="Texture2D" uid="uid://c5vc46buvajk0" path="res://UI/Images/time-9-256(1).png" id="1_ne75i"]
+
+[sub_resource type="FontVariation" id="FontVariation_bytes"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=223765944]
+
+[node name="Panel" type="Panel" parent="." unique_id=1876686139]
+z_index = -1
+offset_left = 451.0
+offset_top = 595.0
+offset_right = 705.0
+offset_bottom = 629.0
+metadata/_edit_lock_ = true
+
+[node name="Time9256" type="Sprite2D" parent="Panel" unique_id=198953075]
+position = Vector2(73.625, 17.375002)
+scale = Vector2(0.09863275, 0.09863275)
+texture = ExtResource("1_ne75i")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1316552657]
+layout_mode = 0
+offset_left = 98.625
+offset_top = 1.0
+offset_right = 265.625
+offset_bottom = 35.0
+theme_override_fonts/font = SubResource("FontVariation_bytes")
+theme_override_font_sizes/font_size = 24
+text = "00:00.00"
+
+[node name="Button" type="Button" parent="." unique_id=1143406962]
+offset_left = 13.0
+offset_top = 596.0
+offset_right = 66.0
+offset_bottom = 628.0
+text = "Menu
+"
+
+[node name="Button2" type="Button" parent="." unique_id=610021239]
+offset_left = 1065.0
+offset_top = 596.0
+offset_right = 1135.0
+offset_bottom = 628.0
+text = "Settings
+"

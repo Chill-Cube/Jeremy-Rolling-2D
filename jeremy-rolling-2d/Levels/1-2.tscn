@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_3fvqv"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="8_6nsl0"]
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="9_ubfli"]
+[ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="10_ubfli"]
 
 [sub_resource type="Gradient" id="Gradient_riloj"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -182,6 +183,27 @@ rotation = 1.5707964
 scale = Vector2(0.5777088, 0.932762)
 texture = SubResource("GradientTexture2D_jkhrd")
 metadata/_edit_lock_ = true
+
+[node name="UntitledArfgftwork" type="Sprite2D" parent="." unique_id=329685274]
+modulate = Color(0.9207, 0.94495505, 0.99, 0.62352943)
+z_index = -2
+position = Vector2(6477.996, 1844)
+scale = Vector2(8.332635, 8.332635)
+texture = ExtResource("10_ubfli")
+
+[node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=2065914012]
+modulate = Color(0.9207, 0.94495505, 0.99, 0.62352943)
+z_index = -2
+position = Vector2(31965.998, -2221)
+scale = Vector2(9.494929, 9.494929)
+texture = ExtResource("10_ubfli")
+
+[node name="UntitledArfgftwork3" type="Sprite2D" parent="." unique_id=1044159316]
+modulate = Color(0.9207, 0.94495505, 0.99, 0.62352943)
+z_index = -2
+position = Vector2(52956, 3281.0005)
+scale = Vector2(9.494929, 9.494929)
+texture = ExtResource("10_ubfli")
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]
