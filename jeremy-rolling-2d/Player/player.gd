@@ -25,6 +25,8 @@ var finished_level := false
 var started_level := false
 
 var mobile_first_touch := false
+var drag_pos := Vector2.ZERO
+var dragging := false
 
 func _ready() -> void:
 	freeze = true
@@ -71,6 +73,8 @@ func _integrate_forces(_state: PhysicsDirectBodyState2D) -> void:
 
 func _update_aim() -> void:
 	var dir := get_global_mouse_position() - global_position
+	if dragging:
+		dir = to_global(drag_pos) - global_position
 
 	if dir.length() > 0.001:
 		aim_direction = dir.normalized()
@@ -80,7 +84,8 @@ func _update_aim() -> void:
 func _input(event: InputEvent) -> void:
 	if !event is InputEventScreenDrag:
 		get_node("Arrow").show()
-		get_node("Node2D").get_node("SwipeTrail").hide()
+		#dragging = false
+		#get_node("Node2D").get_node("SwipeTrail").hide()
 		if event.is_action_pressed("left_click"):
 			_update_aim()
 			if freeze and not finished_level: freeze = false
@@ -88,10 +93,15 @@ func _input(event: InputEvent) -> void:
 	
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
-	if event is InputEventScreenDrag:
+	if event is InputEventMouseMotion:
 		get_node("Arrow").hide()
-		get_node("Node2D").get_node("SwipeTrail").position = (event.position * 8.3) + Vector2(get_node("Node2D").position.x * 3.1, get_node("Node2D").position.y * -35)
+		dragging = true
+		drag_pos = event.screen_relative#(event.position * 8.3) + Vector2(-1546.999 * 3.1, 76.0 * -35)
+		get_node("Node2D").get_node("SwipeTrail").position = (event.position * 8.3) + Vector2(-1546.999 * 3.1, 76.0 * -35)
 		get_node("Node2D").get_node("SwipeTrail").show()
+		_update_aim()
+		if freeze and not finished_level: freeze = false
+		input_push = true
 
 func _apply_push() -> void:
 	if not input_push:
