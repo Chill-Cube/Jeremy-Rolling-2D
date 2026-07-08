@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://owl4h2mopbnp"]
+
+[ext_resource type="Script" uid="uid://cc3jkwkqac7mx" path="res://UI/hud.gd" id="1_bytes"]
+[ext_resource type="Texture2D" uid="uid://c5vc46buvajk0" path="res://UI/Images/time-9-256(1).png" id="1_ne75i"]
+[ext_resource type="Texture2D" uid="uid://dl2txekodcacc" path="res://UI/Images/menu-4-256.png" id="3_2o5uh"]
+[ext_resource type="Texture2D" uid="uid://cjnd1cfvk582q" path="res://UI/Images/redo-256.png" id="4_b1lf8"]
+
+[sub_resource type="FontVariation" id="FontVariation_bytes"]
+
+[node name="HUD" type="CanvasLayer" unique_id=223765944]
+script = ExtResource("1_bytes")
+
+[node name="Timer" type="Panel" parent="." unique_id=1876686139]
+z_index = -1
+offset_left = 451.0
+offset_top = 595.0
+offset_right = 705.0
+offset_bottom = 629.0
+metadata/_edit_lock_ = true
+
+[node name="Time9256" type="Sprite2D" parent="Timer" unique_id=198953075]
+position = Vector2(66.625, 17.375002)
+scale = Vector2(0.09863275, 0.09863275)
+texture = ExtResource("1_ne75i")
+
+[node name="Label" type="Label" parent="Timer" unique_id=1316552657]
+layout_mode = 0
+offset_left = 91.625
+offset_top = 1.0
+offset_right = 241.0
+offset_bottom = 35.0
+theme_override_fonts/font = SubResource("FontVariation_bytes")
+theme_override_font_sizes/font_size = 24
+text = "00:00.00"
+
+[node name="Menu" type="TextureButton" parent="." unique_id=195614286]
+z_index = 2
+offset_left = 9.0
+offset_top = 591.0
+offset_right = 408.99997
+offset_bottom = 1017.0869
+scale = Vector2(0.12, 0.115)
+texture_normal = ExtResource("3_2o5uh")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Panel" type="Panel" parent="." unique_id=2127242529]
+z_index = -1
+offset_left = 1094.2667
+offset_top = 591.0
+offset_right = 1142.0
+offset_bottom = 640.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=1275049498]
+z_index = -1
+offset_left = 9.0
+offset_top = 591.0
+offset_right = 56.733276
+offset_bottom = 640.0
+mouse_filter = 2
+
+[node name="Retry" type="TextureButton" parent="." unique_id=81776475]
+offset_left = 1094.0
+offset_top = 591.0
+offset_right = 1574.0
+offset_bottom = 1081.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_b1lf8")
+ignore_texture_size = true
+stretch_mode = 3
+
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

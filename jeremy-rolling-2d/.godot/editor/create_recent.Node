@@ -1,3 +1,9 @@
+Panel
+TextureButton
+MenuButton
+Button
+Label
+CanvasLayer
 Polygon2D
 Parallax2D
 CPUParticles2D
@@ -5,10 +11,4 @@ Node2D
 TextureRect
 Trail2D
 GridContainer
-Label
-Button
 Control
-Container
-Panel
-CanvasLayer
-MeshInstance2D
