@@ -78,13 +78,17 @@ func _update_aim() -> void:
 	$Arrow.global_rotation = dir.angle()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_click"):
-		_update_aim()
-		if freeze and not finished_level: freeze = false
-		input_push = true
+	if !event is InputEventGesture:
+		get_node("Arrow").show()
+		if event.is_action_pressed("left_click"):
+			_update_aim()
+			if freeze and not finished_level: freeze = false
+			input_push = true
 	
-	if event.is_action_pressed("menu"):
-		get_tree().change_scene_to_file("res://UI/menu.tscn")
+		if event.is_action_pressed("menu"):
+			get_tree().change_scene_to_file("res://UI/menu.tscn")
+	else:
+		get_node("Arrow").hide()
 
 func _apply_push() -> void:
 	if not input_push:

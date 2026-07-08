@@ -1,0 +1,4 @@
+*.cfg
+*.md5
+*.bin
+*cache*
