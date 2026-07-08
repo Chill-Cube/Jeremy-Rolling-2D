@@ -93,7 +93,7 @@ func _input(event: InputEvent) -> void:
 	
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
-	if event is InputEventMouseMotion:
+	if event is InputEventScreenDrag:
 		get_node("Arrow").hide()
 		dragging = true
 		drag_pos = event.screen_relative
