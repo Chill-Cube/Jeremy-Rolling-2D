@@ -1,2 +1,5 @@
+res://UI/menu.tscn
+res://UI/Scripts/finish_screen.gd
+res://UI/finish_screen.tscn
 res://Player/player.gd
-res://Player/Player.tscn
+res://UI/Scripts/level_select.gd
