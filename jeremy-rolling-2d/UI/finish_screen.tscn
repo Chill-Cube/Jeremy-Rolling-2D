@@ -62,18 +62,18 @@ stream = ExtResource("2_72onr")
 position = Vector2(-17, 0)
 
 [node name="BarHarborRevised1" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
-position = Vector2(323.57208, 360.99997)
-scale = Vector2(0.07361985, 0.07673627)
+position = Vector2(133.2, 342.19995)
+scale = Vector2(0.088, 0.092)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Panel/Lobsters" unique_id=220461462]
-position = Vector2(140.00002, 362.99997)
-scale = Vector2(0.07361985, 0.07673627)
+position = Vector2(326.19998, 342.19995)
+scale = Vector2(0.088, 0.092)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Panel/Lobsters" unique_id=264422850]
-position = Vector2(501, 361)
-scale = Vector2(0.07361985, 0.07673627)
+position = Vector2(518.2, 340.2)
+scale = Vector2(0.088, 0.092)
 texture = ExtResource("3_72onr")
 
 [node name="Panel2" type="Panel" parent="Panel" unique_id=791809135]

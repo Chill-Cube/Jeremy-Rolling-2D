@@ -1,5 +1,5 @@
 res://Player/Player.tscn::87ab6d04d697171ea16ea541b5e73eca::1783487060::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
-res://UI/finish_screen.tscn::999e484ad08476390f962fbdea8a5d65::1783489029::res://.godot/exported/133200997/export-8d8e0a733427579659f2467fe5da8d3b-finish_screen.scn
+res://UI/finish_screen.tscn::8cbd49f65b2e056bb0eed27371865226::1783489681::res://.godot/exported/133200997/export-8d8e0a733427579659f2467fe5da8d3b-finish_screen.scn
 res://Levels/1-1.tscn::2e79b725cfb27cb2b4a5ec40642563dd::1783426334::res://.godot/exported/133200997/export-f576e42fa10f7e8968063ffe23904d95-1-1.scn
 res://Levels/1-2.tscn::18961ed156856608ee0f958323388996::1783481729::res://.godot/exported/133200997/export-4a255a92824e885d1b28c7c3f49382a2-1-2.scn
 res://addons/trail_2d/test.tscn::f25c2e2c73ea7b6c75de62b772a3f061::1783328163::res://.godot/exported/133200997/export-126eba02f733ba670d2839b6dd0fe89e-test.scn
@@ -20,5 +20,5 @@ res://Player/PhysicsMaterials/bounce.tres::f893662c1a4cc0810f376faf73f343d5::178
 res://Player/PhysicsMaterials/normal.tres::6d1195f6a85dd76a23f246c960a10b71::1783262497::res://.godot/exported/133200997/export-199960c73a9fc8a134090680ffa70e95-normal.res
 res://UI/menu.tscn::24c8bc4e1c75516f13d7c56569ccdd48::1783439168::res://.godot/exported/133200997/export-4bbc89b9befb86f8560106fa1a99abde-menu.scn
 res://Effects/cpu_particles_2d.tscn::ee3ec0936ecad93d65d5887654190d82::1783422428::res://.godot/exported/133200997/export-b54da108550c91d53e48c1e56d96105a-cpu_particles_2d.scn
-res://UI/hud.tscn::f99e7d0604e579173b60e95ddd079fbe::1783488821::res://.godot/exported/133200997/export-a95b3dfddf44e866791e8c8563580609-hud.scn
+res://UI/hud.tscn::c0ec6af41ef065f6e1a97485d8f80d82::1783489522::res://.godot/exported/133200997/export-a95b3dfddf44e866791e8c8563580609-hud.scn
 res://UI/new_style_box_flat.tres::bc21b99808830784ee5714e44909ac53::1783488633::res://.godot/exported/133200997/export-99c4c64b093e85538e5ef66ce6569db5-new_style_box_flat.res
