@@ -84,8 +84,8 @@ func _update_aim() -> void:
 func _input(event: InputEvent) -> void:
 	if !event is InputEventScreenDrag:
 		get_node("Arrow").show()
-		#dragging = false
-		#get_node("Node2D").get_node("SwipeTrail").hide()
+		dragging = false
+		get_node("Node2D").get_node("SwipeTrail").hide()
 		if event.is_action_pressed("left_click"):
 			_update_aim()
 			if freeze and not finished_level: freeze = false
@@ -96,7 +96,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventScreenDrag:
 		get_node("Arrow").hide()
 		dragging = true
-		drag_pos = event.screen_relative#(event.position * 8.3) + Vector2(-1546.999 * 3.1, 76.0 * -35)
+		drag_pos = event.screen_relative
 		get_node("Node2D").get_node("SwipeTrail").position = (event.position * 8.3) + Vector2(-1546.999 * 3.1, 76.0 * -35)
 		get_node("Node2D").get_node("SwipeTrail").show()
 		_update_aim()
