@@ -88,9 +88,9 @@ func _input(event: InputEvent) -> void:
 	
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
-	if event is InputEventScreenDrag:
+	if event is InputEventMouseMotion:
 		get_node("Arrow").hide()
-		get_node("Node2D").get_node("SwipeTrail").position = event.position
+		get_node("Node2D").get_node("SwipeTrail").position = (event.position * 8.3) + Vector2(get_node("Node2D").position.x * 3.1, get_node("Node2D").position.y * -35)
 		get_node("Node2D").get_node("SwipeTrail").show()
 
 func _apply_push() -> void:
