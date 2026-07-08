@@ -35,7 +35,7 @@ func _show_finish(time: float, current_level: String) -> void:
 	visible = true
 	$Panel/FinishSFX.play()
 
-	$Panel/NextLevel.visible = get_next_level(current_level) != ""
+	$Panel/Panel4.visible = get_next_level(current_level) != ""
 
 	update_save(time, current_level)
 
@@ -47,6 +47,7 @@ func _show_finish(time: float, current_level: String) -> void:
 	for i in children.size():
 		var ui: Sprite2D = children[i]
 		ui.modulate.a = 1.0 if level_data.collectables[i] else 0.3
+		ui.modulate = ui.modulate * 1 if not level_data.collectables[i] else ui.modulate
 
 	$Panel/Time.text = "Time: " + format_time(time)
 	$Panel/BestTime.text = "Best Time: " + format_time(level_data.best_time)
