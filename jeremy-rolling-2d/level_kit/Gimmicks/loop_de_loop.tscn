@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c3t4jfsbc0g3i"]
+
+[node name="LoopDeLoops" type="StaticBody2D" unique_id=1106956673]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=463597622]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1789321238]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=560776508]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=625271273]
