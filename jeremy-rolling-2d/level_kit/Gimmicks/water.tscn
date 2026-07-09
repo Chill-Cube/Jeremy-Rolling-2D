@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c3t6dcwi2hpkf" path="res://level_kit/Gimmicks/Scripts/water.gd" id="1_ow3hb"]
 
 [sub_resource type="Gradient" id="Gradient_ow3hb"]
-colors = PackedColorArray(0, 0.36078432, 1, 1, 0, 0.8117647, 1, 1)
+colors = PackedColorArray(0.43134022, 0.43134025, 0.43134025, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_01tu2"]
 
@@ -13,11 +13,19 @@ height = 64
 noise = SubResource("FastNoiseLite_01tu2")
 color_ramp = SubResource("Gradient_ow3hb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow3hb"]
+size = Vector2(64, 64)
+
 [node name="Water" type="Area2D" unique_id=1249748588]
 script = ExtResource("1_ow3hb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2135307974]
+modulate = Color(0, 0.79607844, 1, 0.5019608)
 texture = SubResource("NoiseTexture2D_jdbgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1460879057]
+visible = false
+shape = SubResource("RectangleShape2D_ow3hb")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

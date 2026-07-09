@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="7_k5y3s"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_p40x3"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_ncnwt"]
-[ext_resource type="PackedScene" uid="uid://dggoh8f6sm63e" path="res://level_kit/Gimmicks/water.tscn" id="10_mui3k"]
+[ext_resource type="PackedScene" uid="uid://b6xo2xf360v6i" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="10_mui3k"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -37,6 +37,15 @@ scale = Vector2(0.44, 0.44)
 skew = 0.26529005
 texture = ExtResource("1_xygf2")
 
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("3_x7n8j")]
+position = Vector2(-1544.9617, 76.30176)
+rotation = 0.0027220477
+scale = Vector2(1, 0.99999994)
+click_push_force = 500.0
+respawn_time = 0.5
+normal_follow = 0.05
+death_follow = 0.01
+
 [node name="StaticBody2D5" parent="." unique_id=1791450517 instance=ExtResource("2_mui3k")]
 visibility_layer = 8
 position = Vector2(-1604, 4374)
@@ -56,14 +65,6 @@ default_color = Color(0.23961064, 0.23295718, 0.37533838, 1)
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
 visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 41286.65, 546.46533, 38909.78, -1350.0371, 35184, -2714, 32117, -3014, 29398, -1505, 26366.332, 3281.2837, 24025.42, 4850.4917, 21938.174, 4913.7417, 19513.373, 3727.0474, 17970.408, 2842.5483, 16349.546, 2421.8843, 15794.984, 2014.54, 15251.994, 1615.6948, 13822.88, 1248.2412, 13212.685, 442.05225, 12080.179, 4.3203125, 10407.386, -1414.2913, 9291.857, -1642.1929, 8054.4897, -2255.6194, 7235.5703, -2886.1138, 5893.3413, -3551.7468, 5283.146, -4497.488, 3886.9878, -5530.5747, 2863.3384, -6372.9067, 2115.3252, -6511.455, 1651.9366, -6854.8135, 269.76013, -7051.592, -1112.4164, -6912.0396, -1860.4296, -6110.87, -2477.6152, -5825.742, -2923.0273, -5317.733, -2591.4648, -4086.8638, -2970.914, 6224.7363, -3402.395, 17950.313, -43522.465, 18166.166)
-
-[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("3_x7n8j")]
-position = Vector2(-1544.9617, 76.30176)
-rotation = 0.002722048
-click_push_force = 500.0
-respawn_time = 0.5
-normal_follow = 0.05
-death_follow = 0.01
 
 [node name="death" parent="." unique_id=521310803 instance=ExtResource("4_am1oe")]
 position = Vector2(19421.377, 26477.742)
@@ -207,18 +208,19 @@ position = Vector2(57447.203, 18130.723)
 scale = Vector2(6.7020383, 6.7020383)
 texture = ExtResource("9_ncnwt")
 
-[node name="Water" parent="." unique_id=1249748588 instance=ExtResource("10_mui3k")]
-position = Vector2(2301.9631, 274.08423)
-scale = Vector2(100, 100)
+[node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("10_mui3k")]
+position = Vector2(3215.7576, 773.0581)
+rotation = 0.83775806
 
-[node name="CollisionPolygon2D" parent="Water" index="0" unique_id=1955629845]
-position = Vector2(-8.838345, -8.302845)
-scale = Vector2(22.861889, 17.680948)
+[node name="CollisionShape2D" parent="BreakableWall" index="0" unique_id=2125774465]
+position = Vector2(0, -49.293213)
+scale = Vector2(1, 0.99999994)
 
-[node name="Polygon2D" parent="Water" index="1" unique_id=1198892558]
-polygon = PackedVector2Array(-0.42677736, 0.56023824, 1.3000002, -0.29999995, 7.64098, 2.7143598, 4.691271, 6.6523376)
+[node name="CollisionShape2D2" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1102231679]
+visible = false
+disabled = true
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]
-[editable path="Water"]
+[editable path="BreakableWall"]

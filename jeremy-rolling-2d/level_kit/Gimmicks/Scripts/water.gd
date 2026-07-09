@@ -7,8 +7,6 @@ func _on_body_entered(body: Node2D) -> void:
 		bodies.append(body)
 
 func _physics_process(delta):
-	self.texture.width = scale.x * 64
-	self.texture.height = scale.x * 64
 	for body in bodies:
 		body.apply_central_impulse((Vector2.UP * 1800) * delta)
 
