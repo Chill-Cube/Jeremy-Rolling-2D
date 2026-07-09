@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c3t4jfsbc0g3i"]
 
+[ext_resource type="Script" uid="uid://b33ahv7yrtjf1" path="res://level_kit/Gimmicks/Scripts/loop_de_loop.gd" id="1_0djp5"]
+
 [node name="LoopDeLoops" type="StaticBody2D" unique_id=1106956673]
+script = ExtResource("1_0djp5")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=463597622]
 
