@@ -22,3 +22,7 @@ func _process(_delta):
 
 func update_collision() -> void:
 	collision.polygon = polygon.polygon
+
+
+func _on_water_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

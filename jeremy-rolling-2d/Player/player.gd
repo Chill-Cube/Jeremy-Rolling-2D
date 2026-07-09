@@ -26,7 +26,7 @@ var level_time := 0.0
 var finished_level := false
 var started_level := false
 
-var simulate_mobile = true
+var simulate_mobile = false
 var is_mobile := simulate_mobile or OS.has_feature("web_android") \
 	or OS.has_feature("web_ios") \
 	or OS.has_feature("ios") \
