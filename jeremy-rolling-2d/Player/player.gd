@@ -24,7 +24,7 @@ var level_time := 0.0
 var finished_level := false
 var started_level := false
 
-var mobile_first_touch := false
+var is_mobile := OS.has_feature("web_android") or OS.has_feature("web_ios") or OS.has_feature("ios") or OS.has_feature("android")
 var drag_pos := Vector2.ZERO
 var dragging := false
 
@@ -82,7 +82,7 @@ func _update_aim() -> void:
 	$Arrow.global_rotation = dir.angle()
 
 func _input(event: InputEvent) -> void:
-	if !event is InputEventScreenDrag:
+	if !event is InputEventScreenDrag and !is_mobile:
 		get_node("Arrow").show()
 		dragging = false
 		get_node("Node2D").get_node("SwipeTrail").hide()
@@ -93,7 +93,7 @@ func _input(event: InputEvent) -> void:
 	
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
-	if event is InputEventScreenDrag:
+	if event is InputEventScreenDrag and is_mobile:
 		get_node("Arrow").hide()
 		dragging = true
 		drag_pos = event.screen_relative
