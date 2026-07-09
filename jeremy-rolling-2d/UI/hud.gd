@@ -11,6 +11,7 @@ func format_time(total_seconds: float) -> String:
 
 func _ready() -> void:
 	level = owner.owner.scene_file_path.get_file().get_basename()
+	$Timer/Label2.text = level
 
 func _on_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/menu.tscn")

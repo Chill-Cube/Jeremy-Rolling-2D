@@ -13,6 +13,8 @@ var follow_speed := 0.1
 @export var normal_follow := 0.05
 @export var death_follow := 0.01
 
+const SWIPE_TRAIL = preload("res://Player/swipe_trail.tscn")
+
 var push_cooldown_timer := 0.0
 
 var aim_direction := Vector2.RIGHT
@@ -24,13 +26,21 @@ var level_time := 0.0
 var finished_level := false
 var started_level := false
 
-var is_mobile := OS.has_feature("web_android") or OS.has_feature("web_ios") or OS.has_feature("ios") or OS.has_feature("android")
+var simulate_mobile = true
+var is_mobile := simulate_mobile or OS.has_feature("web_android") \
+	or OS.has_feature("web_ios") \
+	or OS.has_feature("ios") \
+	or OS.has_feature("android")
 var drag_pos := Vector2.ZERO
 var dragging := false
+var swipe_trail
 
 func _ready() -> void:
 	freeze = true
 	start_position = global_position
+	if is_mobile: 
+		$Arrow.hide()
+		swipe_trail = SWIPE_TRAIL.instantiate()
 
 func _process(delta: float) -> void:
 	if push_cooldown_timer > 0.0:
@@ -71,6 +81,7 @@ func _physics_process(_delta: float) -> void:
 func _integrate_forces(_state: PhysicsDirectBodyState2D) -> void:
 	_apply_push()
 
+
 func _update_aim() -> void:
 	var dir := get_global_mouse_position() - global_position
 	if dragging:
@@ -80,27 +91,54 @@ func _update_aim() -> void:
 		aim_direction = dir.normalized()
 
 	$Arrow.global_rotation = dir.angle()
+	
+func _reset_swipe_trail() -> void:
+	if swipe_trail:
+		swipe_trail.queue_free()
+
+	swipe_trail = SWIPE_TRAIL.instantiate()
+	$Node2D.add_child(swipe_trail)
+	swipe_trail.get_node("Trail2D").clear_points()
 
 func _input(event: InputEvent) -> void:
-	if !event is InputEventScreenDrag and !is_mobile:
-		get_node("Arrow").show()
+	if event is not InputEventScreenDrag and not is_mobile:
+		$Arrow.show()
 		dragging = false
-		get_node("Node2D").get_node("SwipeTrail").hide()
+
 		if event.is_action_pressed("left_click"):
 			_update_aim()
-			if freeze and not finished_level: freeze = false
+
+			if freeze and not finished_level:
+				freeze = false
+
 			input_push = true
-	
+			_reset_swipe_trail()
+
 		if event.is_action_pressed("menu"):
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
+
+
+	if is_mobile and event is InputEventScreenTouch and event.pressed and event.index == 0:
+		_reset_swipe_trail()
+
+
 	if event is InputEventScreenDrag and is_mobile:
-		get_node("Arrow").hide()
+		$Arrow.hide()
 		dragging = true
+
 		drag_pos = event.screen_relative
-		get_node("Node2D").get_node("SwipeTrail").position = ((event.position * 8.3) + Vector2(-1546.999 * 3.1, 76.0 * -35)) + get_node("Node2D").position
-		get_node("Node2D").get_node("SwipeTrail").show()
+
+		swipe_trail.position = (
+			(event.position * 8.3)
+			+ Vector2(-1546.999 * 3.1, 76.0 * -35)
+			+ $Node2D.position
+		)
+
 		_update_aim()
-		if freeze and not finished_level: freeze = false
+
+		if freeze and not finished_level:
+			freeze = false
+
 		input_push = true
 
 func _apply_push() -> void:
