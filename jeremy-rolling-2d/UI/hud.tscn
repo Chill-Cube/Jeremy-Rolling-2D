@@ -33,6 +33,17 @@ theme_override_fonts/font = SubResource("FontVariation_bytes")
 theme_override_font_sizes/font_size = 24
 text = "00:00.00"
 
+[node name="Label2" type="Label" parent="Timer" unique_id=1543777305]
+layout_mode = 0
+offset_left = 49.0
+offset_top = -33.0
+offset_right = 198.375
+offset_bottom = 1.0
+theme_override_fonts/font = SubResource("FontVariation_bytes")
+theme_override_font_sizes/font_size = 24
+text = "1-1"
+horizontal_alignment = 1
+
 [node name="Menu" type="TextureButton" parent="." unique_id=195614286]
 z_index = 2
 offset_left = 9.0
