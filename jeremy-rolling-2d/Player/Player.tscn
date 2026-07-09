@@ -60,9 +60,6 @@ click_push_force = 450.0
 max_speed = 20000.0
 push_cooldown = 1.5
 arrow_transparency = 0.2
-respawn_time = null
-normal_follow = null
-death_follow = null
 
 [node name="land" type="AudioStreamPlayer" parent="." unique_id=770358525]
 stream = ExtResource("2_cxr5p")

@@ -29,6 +29,7 @@ offset_right = -36.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_e05sn")
 
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=1860454881]
@@ -43,6 +44,7 @@ offset_left = 244.25
 offset_top = 54.240005
 offset_right = -235.25012
 offset_bottom = -5.0
+mouse_filter = 2
 theme_override_constants/h_separation = 37
 theme_override_constants/v_separation = 53
 columns = 5

@@ -26,7 +26,7 @@ var level_time := 0.0
 var finished_level := false
 var started_level := false
 
-var simulate_mobile = true
+var simulate_mobile = false
 var is_mobile := simulate_mobile or OS.has_feature("web_android") \
 	or OS.has_feature("web_ios") \
 	or OS.has_feature("ios") \
@@ -92,15 +92,13 @@ func _update_aim() -> void:
 
 	$Arrow.global_rotation = dir.angle()
 	
-func _reset_swipe_trail() -> void:
-	if swipe_trail:
-		swipe_trail.queue_free()
-
-	swipe_trail = SWIPE_TRAIL.instantiate()
-	$Node2D.add_child(swipe_trail)
-	swipe_trail.get_node("Trail2D").clear_points()
-
 func _input(event: InputEvent) -> void:
+	if event is InputEventScreenTouch:
+		print("touch idx=", event.index, " pressed=", event.pressed)
+
+	if event is InputEventScreenDrag:
+		print("drag idx=", event.index)
+
 	if event is not InputEventScreenDrag and not is_mobile:
 		$Arrow.show()
 		dragging = false
@@ -118,7 +116,7 @@ func _input(event: InputEvent) -> void:
 			get_tree().change_scene_to_file("res://UI/menu.tscn")
 
 
-	if is_mobile and event is InputEventScreenTouch and event.pressed and event.index == 0:
+	if is_mobile and event is InputEventScreenTouch and event.pressed:
 		_reset_swipe_trail()
 
 
@@ -140,6 +138,15 @@ func _input(event: InputEvent) -> void:
 			freeze = false
 
 		input_push = true
+
+
+func _reset_swipe_trail() -> void:
+	if swipe_trail:
+		swipe_trail.queue_free()
+
+	swipe_trail = SWIPE_TRAIL.instantiate()
+	$Node2D.add_child(swipe_trail)
+	swipe_trail.get_node("Trail2D").clear_points()
 
 func _apply_push() -> void:
 	if not input_push:
