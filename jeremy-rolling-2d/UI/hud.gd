@@ -14,10 +14,14 @@ func _ready() -> void:
 	$Timer/Label2.text = level
 
 func _on_menu_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://UI/menu.tscn")
 
 
 func _on_retry_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Levels/%s.tscn" % level)
 	
 

@@ -52,12 +52,18 @@ func _show_finish(time: float, current_level: String) -> void:
 	$Panel/Time.text = "[center][img=80]res://UI/Images/clock.png[/img] %s[/center]" % format_time(time)
 
 func _on_retry_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Levels/%s.tscn" % level)
 
 func _on_next_level_pressed() -> void:
 	var next_level := get_next_level(level)
 	if next_level != "":
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		get_tree().change_scene_to_file("res://Levels/%s.tscn" % next_level)
 
 func _on_menu_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://UI/menu.tscn")
