@@ -93,12 +93,6 @@ func _update_aim() -> void:
 	$Arrow.global_rotation = dir.angle()
 	
 func _input(event: InputEvent) -> void:
-	if event is InputEventScreenTouch:
-		print("touch idx=", event.index, " pressed=", event.pressed)
-
-	if event is InputEventScreenDrag:
-		print("drag idx=", event.index)
-
 	if event is not InputEventScreenDrag and not is_mobile:
 		$Arrow.show()
 		dragging = false
@@ -111,9 +105,6 @@ func _input(event: InputEvent) -> void:
 
 			input_push = true
 			_reset_swipe_trail()
-
-		if event.is_action_pressed("menu"):
-			get_tree().change_scene_to_file("res://UI/menu.tscn")
 
 
 	if is_mobile and event is InputEventScreenTouch and event.pressed:

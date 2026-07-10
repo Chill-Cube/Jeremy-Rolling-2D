@@ -21,6 +21,7 @@ config/icon="uid://b84xpr6p7tsg8"
 
 World1BGM="*uid://dwsqtq4kag3fx"
 SaveManager="*uid://c7p3buhqaimv0"
+TransitionScreen="*uid://cy4o366pwaea3"
 
 [display]
 
