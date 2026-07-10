@@ -6,7 +6,7 @@ func _ready() -> void:
 		var level := $GridContainer/Template.duplicate()
 
 		level.name = level_name
-		level.text = level_name
+		level.get_node("Label").text = level_name
 		level.visible = true
 
 		$GridContainer.add_child(level)
@@ -17,3 +17,7 @@ func _ready() -> void:
 		for i in children.size():
 			var ui: Sprite2D = children[i]
 			ui.modulate.a = 1.0 if level_data.collectables[i] else 0.3
+
+
+func _on_template_pressed() -> void:
+	pass # Replace with function body.
