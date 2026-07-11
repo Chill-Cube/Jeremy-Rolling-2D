@@ -35,29 +35,26 @@ var drag_pos := Vector2.ZERO
 var dragging := false
 var swipe_trail
 
+@onready var Arrow := $Arrow
+@onready var Hud := $CanvasLayer2
+@onready var Visual := $Visual
+@onready var FinishScreen := $CanvasLayer
+@onready var CameraNode := $Node2D
+
 func _ready() -> void:
 	freeze = true
 	start_position = global_position
 	if is_mobile: 
-		$Arrow.hide()
 		swipe_trail = SWIPE_TRAIL.instantiate()
 
 func _process(delta: float) -> void:
-	if push_cooldown_timer > 0.0:
-		push_cooldown_timer -= delta
-	else:
-		$Arrow.modulate.a = 1
 	
 	if not finished_level and started_level:
 		level_time += delta
-		$CanvasLayer2._update_timer(level_time)
-		
-	$Trail.emitting = true if is_grounded() and linear_velocity.length() > 500 else false
-	$Trail.direction.x = -100 if linear_velocity.x > 0 else 100
-	$Trail.position.x = -38.0 if linear_velocity.x > 0 else 38.0
+		Hud._update_timer(level_time)
+
 
 	_update_aim()
-	_update_visuals()
 
 
 func is_grounded() -> bool:
@@ -67,14 +64,6 @@ func is_grounded() -> bool:
 	return false
 
 func _physics_process(_delta: float) -> void:	
-	var target_pos := global_position - linear_velocity * 0.05
-	follow_speed = death_follow if camera_pause else normal_follow
-
-	$Node2D.global_position = $Node2D.global_position.lerp(
-		target_pos,
-		follow_speed
-	) 
-	
 	if linear_velocity.length() > max_speed:
 		linear_velocity = linear_velocity.normalized() * max_speed
 
@@ -89,12 +78,10 @@ func _update_aim() -> void:
 
 	if dir.length() > 0.001:
 		aim_direction = dir.normalized()
-
-	$Arrow.global_rotation = dir.angle()
 	
 func _input(event: InputEvent) -> void:
 	if event is not InputEventScreenDrag and not is_mobile:
-		$Arrow.show()
+		Arrow.show()
 		dragging = false
 
 		if event.is_action_pressed("left_click"):
@@ -112,7 +99,7 @@ func _input(event: InputEvent) -> void:
 
 
 	if event is InputEventScreenDrag and is_mobile:
-		$Arrow.hide()
+		Arrow.hide()
 		dragging = true
 
 		drag_pos = event.screen_relative
@@ -120,7 +107,7 @@ func _input(event: InputEvent) -> void:
 		swipe_trail.position = (
 			(event.position * 8.3)
 			+ Vector2(-1546.999 * 3.1, 76.0 * -35)
-			+ $Node2D.position
+			+ CameraNode.position
 		)
 
 		_update_aim()
@@ -136,7 +123,7 @@ func _reset_swipe_trail() -> void:
 		swipe_trail.queue_free()
 
 	swipe_trail = SWIPE_TRAIL.instantiate()
-	$Node2D.add_child(swipe_trail)
+	CameraNode.add_child(swipe_trail)
 	swipe_trail.get_node("Trail2D").clear_points()
 
 func _apply_push() -> void:
@@ -149,17 +136,15 @@ func _apply_push() -> void:
 		return
 
 	push_cooldown_timer = push_cooldown
-	$Arrow.modulate.a = arrow_transparency
-	$Visual/Explosion.emitting = true
+	Arrow.modulate.a = arrow_transparency
 
-	$jump.play()
+	Visual.push_fx()
 	
 	apply_central_impulse(aim_direction * click_push_force)
 	
 	if not started_level: started_level = true
 
 func _spring(normal: Vector2, bounce_force: float) -> void:
-	$boing.play()
 	angular_velocity = 0.0
 	linear_velocity = linear_velocity.bounce(normal)
 	apply_central_impulse(normal * bounce_force)
@@ -168,7 +153,7 @@ func _reset():
 	freeze = true
 	linear_velocity = Vector2.ZERO
 	angular_velocity = 0.0
-	$Visual.rotation = 0
+	Visual.rotation = 0
 
 func _death() -> void:
 	_reset()
@@ -187,24 +172,5 @@ func _finish():
 	_reset()
 	finished_level = true
 	
-	$CanvasLayer2.visible = false
-	$CanvasLayer._show_finish(level_time, owner.scene_file_path.get_file().get_basename())
-
-func _update_visuals() -> void:
-	var airborne := get_contact_count() == 0
-
-	$Visual.rotation += linear_velocity.x / 20000.0
-
-	if airborne and linear_velocity.length():
-		$Rolling.stop()
-
-		if not $falling.playing:
-			$falling.play()
-	else:
-		$falling.stop()
-
-		if linear_velocity.length() > 20.0:
-			if not $Rolling.playing:
-				$Rolling.play()
-		else:
-			$Rolling.stop()
+	Hud.visible = false
+	FinishScreen._show_finish(level_time, owner.scene_file_path.get_file().get_basename())
