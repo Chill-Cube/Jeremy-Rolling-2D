@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dpemnq1kxjkle" path="res://Player/arrow.gd" id="14_3nb2p"]
 [ext_resource type="Script" uid="uid://d0p5m0ruqfnd6" path="res://addons/trail_2d/trail_2d.gd" id="14_dm7nj"]
 [ext_resource type="PackedScene" uid="uid://owl4h2mopbnp" path="res://UI/hud.tscn" id="15_3mea3"]
+[ext_resource type="Script" uid="uid://bwb1xvrxxdmk5" path="res://Player/player_input.gd" id="19_d7xyo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
 radius = 126.43
@@ -63,9 +64,7 @@ click_push_force = 450.0
 max_speed = 20000.0
 push_cooldown = 1.5
 arrow_transparency = 0.2
-respawn_time = null
 normal_follow = 0.2
-death_follow = null
 
 [node name="land" type="AudioStreamPlayer" parent="." unique_id=770358525]
 stream = ExtResource("2_cxr5p")
@@ -160,3 +159,9 @@ script = ExtResource("14_dm7nj")
 metadata/_custom_type_script = "uid://d0p5m0ruqfnd6"
 
 [node name="CanvasLayer2" parent="." unique_id=223765944 instance=ExtResource("15_3mea3")]
+
+[node name="Input" type="Node" parent="." unique_id=1010678454]
+script = ExtResource("19_d7xyo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

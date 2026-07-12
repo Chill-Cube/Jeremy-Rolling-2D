@@ -8,14 +8,15 @@ extends Node2D
 @onready var BoingSFX := get_parent().get_node("boing")
 @onready var RollingSFX := get_parent().get_node("Rolling")
 @onready var FallingSFX := get_parent().get_node("falling")
+@onready var InputNode := get_parent().get_node("Input")
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	player.on_spring.connect(_spring_sfx) 
+	InputNode.on_push.connect(_push_fx)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta: float) -> void:
 	Trail.emitting = true if player.is_grounded() and player.linear_velocity.length() > 500 else false
 	Trail.direction.x = -100 if player.linear_velocity.x > 0 else 100
@@ -28,24 +29,25 @@ func update_visuals() -> void:
 
 	rotation += player.linear_velocity.x / 20000.0
 
-	if airborne and player.linear_velocity.length():
-		RollingSFX.stop()
+	var speed = player.linear_velocity.length()
 
+	if airborne and speed > 0.0:
+		RollingSFX.stop()
 		if not FallingSFX.playing:
 			FallingSFX.play()
 	else:
 		FallingSFX.stop()
 
-		if player.linear_velocity.length() > 20.0:
+		if speed > 20.0:
 			if not RollingSFX.playing:
 				RollingSFX.play()
 		else:
 			RollingSFX.stop()
 
-func _sprinng_sfx() -> void:
+func _spring_sfx() -> void:
 	BoingSFX.play()
 
-func push_fx() -> void:
+func _push_fx() -> void:
 	Explosion.emitting = true
 
 	JumpSFX.play()
