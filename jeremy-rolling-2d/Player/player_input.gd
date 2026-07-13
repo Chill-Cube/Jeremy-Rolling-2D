@@ -11,18 +11,25 @@ var is_mobile := simulate_mobile or OS.has_feature("web_android") \
 	or OS.has_feature("android")
 
 const SWIPE_TRAIL = preload("res://Player/swipe_trail.tscn")
+var active_touch_index := -1
+
 @onready var swipe_trail = SWIPE_TRAIL.instantiate()
+@onready var Arrow := get_parent().get_node("Arrow")
+
+var drag_pos := Vector2.ZERO
+var dragging := false
 
 signal on_push
-
-var dragging := false
-var drag_pos := Vector2.ZERO
 
 func start_player():
 	if player.freeze and not player.finished_level:
 		player.freeze = false
 
+	Arrow.update_aim()
+
 func _input(event: InputEvent) -> void:
+	if player.finished_level: return
+
 	if event is not InputEventScreenDrag and not is_mobile:
 		dragging = false
 
@@ -34,11 +41,18 @@ func _input(event: InputEvent) -> void:
 			if player.can_push(): on_push.emit()
 
 
-	if is_mobile and event is InputEventScreenTouch and event.pressed:
-		_reset_swipe_trail()
+	if is_mobile and event is InputEventScreenTouch:
+		if event.pressed:
+			if active_touch_index == -1:
+				active_touch_index = event.index
+				_reset_swipe_trail()
+		else:
+			if event.index == active_touch_index:
+				active_touch_index = -1
+				dragging = false
 
 
-	if event is InputEventScreenDrag and is_mobile:
+	if event is InputEventScreenDrag and is_mobile and event.index == active_touch_index:
 		dragging = true
 
 		drag_pos = event.screen_relative
