@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
-[ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/ElmsSans-Regular.ttf" id="2_ab4ai"]
+[ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/Fonts/ElmsSans-Regular.ttf" id="2_ab4ai"]
 [ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_72onr"]
 [ext_resource type="Texture2D" uid="uid://d1dmn65k6t470" path="res://UI/Images/IMG_2835.png" id="5_ab4ai"]
 [ext_resource type="Texture2D" uid="uid://bj5qfq5dxsenh" path="res://UI/Images/IMG_2836.png" id="6_65eop"]
@@ -118,7 +118,7 @@ fit_content = true
 scroll_active = false
 
 [node name="Panel2" type="Panel" parent="." unique_id=1679491063]
-z_index = -2
+z_index = -4
 offset_right = 1154.0
 offset_bottom = 664.0
 mouse_filter = 2

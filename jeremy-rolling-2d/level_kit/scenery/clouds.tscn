@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bbjeyrajycwnb"]
+
+[ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="1_pljtg"]
+[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_c7723"]
+
+[node name="Parallax2D2" type="Parallax2D" unique_id=2005652190]
+show_behind_parent = true
+scale = Vector2(25.2, 25.2)
+repeat_size = Vector2(1016.295, 0)
+autoscroll = Vector2(200, 6.22)
+repeat_times = 1598
+screen_offset = Vector2(-14.445, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1959803675]
+modulate = Color(1, 1, 1, 0.53333336)
+texture_repeat = 2
+position = Vector2(6.805, 256.44)
+scale = Vector2(0.44, 0.44)
+skew = 0.26529005
+texture = ExtResource("1_pljtg")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1953401713]
+rect = Rect2(-484.69696, -49.007935, 935.0792, 513.2936)
+show_rect = false
+script = ExtResource("2_c7723")
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

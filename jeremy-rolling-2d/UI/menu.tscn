@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dp0lgsqsc5uj8"]
 
 [ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_e05sn"]
-[ext_resource type="Texture2D" uid="uid://cbi74g5711we" path="res://UI/Images/IMG_2837.png" id="2_dhncy"]
-[ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/level_teleport.gd" id="2_kfjwn"]
+[ext_resource type="Texture2D" uid="uid://cnyeocg2okvm7" path="res://UI/Images/IMG_2837.png" id="2_dhncy"]
+[ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/Scripts/level_teleport.gd" id="2_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="4_qmqfe"]
-[ext_resource type="FontFile" uid="uid://j68aq8xnkyjm" path="res://UI/Jeremy-Regular(1).ttf" id="5_cvc1e"]
+[ext_resource type="FontFile" uid="uid://j68aq8xnkyjm" path="res://UI/Fonts/Jeremy-Regular(1).ttf" id="5_cvc1e"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="5_kfjwn"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="6_dte3n"]
+[ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="8_cvc1e"]
 
 [sub_resource type="Gradient" id="Gradient_536hm"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -148,12 +149,8 @@ emission_rect_extents = Vector2(10, 34.775)
 scale_amount_min = 0.0
 scale_amount_max = 13.21
 
-[node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=1417480819]
-modulate = Color(0.76474124, 0.7554347, 0.8028953, 1)
-z_index = -1
+[node name="UntitledArfgftwork2" parent="." unique_id=1099299449 instance=ExtResource("8_cvc1e")]
 position = Vector2(338, 332.00003)
-scale = Vector2(0.36094573, 0.36094573)
-texture = ExtResource("6_dte3n")
 
 [node name="UntitledArfgftwork3" type="Sprite2D" parent="." unique_id=1609539368]
 modulate = Color(0.9207, 0.94495505, 0.99, 1)
