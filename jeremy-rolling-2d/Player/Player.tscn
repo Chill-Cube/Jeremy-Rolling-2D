@@ -22,7 +22,7 @@
 friction = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
-radius = 126.43
+radius = 131.8
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kpjcp"]
 animations = [{
@@ -58,7 +58,7 @@ mass = 0.095
 physics_material_override = SubResource("PhysicsMaterial_8sa4y")
 gravity_scale = 3.188
 lock_rotation = true
-continuous_cd = 2
+continuous_cd = 1
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
@@ -67,6 +67,7 @@ max_speed = 20000.0
 push_cooldown = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457438960]
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_xhfnw")
 
 [node name="Visual" type="Node2D" parent="." unique_id=1690068538]
