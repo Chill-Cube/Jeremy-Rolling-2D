@@ -7,6 +7,9 @@ extends StaticBody2D
 @onready var notifier := $VisibleOnScreenNotifier2D
 
 func _process(_delta):
+	if not Engine.is_editor_hint():
+		return
+	
 	if polygon.polygon.size() < 2:
 		return
 

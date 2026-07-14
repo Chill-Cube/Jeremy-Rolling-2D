@@ -31,7 +31,7 @@ polygon = PackedVector2Array(-143.1464, -112.3703, -113.63599, -129.0586, -98.51
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D3" index="3" unique_id=593082635]
 position = Vector2(1.5572524, 102.37253)
-rect = Rect2(-173.75824, -288.3385, 370.3044, 332.0169)
+rect = Rect2(-161.75824, -276.3385, 346.3044, 308.0169)
 
 [node name="StaticBody2D" parent="." unique_id=1061570233 instance=ExtResource("2_4lxun")]
 position = Vector2(-1515.0012, 1505.9575)
@@ -58,7 +58,7 @@ polygon = PackedVector2Array(-172.8746, -268.99622, -104.95404, -252.12743, -86.
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
 position = Vector2(-1640.8364, 7.989275)
 scale = Vector2(11.807059, 32.1389)
-rect = Rect2(-514.09845, -268.99622, 1306.1384, 1020.06525)
+rect = Rect2(-502.09845, -256.99622, 1282.1384, 996.06525)
 
 [node name="StaticBody2D2" parent="." unique_id=120451123 instance=ExtResource("2_4lxun")]
 position = Vector2(-1515, 1506)
@@ -85,7 +85,7 @@ polygon = PackedVector2Array(596.1445, 632.6737, 545.8173, 677.626, 470.7917, 71
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D2" index="3" unique_id=593082635]
 position = Vector2(13279.48, -14888.94)
 scale = Vector2(11.807059, 32.1389)
-rect = Rect2(-1465.071, 64.47635, 2084.1377, 693.24524)
+rect = Rect2(-1453.071, 76.47635, 2060.1377, 669.24524)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("4_8l2tc")]
 position = Vector2(-1951, -123)
@@ -156,7 +156,7 @@ polygon = PackedVector2Array(-2979.0703, -828.27734, -2518.6777, -726.87695, -23
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D4" index="3" unique_id=593082635]
 position = Vector2(189.74976, 1585.2711)
-rect = Rect2(-3771.0254, -16839.617, 15443.625, 20458.934)
+rect = Rect2(-3759.0254, -16827.617, 15419.625, 20434.934)
 
 [node name="Bouncer4" parent="." unique_id=1788668600 instance=ExtResource("7_vj0fj")]
 position = Vector2(5119.2456, 20903.693)
@@ -207,10 +207,10 @@ polygon = PackedVector2Array(-139.05469, -158.6289, 441.18604, 67.265625, 1099.0
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D5" index="3" unique_id=593082635]
 position = Vector2(-58.01834, -0.00012207031)
 scale = Vector2(1.0550662, 1)
-rect = Rect2(-2491.254, -3213.7139, 4511.3003, 3458.6826)
+rect = Rect2(-2479.254, -3201.7139, 4487.3003, 3434.6826)
 
 [node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("8_p56ml")]
-position = Vector2(-4519.0386, 6072.0195)
+position = Vector2(-4659.8525, 6079.0483)
 scale = Vector2(2.315, 2.315)
 order = 1
 
