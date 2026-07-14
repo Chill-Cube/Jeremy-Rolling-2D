@@ -128,6 +128,9 @@ points = PackedVector2Array(7962, -324, 8114, -21, 8574, 146, 9099, 65, 9170, 28
 visible = false
 polygon = PackedVector2Array(7962, -324, 8114, -21, 8574, 146, 9099, 65, 9170, 283, 8499, 1249, 8605, 2315, 8253, 3244, 8234, 4837, -3864, 5081, -4426, 4922, -5061, 4403, -5407, 3855, -5609, 3148, -5755, 1654, -5008, 2663, -4051, 3062, -2969, 3370, -1599, 3504, -238, 3406, 979, 3298, 2197, 2851, 3155, 2367, 3845, 1901, 4511, 1458, 5058, 910, 5525, 459, 6354, 8, 7234, -311)
 
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D5" index="3" unique_id=593082635]
+rect = Rect2(-5743, -312, 14901, 5381)
+
 [node name="Area2D5" parent="." unique_id=1791908608 instance=ExtResource("3_in5bo")]
 position = Vector2(-34383, 1204)
 order = 3
