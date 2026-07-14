@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="8_riloj"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_sajpy"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_sajpy"]
+[ext_resource type="Material" uid="uid://byj0u6t3nbeco" path="res://level_kit/water.tres" id="10_1mbfu"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -60,6 +61,9 @@ polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309
 position = Vector2(-1544.9617, 76.30176)
 rotation = 0.002722048
 click_push_force = 500.0
+respawn_time = 0.5
+normal_follow = 0.05
+death_follow = 0.01
 
 [node name="death" parent="." unique_id=521310803 instance=ExtResource("5_1mbfu")]
 position = Vector2(19421.377, 26477.742)
@@ -192,7 +196,7 @@ texture = ExtResource("9_sajpy")
 [node name="UntitledArfgftwork4" type="Sprite2D" parent="." unique_id=2046273059]
 modulate = Color(0.9207, 0.94495505, 0.99, 0.3254902)
 z_index = -2
-position = Vector2(4775.7, 579.29156)
+position = Vector2(4869.576, 385.52512)
 scale = Vector2(10.213544, 10.213544)
 texture = ExtResource("9_sajpy")
 
@@ -202,6 +206,10 @@ z_index = -2
 position = Vector2(57447.203, 18130.723)
 scale = Vector2(6.7020383, 6.7020383)
 texture = ExtResource("9_sajpy")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1308512853]
+material = ExtResource("10_1mbfu")
+position = Vector2(-22.969696, 0)
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]

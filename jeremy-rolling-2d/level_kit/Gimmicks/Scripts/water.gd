@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var push_force := 1800.0
+
 var bodies = []
 
 func _on_body_entered(body: Node2D) -> void:
@@ -8,7 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _physics_process(delta):
 	for body in bodies:
-		body.apply_central_impulse((Vector2.UP * 1800) * delta)
+		body.apply_central_impulse((Vector2.UP * push_force) * delta)
 
 
 func _on_body_exited(body: Node2D) -> void:

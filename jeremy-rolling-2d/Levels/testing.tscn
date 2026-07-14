@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_p40x3"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_ncnwt"]
 [ext_resource type="PackedScene" uid="uid://b6xo2xf360v6i" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="10_mui3k"]
+[ext_resource type="PackedScene" uid="uid://dggoh8f6sm63e" path="res://level_kit/Gimmicks/water.tscn" id="11_x7n8j"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -219,6 +220,16 @@ scale = Vector2(1, 0.99999994)
 [node name="CollisionShape2D2" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1102231679]
 visible = false
 disabled = true
+
+[node name="Water" parent="." unique_id=1249748588 instance=ExtResource("11_x7n8j")]
+position = Vector2(31095.975, 8721.501)
+scale = Vector2(27.659056, 25.778015)
+push_force = 2000.0
+
+[node name="Water2" parent="." unique_id=1036769860 instance=ExtResource("11_x7n8j")]
+position = Vector2(32597.992, 7543.8433)
+scale = Vector2(17.55239, 30.918352)
+push_force = 2000.0
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]
