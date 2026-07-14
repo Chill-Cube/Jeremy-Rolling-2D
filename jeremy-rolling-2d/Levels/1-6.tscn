@@ -2,8 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_st3s1"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_lo6iw"]
-[ext_resource type="Texture2D" uid="uid://dlogqqyrkfsxy" path="res://Assets/Images/HKPFVHRXsAARYYn.png" id="2_ynibb"]
-[ext_resource type="Texture2D" uid="uid://b1wogehkbjv43" path="res://Assets/Images/Untdfgrtyrtdfgitled.png" id="3_c65wt"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="3_lo6iw"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="4_1hd6s"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="5_atlrd"]
@@ -13,7 +11,7 @@
 [node name="16" type="Node2D" unique_id=303574137]
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_st3s1")]
-position = Vector2(-16942, -9327)
+position = Vector2(-16951, -9401)
 click_push_force = 550.0
 max_speed = 17000.0
 push_cooldown = 1.0
@@ -34,8 +32,11 @@ default_color = Color(0.34901962, 0.43529412, 0.6, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
 position = Vector2(0, -37)
-build_mode = 1
 polygon = PackedVector2Array(-21267, -11076, -19775, -11373, -18013, -10884, -14961, -10735, -12458, -10294, -9801, -8292, -3593, -1678, 4599, 7239, 10482, 13665, 16411, 19096, 18513, 20164, 19512, 20835, 20842, 21237, 22016, 21267, 23098, 21144, 24178, 20903, 25143, 20582, 25746, 20391, 26428, 20011, 27110, 19677, 27713, 19313, 28697, 18551, 25355, 27512, -2294, 26818, -35061, 13980, -31291, -16363, -27308, -26365, -5131, -21975, -4090, -16499, 12050, -12960, 16782, -11808, 20937, -9751, 25875, -6171, 31141, -5266, 26245, -1686, 25710, -411, 24229, 2181, 21192, 3272, 18551, 2593, 16631, 5053, 16683, 5970, 18886, 6613, 20039, 6739, 20471, 6778, 20733, 7093, 20065, 7368, 19737, 7460, 19331, 7696, 18794, 7806, 18688, 8233, 18453, 8527, 17406, 8483, 16264, 7963, 15005, 7255, 13327, 5525, 13681, 4502, 13754, 2233, 11597, -1851, 6742, -2880, 3698, -5965, -1116, -6212, -3379, -8516, -4819, -10903, -7798, -11855, -10038, -12368, -11993, -12943, -14610, -13729, -16931, -13432, -19523, -14236, -21607, -12717)
+
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
+position = Vector2(0, -37)
+rect = Rect2(-35057, -26361, 66194, 53869)
 
 [node name="StaticBody2D2" parent="." unique_id=108737421 instance=ExtResource("2_lo6iw")]
 position = Vector2(38094, 19738)
@@ -52,6 +53,9 @@ default_color = Color(0.34901962, 0.43529412, 0.6, 1)
 [node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
 visible = false
 polygon = PackedVector2Array(-6237, -12405, -4159, -12503, -2287, -12087, 6, -11894, 3339, -10232, 5101, -7110, 5163, -2164, 4915, 4730, 3710, 9274, 3122, 10109, 11702, 10034, 22304, 10998, 28870, 10998, 35979, 11480, 37379, 9596, 41046, 8844, 43951, 7391, 46298, 4066, 45669, 4401, 44759, 4434, 43459, 4228, 41964, 3860, 40609, 3242, 38856, 2547, 37087, 1832, 31608, 182, 27370, -271, 24232, 95, 21160, 817, 18810, 938, 16039, 817, 14292, 215, 11099, -2435, 8027, -5026, 6943, -7917, 4774, -11170, 2184, -12978, -1160, -13425, -4392, -13381, -6496, -12852, -7320, -12279)
+
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D2" index="3" unique_id=593082635]
+rect = Rect2(-7316, -13421, 53610, 24897)
 
 [node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("3_lo6iw")]
 position = Vector2(37414, 16978.998)
@@ -94,6 +98,9 @@ default_color = Color(0.34901962, 0.43529412, 0.6, 1)
 visible = false
 polygon = PackedVector2Array(8121, 66, 10898, 0, 19277, 384, 23055, 3341, 24589, 5696, 27053, 6901, 29627, 5641, 33132, 1698, 34720, -1040, 35323, -4764, 23986, -6407, 20536, -8707, 12596, -8050, 9036, -5750, 4545, -2300, 2738, 1205, -219, 2300, 4217, 2191, 5565, 1233, 7125, 892)
 
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D3" index="3" unique_id=593082635]
+rect = Rect2(-215, -8703, 35534, 15600)
+
 [node name="Area2D3" parent="." unique_id=1547374501 instance=ExtResource("5_atlrd")]
 position = Vector2(121554.01, 15321)
 scale = Vector2(3.015, 3.015)
@@ -122,38 +129,6 @@ order = 1
 [node name="finish" parent="." unique_id=868129391 instance=ExtResource("7_4k5i8")]
 position = Vector2(123531, 18675)
 scale = Vector2(16.955, 16.955)
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=26951406]
-show_behind_parent = true
-z_index = -2
-scale = Vector2(26.295, 26.410372)
-scroll_scale = Vector2(4.315, 4.315)
-scroll_offset = Vector2(0, 23002.996)
-repeat_size = Vector2(800, 597.715)
-autoscroll = Vector2(0.565, 0.36)
-repeat_times = 100
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1672400609]
-texture_repeat = 2
-position = Vector2(234.34111, 92.189384)
-scale = Vector2(3.825, 3.825)
-texture = ExtResource("2_ynibb")
-offset = Vector2(0, -5.46)
-
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1483753767]
-show_behind_parent = true
-scale = Vector2(26.295, 26.295)
-repeat_size = Vector2(1000, 0)
-autoscroll = Vector2(0, 3.765)
-repeat_times = 100
-screen_offset = Vector2(-13.605, 0)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=1877826484]
-texture_repeat = 2
-position = Vector2(6.824662, 256.61505)
-scale = Vector2(1.9, 1.9)
-skew = 0.41538838
-texture = ExtResource("3_c65wt")
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

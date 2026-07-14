@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c73swo7fblll"]
 
-[ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="1_eioh3"]
+[ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="1_sajpy"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_riloj"]
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="4_536hm"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="5_1mbfu"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="7_xwijh"]
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="8_riloj"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_sajpy"]
-[ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_sajpy"]
+[ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="9_sajpy"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -20,21 +20,7 @@ gradient = SubResource("Gradient_sajpy")
 [node name="Node2D" type="Node2D" unique_id=1785804454]
 scale = Vector2(1.0013193, 0.9960441)
 
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=530708029]
-show_behind_parent = true
-scale = Vector2(25.2, 25.2)
-repeat_size = Vector2(1016.295, 0)
-autoscroll = Vector2(200, 6.22)
-repeat_times = 1598
-screen_offset = Vector2(-14.445, 0)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=716892695]
-modulate = Color(1, 1, 1, 0.53333336)
-texture_repeat = 2
-position = Vector2(6.805, 256.44)
-scale = Vector2(0.44, 0.44)
-skew = 0.26529005
-texture = ExtResource("1_eioh3")
+[node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("1_sajpy")]
 
 [node name="StaticBody2D5" parent="." unique_id=1791450517 instance=ExtResource("2_riloj")]
 visibility_layer = 8
@@ -55,6 +41,9 @@ default_color = Color(0.23961064, 0.23295718, 0.37533838, 1)
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
 visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 41286.65, 546.46533, 38909.78, -1350.0371, 35184, -2714, 32117, -3014, 29398, -1505, 26366.332, 3281.2837, 24025.42, 4850.4917, 21938.174, 4913.7417, 19513.373, 3727.0474, 17970.408, 2842.5483, 16349.546, 2421.8843, 15794.984, 2014.54, 15251.994, 1615.6948, 13822.88, 1248.2412, 13212.685, 442.05225, 12080.179, 4.3203125, 10407.386, -1414.2913, 9291.857, -1642.1929, 8054.4897, -2255.6194, 7235.5703, -2886.1138, 5893.3413, -3551.7468, 5283.146, -4497.488, 3886.9878, -5530.5747, 2863.3384, -6372.9067, 2115.3252, -6511.455, 1651.9366, -6854.8135, 269.76013, -7051.592, -1112.4164, -6912.0396, -1860.4296, -6110.87, -2477.6152, -5825.742, -2923.0273, -5317.733, -2591.4648, -4086.8638, -2970.914, 6224.7363, -3402.395, 17950.313, -43522.465, 18166.166)
+
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D5" index="3" unique_id=593082635]
+rect = Rect2(-43510.465, -18120, 110807.47, 36274.164)
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("4_536hm")]
 position = Vector2(-1544.9617, 76.30176)
@@ -116,6 +105,9 @@ default_color = Color(0.35951087, 0.3544208, 0.53957105, 1)
 visible = false
 polygon = PackedVector2Array(-25.902328, -325.7445, 28.333015, -330.95248, 118.839195, -322.8174, 181.80994, -325.40237, 714.2506, 67.89349, 836.69794, 121.189514, 945.3965, 129.13452, 1005.7086, 117.88229, 1054.8927, 106.40198, 1104.6084, 80.51422, 1131.1943, 68.65378, 1160.7808, 36.835815, 1147.5258, 78.613525, 1142.2085, 117.083984, 1161.4264, 165.17206, 1155.5796, 201.08594, 1183.8346, 231.39294, 1178.5554, 347.6787, 1125.6113, 482.0592, 1131.3083, 572.87537, 1106.0516, 655.4804, -77.40312, 655.4804)
 
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
+rect = Rect2(-65.40312, -318.95248, 1237.2377, 962.43286)
+
 [node name="StaticBody2D2" parent="." unique_id=337675770 instance=ExtResource("2_riloj")]
 position = Vector2(-3488.3975, 8822.903)
 scale = Vector2(26.295, 26.41037)
@@ -151,16 +143,19 @@ visible = false
 position = Vector2(1384.8243, 342.6988)
 polygon = PackedVector2Array(-25.902328, -325.7445, 28.333015, -330.95248, 118.839195, -322.8174, 181.80994, -325.40237, 714.2506, 67.89349, 836.69794, 121.189514, 945.3965, 129.13452, 1005.7086, 117.88229, 1054.8927, 106.40198, 1104.6084, 80.51422, 1126.2571, 63.065735, 1154.1343, 20.185608, 1142.7024, 76.522766, 1142.2085, 117.083984, 1161.4264, 165.17206, 1155.5796, 201.08594, 1183.8346, 231.39294, 1178.5554, 347.6787, 1125.6113, 482.0592, 1131.3083, 572.87537, 1106.0516, 655.4804, -77.40312, 655.4804, -74.70654, 348.9712, -34.59973, 195.6596, -34.59973, 97.772766, -9.760864, -2.584961, 8.545532, -150.08041, 12.001709, -270.5097)
 
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D2" index="3" unique_id=593082635]
+position = Vector2(1384.8245, 342.69882)
+rect = Rect2(-65.40312, -318.95248, 1237.2377, 962.43286)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=886353741]
 z_index = -3
-offset_left = 139225.33
-offset_top = -34307.72
-offset_right = 274255.56
-offset_bottom = 218618.6
+offset_left = 141144.81
+offset_top = -28719.613
+offset_right = 276175.06
+offset_bottom = 224206.7
 rotation = 1.5707964
 scale = Vector2(0.5777088, 0.932762)
 texture = SubResource("GradientTexture2D_sajpy")
-metadata/_edit_lock_ = true
 
 [node name="Polygon2D3" type="Polygon2D" parent="." unique_id=812060879]
 color = Color(0, 0, 0, 0.15294118)
@@ -169,39 +164,23 @@ polygon = PackedVector2Array(-4522.034, -967.8286, -4001.7205, -1514.9932, -3399
 [node name="CPUParticles2D" parent="." unique_id=490536070 instance=ExtResource("8_sajpy")]
 z_index = -1
 position = Vector2(18426.69, -2510.933)
+amount = 1000
 lifetime = 172.89
 speed_scale = 1.24
-emission_rect_extents = Vector2(100, 31.055)
 scale_amount_min = 54.57
 scale_amount_max = 102.49
 
-[node name="UntitledArfgftwork" type="Sprite2D" parent="." unique_id=565828389]
-modulate = Color(0.9207, 0.94495505, 0.99, 0.62352943)
-z_index = -2
-position = Vector2(47313.582, 12632.976)
-scale = Vector2(8.332635, 8.332635)
-texture = ExtResource("9_sajpy")
+[node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("9_sajpy")]
+position = Vector2(14278.163, 9608.008)
+scale = Vector2(52.56971, 40.146576)
 
-[node name="UntitledArfgftwork3" type="Sprite2D" parent="." unique_id=1146179027]
-modulate = Color(0.9207, 0.94495505, 0.99, 0.5294118)
-z_index = -2
-position = Vector2(27245.055, 11164.163)
-scale = Vector2(13.938578, 13.938578)
-texture = ExtResource("9_sajpy")
+[node name="Node2D2" parent="." unique_id=724643271 instance=ExtResource("9_sajpy")]
+position = Vector2(47501.332, 13330.735)
+scale = Vector2(37.309837, 36.05037)
 
-[node name="UntitledArfgftwork4" type="Sprite2D" parent="." unique_id=2046273059]
-modulate = Color(0.9207, 0.94495505, 0.99, 0.3254902)
-z_index = -2
-position = Vector2(4775.7, 579.29156)
-scale = Vector2(10.213544, 10.213544)
-texture = ExtResource("9_sajpy")
-
-[node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=112936079]
-modulate = Color(0.9207, 0.94495505, 0.99, 0.3254902)
-z_index = -2
-position = Vector2(57447.203, 18130.723)
-scale = Vector2(6.7020383, 6.7020383)
-texture = ExtResource("9_sajpy")
+[node name="Node2D3" parent="." unique_id=1474451668 instance=ExtResource("9_sajpy")]
+position = Vector2(62379.703, 22534.143)
+scale = Vector2(37.309837, 36.05037)
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]

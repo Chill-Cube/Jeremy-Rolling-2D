@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://v3ec3ip35r4s"]
+
+[ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="1_oswic"]
+[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_j2m7x"]
+
+[node name="Node2D" type="Node2D" unique_id=2039717938]
+
+[node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=1099299449]
+modulate = Color(1, 1, 1, 0.6431373)
+z_index = -1
+scale = Vector2(0.36094573, 0.36094573)
+texture = ExtResource("1_oswic")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=213313992]
+rect = Rect2(-331, -324, 637, 693)
+show_rect = false
+script = ExtResource("2_j2m7x")
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

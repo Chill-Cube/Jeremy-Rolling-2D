@@ -10,6 +10,8 @@ extends Node2D
 @onready var FallingSFX := get_parent().get_node("falling")
 @onready var InputNode := get_parent().get_node("Input")
 
+var rotate_speed := 300.0
+
 
 func _ready() -> void:
 	player.on_spring.connect(_spring_sfx) 
@@ -17,17 +19,17 @@ func _ready() -> void:
 
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	Trail.emitting = true if player.is_grounded() and player.linear_velocity.length() > 500 else false
 	Trail.direction.x = -100 if player.linear_velocity.x > 0 else 100
 	Trail.position.x = -38.0 if player.linear_velocity.x > 0 else 38.0
 
-	update_visuals()
+	update_visuals(delta)
 
-func update_visuals() -> void:
+func update_visuals(delta) -> void:
 	var airborne := !player.is_grounded()
 
-	rotation += player.linear_velocity.x / 20000.0
+	rotation += (player.linear_velocity.x / rotate_speed) * delta
 
 	var speed = player.linear_velocity.length()
 

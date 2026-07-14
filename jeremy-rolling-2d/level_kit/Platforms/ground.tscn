@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://j7tqwhs4lf7o"]
 
 [ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="1_yjt17"]
+[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_iildq"]
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=470789971]
 script = ExtResource("1_yjt17")
@@ -10,3 +11,10 @@ script = ExtResource("1_yjt17")
 [node name="Line2D" type="Line2D" parent="." unique_id=1715767360]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1552637217]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=593082635]
+show_rect = false
+script = ExtResource("2_iildq")
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]
