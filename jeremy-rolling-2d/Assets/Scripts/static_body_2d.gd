@@ -30,7 +30,7 @@ func _process(_delta):
 	var target_collision = get_parent().get_node_or_null("CollisionPolygon2D")
 
 	if target_collision != null:
-		var growth_margin: float = 100.0
+		var growth_margin: float = 200.0
 
 		var enlarged_polygons: Array = Geometry2D.offset_polygon(polygon.polygon, growth_margin)
 		

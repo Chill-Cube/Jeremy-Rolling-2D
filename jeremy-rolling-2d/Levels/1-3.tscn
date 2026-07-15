@@ -9,16 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_3fvqv"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="8_6nsl0"]
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="9_ubfli"]
+[ext_resource type="PackedScene" uid="uid://y8vxbcxtqs87" path="res://Level_kit/texture_rect.tscn" id="10_n5njp"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="10_ubfli"]
 [ext_resource type="Texture2D" uid="uid://dkfof7hd7e3qn" path="res://Assets/Images/IMG_2847.png" id="11_tbva3"]
 [ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="12_d83n8"]
-
-[sub_resource type="Gradient" id="Gradient_d83n8"]
-offsets = PackedFloat32Array(0, 0.6744186, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49863547, 0.5829519, 0.9366737, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_jkhrd"]
-gradient = SubResource("Gradient_d83n8")
 
 [node name="12" type="Node2D" unique_id=328900603]
 
@@ -178,16 +172,7 @@ scale = Vector2(0.44, 0.44)
 skew = 0.41538838
 texture = ExtResource("9_ubfli")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1871550933]
-z_index = -2
-offset_left = 139225.33
-offset_top = -34307.72
-offset_right = 274255.56
-offset_bottom = 218618.6
-rotation = 1.5707964
-scale = Vector2(0.5777088, 0.932762)
-texture = SubResource("GradientTexture2D_jkhrd")
-metadata/_edit_lock_ = true
+[node name="TextureRect" parent="." unique_id=243302608 instance=ExtResource("10_n5njp")]
 
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("10_ubfli")]
 position = Vector2(6672, 347)
