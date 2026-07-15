@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var follow_speed := 0.15
-@export var random_strength := 120.0
+@export var random_strength := 200.0
 @export var shake_fade := 5.0
 
 @onready var player: Player = get_parent() as Player
@@ -10,7 +10,7 @@ var rng = RandomNumberGenerator.new()
 var shake_strength := 0.0
 
 func _ready() -> void:
-	player.on_break.connect(_camera_shake)
+	player._on_break.connect(_camera_shake)
 
 func _physics_process(_delta: float) -> void:
 	var target_pos := player.global_position - player.linear_velocity * 0.05

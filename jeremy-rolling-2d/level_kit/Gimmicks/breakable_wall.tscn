@@ -1,8 +1,7 @@
-[gd_scene format=3 uid="uid://b6xo2xf360v6i"]
+[gd_scene format=3 uid="uid://crclxsqalcwr"]
 
 [ext_resource type="Script" uid="uid://bjsh3e8qb70hf" path="res://level_kit/Gimmicks/Scripts/breakable_wall.gd" id="1_dvj1e"]
 [ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="2_03ha7"]
-[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_72of4"]
 [ext_resource type="AudioStream" uid="uid://c80elymag4gok" path="res://Assets/SFX/847207__artninja__artninja__custom_rock_impact_sound_pt3_03052026.wav" id="4_h4blh"]
 [ext_resource type="Texture2D" uid="uid://bfci2u6e21gph" path="res://Assets/Images/Untidfgdfgled.png" id="4_khv0c"]
 [ext_resource type="PackedScene" uid="uid://dw4mhn7xl7x7d" path="res://Effects/explosion.tscn" id="5_c3bwd"]
@@ -26,10 +25,6 @@ script = ExtResource("2_03ha7")
 
 [node name="Line2D" type="Line2D" parent="StaticBody2D" unique_id=927314382]
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="StaticBody2D" unique_id=1667465241]
-show_rect = false
-script = ExtResource("2_72of4")
-
 [node name="break" type="AudioStreamPlayer" parent="." unique_id=900406279]
 stream = ExtResource("4_h4blh")
 
@@ -50,5 +45,3 @@ color = Color(0.3882353, 0.38431373, 0.65882355, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="screen_entered" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_entered"]
-[connection signal="screen_exited" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_exited"]

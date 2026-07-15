@@ -11,6 +11,7 @@ script = ExtResource("1_yjt17")
 [node name="Line2D" type="Line2D" parent="." unique_id=1715767360]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1552637217]
+visible = false
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=593082635]
 show_rect = false

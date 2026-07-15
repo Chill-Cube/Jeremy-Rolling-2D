@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bbujvkklvmlwb"]
+[gd_scene format=3 uid="uid://d066fttcw7i8h"]
 
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="1_xygf2"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_mui3k"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="7_k5y3s"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_p40x3"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_ncnwt"]
-[ext_resource type="PackedScene" uid="uid://b6xo2xf360v6i" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="10_mui3k"]
-[ext_resource type="PackedScene" uid="uid://dggoh8f6sm63e" path="res://level_kit/Gimmicks/water.tscn" id="11_x7n8j"]
+[ext_resource type="PackedScene" uid="uid://crclxsqalcwr" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="10_mui3k"]
+[ext_resource type="PackedScene" uid="uid://dyphg5uumqh1l" path="res://level_kit/Gimmicks/water.tscn" id="11_x7n8j"]
+[ext_resource type="Texture2D" uid="uid://ciovj5r1ux2gy" path="res://Assets/Textures/Untithrthtrhrtd_Artwork.png" id="12_am1oe"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -61,7 +62,6 @@ width = 84.125
 default_color = Color(0.23961064, 0.23295718, 0.37533838, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
-visible = false
 polygon = PackedVector2Array(-42794.426, -17491.893, -570.8594, -18116.73, 67309, -18132, 62639, 8918, 61965, 10489, 59871, 12135, 57178, 11724, 54223, 10228, 47079, 5477, 42590, 2747, 41286.65, 546.46533, 38909.78, -1350.0371, 35184, -2714, 32117, -3014, 29398, -1505, 26366.332, 3281.2837, 24025.42, 4850.4917, 21938.174, 4913.7417, 19513.373, 3727.0474, 17970.408, 2842.5483, 16349.546, 2421.8843, 15794.984, 2014.54, 15251.994, 1615.6948, 13822.88, 1248.2412, 13212.685, 442.05225, 12080.179, 4.3203125, 10407.386, -1414.2913, 9291.857, -1642.1929, 8054.4897, -2255.6194, 7235.5703, -2886.1138, 5893.3413, -3551.7468, 5283.146, -4497.488, 3886.9878, -5530.5747, 2863.3384, -6372.9067, 2115.3252, -6511.455, 1651.9366, -6854.8135, 269.76013, -7051.592, -1112.4164, -6912.0396, -1860.4296, -6110.87, -2477.6152, -5825.742, -2923.0273, -5317.733, -2591.4648, -4086.8638, -2970.914, 6224.7363, -3402.395, 17950.313, -43522.465, 18166.166)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D5" index="3" unique_id=593082635]
@@ -119,7 +119,6 @@ width = 1.825
 default_color = Color(0.35951087, 0.3544208, 0.53957105, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
-visible = false
 polygon = PackedVector2Array(-25.902328, -325.7445, 28.333015, -330.95248, 118.839195, -322.8174, 181.80994, -325.40237, 714.2506, 67.89349, 836.69794, 121.189514, 945.3965, 129.13452, 1005.7086, 117.88229, 1054.8927, 106.40198, 1104.6084, 80.51422, 1131.1943, 68.65378, 1160.7808, 36.835815, 1147.5258, 78.613525, 1142.2085, 117.083984, 1161.4264, 165.17206, 1155.5796, 201.08594, 1183.8346, 231.39294, 1178.5554, 347.6787, 1125.6113, 482.0592, 1131.3083, 572.87537, 1106.0516, 655.4804, -77.40312, 655.4804)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
@@ -156,7 +155,6 @@ width = 1.825
 default_color = Color(0.35951087, 0.3544208, 0.53957105, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
-visible = false
 position = Vector2(1384.8243, 342.6988)
 polygon = PackedVector2Array(-25.902328, -325.7445, 28.333015, -330.95248, 118.839195, -322.8174, 181.80994, -325.40237, 714.2506, 67.89349, 836.69794, 121.189514, 945.3965, 129.13452, 1005.7086, 117.88229, 1054.8927, 106.40198, 1104.6084, 80.51422, 1126.2571, 63.065735, 1154.1343, 20.185608, 1142.7024, 76.522766, 1142.2085, 117.083984, 1161.4264, 165.17206, 1155.5796, 201.08594, 1183.8346, 231.39294, 1178.5554, 347.6787, 1125.6113, 482.0592, 1131.3083, 572.87537, 1106.0516, 655.4804, -77.40312, 655.4804, -74.70654, 348.9712, -34.59973, 195.6596, -34.59973, 97.772766, -9.760864, -2.584961, 8.545532, -150.08041, 12.001709, -270.5097)
 
@@ -215,32 +213,41 @@ position = Vector2(57447.203, 18130.723)
 scale = Vector2(6.7020383, 6.7020383)
 texture = ExtResource("9_ncnwt")
 
-[node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("10_mui3k")]
-position = Vector2(3215.7576, 773.0581)
-rotation = 0.83775806
-
-[node name="CollisionPolygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1159883313]
-rotation = 0.0
-polygon = PackedVector2Array(-161, 66, -295.94135, 150.67668, -298.5068, 86.77503, -256.7304, 89.72996, -430.43018, 476.54077, -226.73994, 4.146241, -199.8912, 41.83105, -129.16165, -5.8274126, -180.4288, -1.1714487, -190.05469, 22.563385, -293.14185, -179.31842, -168.22357, -36.66838, -109.34302, -243.64809, -118.63359, -48.408638, -109.34302, -78.22897, -94.42583, -95.216576, -34.524376, -49.688385, -97, -25, -126, 92, -116, 88, -109, 64, -79, -1, -33, -16, -48.36901, -10.980176, -41, 21, -62.25142, 17.432472, -61.265762, 47.830315, -95.14514, 79.42443, -163, 133, -171, 96)
-
-[node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
-polygon = PackedVector2Array(-161, 66, -295.94135, 150.67668, -298.5068, 86.77503, -256.7304, 89.72996, -430.43018, 476.54077, -226.73994, 4.146241, -199.8912, 41.83105, -129.16165, -5.8274126, -180.4288, -1.1714487, -190.05469, 22.563385, -293.14185, -179.31842, -168.22357, -36.66838, -109.34302, -243.64809, -118.63359, -48.408638, -109.34302, -78.22897, -94.42583, -95.216576, -34.524376, -49.688385, -97, -25, -126, 92, -116, 88, -109, 64, -79, -1, -33, -16, -48.36901, -10.980176, -41, 21, -62.25142, 17.432472, -61.265762, 47.830315, -95.14514, 79.42443, -163, 133, -171, 96)
-
-[node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
-points = PackedVector2Array(-161, 66, -295.94135, 150.67668, -298.5068, 86.77503, -256.7304, 89.72996, -430.43018, 476.54077, -226.73994, 4.146241, -199.8912, 41.83105, -129.16165, -5.8274126, -180.4288, -1.1714487, -190.05469, 22.563385, -293.14185, -179.31842, -168.22357, -36.66838, -109.34302, -243.64809, -118.63359, -48.408638, -109.34302, -78.22897, -94.42583, -95.216576, -34.524376, -49.688385, -97, -25, -126, 92, -116, 88, -109, 64, -79, -1, -33, -16, -48.36901, -10.980176, -41, 21, -62.25142, 17.432472, -61.265762, 47.830315, -95.14514, 79.42443, -163, 133, -171, 96, -161, 66)
-
-[node name="VisibleOnScreenNotifier2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="3" unique_id=1667465241]
-rect = Rect2(-418.43018, -231.64809, 373.43018, 696.18884)
-
 [node name="Water" parent="." unique_id=1249748588 instance=ExtResource("11_x7n8j")]
-position = Vector2(31095.975, 8721.501)
-scale = Vector2(27.659056, 25.778015)
+position = Vector2(31171.875, 7568.942)
+scale = Vector2(38.7081, 64.08106)
 push_force = 2000.0
 
 [node name="Water2" parent="." unique_id=1036769860 instance=ExtResource("11_x7n8j")]
-position = Vector2(32597.992, 7543.8433)
-scale = Vector2(17.55239, 30.918352)
-push_force = 2000.0
+position = Vector2(33656.598, 4608.229)
+rotation = 1.5713234
+scale = Vector2(-24.338348, 85.23149)
+direction = Vector2(1, 0)
+
+[node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("10_mui3k")]
+position = Vector2(2601.5679, 22.087376)
+
+[node name="CollisionPolygon2D" parent="BreakableWall" index="0" unique_id=1263546160]
+position = Vector2(18085.14, 10573.828)
+scale = Vector2(1.01, 1.01)
+polygon = PackedVector2Array(1869.2471, -1889.632, 212.86365, -1778.8495, -638.3385, -1768.1919, -911.68726, -1226.1473, -779.09906, -1042.037, -900.6438, -818.4588, -930.01965, -666.68005, -861.3785, -75.45337, -729.7935, 97.66092, -876.752, 353.86896, -1272.8503, 918.0755, -1317.3346, 1103.1837, -1226.4958, 1745.8748, -970.50287, 1986.5616, 742.43555, 2121.8164, 1022.3856, 1946.6405, 1288.2131, 1268.7993, 2079.5442, 853.8266, 2224.1711, 609.80475, 2184.8818, -1599.6202)
+
+[node name="CollisionPolygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1159883313]
+position = Vector2(18085.14, 10573.828)
+polygon = PackedVector2Array(-232.69336, 235.93457, -454.40234, 622.4629, -808.9336, 1127.4609, -756.0039, 1501.9424, 617.18555, 1610.3704, 890.8242, 912.6113, 1721.7285, 476.88647, 1688.7715, -1376.4443, 232.6914, -1279.0586, -328.56836, -1272.0313, -189.74976, -1079.2694, -424.4414, -647.56055, -380.49805, -269.06348, -49.934326, -134.5322, -158.79053, -4.015888, -12.98291, 42.166805)
+
+[node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
+position = Vector2(18085.14, 10573.828)
+texture = ExtResource("12_am1oe")
+texture_offset = Vector2(0, 237.065)
+texture_scale = Vector2(1.455, 1.455)
+polygon = PackedVector2Array(-232.69336, 235.93457, -454.40234, 622.4629, -808.9336, 1127.4609, -756.0039, 1501.9424, 617.18555, 1610.3704, 890.8242, 912.6113, 1721.7285, 476.88647, 1688.7715, -1376.4443, 232.6914, -1279.0586, -328.56836, -1272.0313, -189.74976, -1079.2694, -424.4414, -647.56055, -380.49805, -269.06348, -49.934326, -134.5322, -158.79053, -4.015888, -12.98291, 42.166805)
+
+[node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
+position = Vector2(18085.14, 10573.828)
+points = PackedVector2Array(-232.69336, 235.93457, -454.40234, 622.4629, -808.9336, 1127.4609, -756.0039, 1501.9424, 617.18555, 1610.3704, 890.8242, 912.6113, 1721.7285, 476.88647, 1688.7715, -1376.4443, 232.6914, -1279.0586, -328.56836, -1272.0313, -189.74976, -1079.2694, -424.4414, -647.56055, -380.49805, -269.06348, -49.934326, -134.5322, -158.79053, -4.015888, -12.98291, 42.166805, -232.69336, 235.93457)
+width = 42.66
+default_color = Color(0.21469507, 0.30200693, 0.607592, 1)
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]
