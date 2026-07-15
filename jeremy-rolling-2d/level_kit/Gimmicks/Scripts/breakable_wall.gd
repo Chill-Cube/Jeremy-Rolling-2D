@@ -4,6 +4,7 @@ extends Area2D
 var broken := false
 
 func _ready():
+	get_node("CollisionPolygon2D2").shape = get_node("StaticBody2D/Polygon2D")
 	get_node("StaticBody2D").get_node("CollisionPolygon2D2").shape = get_node("CollisionPolygon2D2").shape
 	get_node("StaticBody2D").get_node("CollisionPolygon2D2").position = get_node("CollisionPolygon2D2").position
 	get_node("StaticBody2D").get_node("Sprite2D").position = get_node("CollisionPolygon2D2").position

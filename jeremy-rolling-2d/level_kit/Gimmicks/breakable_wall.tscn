@@ -11,14 +11,16 @@ size = Vector2(128, 128)
 [node name="BreakableWall" type="Area2D" unique_id=900924851]
 script = ExtResource("1_dvj1e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125774465]
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=2125774465]
 shape = SubResource("RectangleShape2D_72of4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=655161405]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1102231679]
+[node name="CollisionPolygon2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1102231679]
 rotation = 3.1415927
 shape = SubResource("RectangleShape2D_72of4")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=292345145]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=759937694]
 emitting = false
