@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="jeremy rolling 2d objects branch"
+config/name="jeremy rolling 2d"
 run/main_scene="uid://dp0lgsqsc5uj8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
