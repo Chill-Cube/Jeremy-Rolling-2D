@@ -4,11 +4,11 @@ extends Area2D
 var broken := false
 
 func _ready():
-	get_node("StaticBody2D").get_node("CollisionShape2D2").shape = get_node("CollisionShape2D").shape
-	get_node("StaticBody2D").get_node("CollisionShape2D2").position = get_node("CollisionShape2D").position
-	get_node("StaticBody2D").get_node("Sprite2D").position = get_node("CollisionShape2D").position
-	get_node("StaticBody2D").get_node("Sprite2D").scale = get_node("CollisionShape2D").shape.size/4
-	get_node("CPUParticles2D").position = get_node("CollisionShape2D").position
+	get_node("StaticBody2D").get_node("CollisionPolygon2D2").shape = get_node("CollisionPolygon2D2").shape
+	get_node("StaticBody2D").get_node("CollisionPolygon2D2").position = get_node("CollisionPolygon2D2").position
+	get_node("StaticBody2D").get_node("Sprite2D").position = get_node("CollisionPolygon2D2").position
+	get_node("StaticBody2D").get_node("Sprite2D").scale = get_node("CollisionPolygon2D2").shape.size/4
+	#get_node("CPUParticles2D").position = get_node("CollisionPolygon2D2").position
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -21,10 +21,10 @@ func _on_body_entered(body: Node2D) -> void:
 				get_node("StaticBody2D").queue_free()
 				get_node("CPUParticles2D").emitting = true
 			else:
-				get_node("StaticBody2D").get_node("CollisionShape2D2").disabled = false
+				get_node("StaticBody2D").get_node("CollisionPolygon2D2").disabled = false
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if !broken:
 		if body is RigidBody2D:
-			get_node("StaticBody2D").get_node("CollisionShape2D2").disabled = true
+			get_node("StaticBody2D").get_node("CollisionPolygon2D2").disabled = true
