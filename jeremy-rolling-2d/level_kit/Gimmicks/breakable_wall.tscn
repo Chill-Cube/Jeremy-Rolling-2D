@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://b6xo2xf360v6i"]
 
 [ext_resource type="Script" uid="uid://bjsh3e8qb70hf" path="res://level_kit/Gimmicks/Scripts/breakable_wall.gd" id="1_dvj1e"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_72of4"]
-size = Vector2(615.30695, 1747.1672)
+[ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="2_03ha7"]
+[ext_resource type="Script" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_72of4"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mui3k"]
 size = Vector2(128, 128)
@@ -11,18 +10,23 @@ size = Vector2(128, 128)
 [node name="BreakableWall" type="Area2D" unique_id=900924851]
 script = ExtResource("1_dvj1e")
 
-[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=2125774465]
-shape = SubResource("RectangleShape2D_72of4")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263546160]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=655161405]
+script = ExtResource("2_03ha7")
 
-[node name="CollisionPolygon2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1102231679]
-rotation = 3.1415927
-shape = SubResource("RectangleShape2D_72of4")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1159883313]
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=292345145]
 
+[node name="Line2D" type="Line2D" parent="StaticBody2D" unique_id=927314382]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="StaticBody2D" unique_id=1667465241]
+show_rect = false
+script = ExtResource("2_72of4")
+
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=759937694]
+top_level = true
 emitting = false
 texture = SubResource("PlaceholderTexture2D_mui3k")
 lifetime = 10.0
@@ -37,3 +41,5 @@ angular_velocity_max = -150.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="screen_entered" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_entered"]
+[connection signal="screen_exited" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_exited"]
