@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b6xo2xf360v6i"]
+
+[ext_resource type="Script" uid="uid://bjsh3e8qb70hf" path="res://level_kit/Gimmicks/Scripts/breakable_wall.gd" id="1_dvj1e"]
+[ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="2_03ha7"]
+[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_72of4"]
+[ext_resource type="AudioStream" uid="uid://c80elymag4gok" path="res://Assets/SFX/847207__artninja__artninja__custom_rock_impact_sound_pt3_03052026.wav" id="4_h4blh"]
+[ext_resource type="Texture2D" uid="uid://bfci2u6e21gph" path="res://Assets/Images/Untidfgdfgled.png" id="4_khv0c"]
+[ext_resource type="PackedScene" uid="uid://dw4mhn7xl7x7d" path="res://Effects/explosion.tscn" id="5_c3bwd"]
+
+[sub_resource type="Curve" id="Curve_c3bwd"]
+_data = [Vector2(0.011869438, 1), 0.0, 0.0, 0, 0, Vector2(0.29721358, 0.17945552), 0.0, 0.0, 0, 0, Vector2(0.9999999, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="BreakableWall" type="Area2D" unique_id=900924851]
+script = ExtResource("1_dvj1e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263546160]
+scale = Vector2(1.2, 1.2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=655161405]
+script = ExtResource("2_03ha7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1159883313]
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=292345145]
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D" unique_id=927314382]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="StaticBody2D" unique_id=1667465241]
+show_rect = false
+script = ExtResource("2_72of4")
+
+[node name="break" type="AudioStreamPlayer" parent="." unique_id=900406279]
+stream = ExtResource("4_h4blh")
+
+[node name="Explosion" parent="." unique_id=1275942708 instance=ExtResource("5_c3bwd")]
+position = Vector2(2.9999998, 1.0000076)
+rotation = -1.6065121
+scale = Vector2(7.065, 7.065)
+amount = 60
+texture = ExtResource("4_khv0c")
+lifetime = 2.5599999999999996
+speed_scale = 4.8
+initial_velocity_min = 77.38
+initial_velocity_max = 148.26
+scale_amount_min = 0.0
+scale_amount_max = 2.57
+scale_amount_curve = SubResource("Curve_c3bwd")
+color = Color(0.3882353, 0.38431373, 0.65882355, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="screen_entered" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_entered"]
+[connection signal="screen_exited" from="StaticBody2D/VisibleOnScreenNotifier2D" to="StaticBody2D/VisibleOnScreenNotifier2D" method="_on_screen_exited"]

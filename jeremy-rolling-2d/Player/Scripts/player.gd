@@ -29,6 +29,7 @@ var contact_count := 0
 # signals
 
 signal on_spring
+signal on_break
 
 func _ready() -> void:
 	freeze = true

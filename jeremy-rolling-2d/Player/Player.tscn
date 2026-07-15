@@ -62,9 +62,7 @@ continuous_cd = 1
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
-click_push_force = 450.0
 max_speed = 20000.0
-push_cooldown = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457438960]
 position = Vector2(-1, 0)
