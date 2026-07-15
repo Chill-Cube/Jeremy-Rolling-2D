@@ -3,23 +3,31 @@ extends Area2D
 @export var break_speed := 5000.0
 var broken := false
 
-func _process(_delta):
-	$CollisionPolygon2D.polygon = $StaticBody2D/CollisionPolygon2D.polygon
+@onready var AreaCollision := $CollisionPolygon2D
+@onready var StaticBodyCollision := $StaticBody2D/CollisionPolygon2D
+
+func _ready() -> void:
+	AreaCollision.polygon = StaticBodyCollision.polygon
+	AreaCollision.transform = StaticBodyCollision.transform
+	get_node("Explosion").position = StaticBodyCollision.position
 
 func _on_body_entered(body: Node2D) -> void:
 	if !broken:
-		if body is RigidBody2D:
-			print(body.linear_velocity.abs().length())
-			print(body.linear_velocity)
+		if body is Player:
 			if body.linear_velocity.abs().length() >= break_speed:
 				broken = true
+				
+				
 				get_node("StaticBody2D").queue_free()
-				get_node("CPUParticles2D").emitting = true
+				get_node("Explosion").emitting = true
+				$break.play()
+				
+				body.on_break.emit()
 			else:
-				get_node("StaticBody2D").get_node("CollisionShape2D2").disabled = false
+				get_node("StaticBody2D").get_node("CollisionPolygon2D").set_deferred("disabled", false)
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if !broken:
-		if body is RigidBody2D:
-			get_node("StaticBody2D").get_node("CollisionShape2D2").disabled = true
+		if body is Player:
+			get_node("StaticBody2D").get_node("CollisionPolygon2D").set_deferred("disabled", true)
