@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b6xo2xf360v6i"]
+
+[ext_resource type="Script" uid="uid://bjsh3e8qb70hf" path="res://level_kit/Gimmicks/Scripts/breakable_wall.gd" id="1_dvj1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72of4"]
+size = Vector2(615.30695, 1747.1672)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mui3k"]
+size = Vector2(128, 128)
+
+[node name="BreakableWall" type="Area2D" unique_id=900924851]
+script = ExtResource("1_dvj1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125774465]
+shape = SubResource("RectangleShape2D_72of4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=655161405]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1102231679]
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_72of4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=759937694]
+emitting = false
+texture = SubResource("PlaceholderTexture2D_mui3k")
+lifetime = 10.0
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 1.0
+spread = 90.0
+initial_velocity_min = 2000.0
+initial_velocity_max = 2000.0
+angular_velocity_min = -250.0
+angular_velocity_max = -150.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

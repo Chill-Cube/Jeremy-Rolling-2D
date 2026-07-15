@@ -1,0 +1,60 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://byj0u6t3nbeco"]
+
+[sub_resource type="Shader" id="Shader_oo3gw"]
+code = "shader_type canvas_item;
+uniform sampler2D noise;
+uniform float size = 0.5;
+uniform float wobble_speed = 1.0;
+// Outline uniforms
+uniform vec4 outline_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform float outline_width = 1.0;
+uniform float frequency = 20.0;
+uniform float amplitude = 0.015;
+
+void vertex() {
+	VERTEX += texture(noise, vec2(UV.x + cos(TIME/(100.0/wobble_speed))/10.0, UV.y + cos(TIME/(100.0/wobble_speed))/10.0)).r;
+}
+
+void fragment() {
+	vec2 distorted_uv = UV;
+	distorted_uv.x += sin(TIME + UV.y * frequency) * amplitude;
+	distorted_uv.y += sin(TIME + UV.x * frequency) * amplitude;
+
+	// Sample the main texture
+	vec4 main_color = texture(TEXTURE, distorted_uv);
+
+	// Calculate pixel size for perfect outline scaling
+	vec2 size_uv = TEXTURE_PIXEL_SIZE * outline_width;
+
+	// Sample neighboring pixels in 4 directions
+	float alpha = main_color.a;
+	alpha += texture(TEXTURE, distorted_uv + vec2(size_uv.x, 0.0)).a;
+	alpha += texture(TEXTURE, distorted_uv + vec2(-size_uv.x, 0.0)).a;
+	alpha += texture(TEXTURE, distorted_uv + vec2(0.0, size_uv.y)).a;
+	alpha += texture(TEXTURE, distorted_uv + vec2(0.0, -size_uv.y)).a;
+
+	// Smooth out the alpha checking
+	alpha = min(alpha, 1.0);
+
+	// Mix between the main color and the outline color based on texture presence
+	vec4 final_color = mix(outline_color, main_color, main_color.a);
+
+	// Apply the overall 0.5 transparency mix to the whole result
+	COLOR = vec4(final_color.rgb, alpha * 0.5);
+}"
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6hf5g"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_251tm"]
+noise = SubResource("FastNoiseLite_6hf5g")
+
+[resource]
+shader = SubResource("Shader_oo3gw")
+shader_parameter/noise = SubResource("NoiseTexture2D_251tm")
+shader_parameter/size = 0.5
+shader_parameter/wobble_speed = 1.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 1.0
+shader_parameter/frequency = 20.67
+shader_parameter/amplitude = -0.01
