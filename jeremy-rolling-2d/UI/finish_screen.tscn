@@ -2,69 +2,50 @@
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
+[ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/Fonts/ElmsSans-Regular.ttf" id="2_ab4ai"]
 [ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_72onr"]
-[ext_resource type="StyleBox" uid="uid://bf21s15nuk4xr" path="res://UI/new_style_box_flat.tres" id="4_ab4ai"]
-[ext_resource type="Texture2D" uid="uid://dl2txekodcacc" path="res://UI/Images/menu-4-256.png" id="5_65eop"]
-[ext_resource type="Texture2D" uid="uid://cjnd1cfvk582q" path="res://UI/Images/redo-256.png" id="6_jk0d0"]
-[ext_resource type="Texture2D" uid="uid://ideiavns1ri1" path="res://UI/Images/arrow-8-256.png" id="7_sucph"]
+[ext_resource type="Texture2D" uid="uid://d1dmn65k6t470" path="res://UI/Images/IMG_2835.png" id="5_ab4ai"]
+[ext_resource type="Texture2D" uid="uid://bj5qfq5dxsenh" path="res://UI/Images/IMG_2836.png" id="6_65eop"]
+[ext_resource type="Texture2D" uid="uid://bxnjwljjbmhf8" path="res://UI/Images/IMG_2834.png" id="7_jk0d0"]
 
 [node name="finish_screen" type="CanvasLayer" unique_id=487590026]
 script = ExtResource("1_beg00")
 
 [node name="Panel" type="Panel" parent="." unique_id=126799448]
+self_modulate = Color(0, 0, 0, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 281.0
 offset_top = -1.0
-offset_right = -260.0
+offset_right = -268.0
 offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="YouDidIt" type="Label" parent="Panel" unique_id=1548698008]
 layout_mode = 0
-offset_left = 86.000015
-offset_top = 43.0
-offset_right = 540.0
-offset_bottom = 173.0
-theme_override_font_sizes/font_size = 95
-text = "Finish!!!!!!!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Time" type="Label" parent="Panel" unique_id=1751067517]
-layout_mode = 0
-offset_left = 81.000015
-offset_top = 163.0
-offset_right = 535.0
-offset_bottom = 214.0
-theme_override_font_sizes/font_size = 37
-text = "Time: time"
+offset_left = -0.99998474
+offset_top = -2.0
+offset_right = 602.0
+offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("2_ab4ai")
+theme_override_font_sizes/font_size = 102
+text = "Finish!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Time2" type="Label" parent="Panel" unique_id=1583091778]
 visible = false
 layout_mode = 0
-offset_left = 81.000015
-offset_top = 580.0
-offset_right = 535.0
-offset_bottom = 631.0
+offset_left = 2.0000153
+offset_top = 383.0
+offset_right = 606.0
+offset_bottom = 448.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 37
+theme_override_fonts/font = ExtResource("2_ab4ai")
+theme_override_font_sizes/font_size = 50
 text = "NEW RECORD!!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BestTime" type="Label" parent="Panel" unique_id=134304391]
-layout_mode = 0
-offset_left = 81.000015
-offset_top = 211.0
-offset_right = 535.0
-offset_bottom = 262.0
-theme_override_font_sizes/font_size = 37
-text = "Best Time: time"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -72,88 +53,76 @@ vertical_alignment = 1
 stream = ExtResource("2_72onr")
 
 [node name="Lobsters" type="Node2D" parent="Panel" unique_id=1232955957]
-position = Vector2(-17, 0)
+position = Vector2(27, 8)
+scale = Vector2(0.885, 0.885)
 
 [node name="BarHarborRevised1" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
-position = Vector2(133.2, 342.19995)
-scale = Vector2(0.088, 0.092)
+position = Vector2(110.999985, 231)
+scale = Vector2(0.084, 0.088)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised2" type="Sprite2D" parent="Panel/Lobsters" unique_id=220461462]
-position = Vector2(326.19998, 342.19995)
-scale = Vector2(0.088, 0.092)
+position = Vector2(316.00003, 231)
+scale = Vector2(0.084, 0.088)
 texture = ExtResource("3_72onr")
 
 [node name="BarHarborRevised3" type="Sprite2D" parent="Panel/Lobsters" unique_id=264422850]
-position = Vector2(518.2, 340.2)
-scale = Vector2(0.088, 0.092)
+position = Vector2(531, 230)
+scale = Vector2(0.084, 0.088)
 texture = ExtResource("3_72onr")
 
-[node name="Panel2" type="Panel" parent="Panel" unique_id=791809135]
-self_modulate = Color(0.15127608, 0.15127608, 0.15127608, 1)
+[node name="Menu" type="TextureButton" parent="Panel" unique_id=742221033]
 z_index = 2
 layout_mode = 0
-offset_left = 246.0
-offset_top = 443.0
-offset_right = 367.0
-offset_bottom = 567.21106
-theme_override_styles/panel = ExtResource("4_ab4ai")
+offset_left = 244.0
+offset_top = 468.0
+offset_right = 13744.0
+offset_bottom = 14581.636
+scale = Vector2(0.01, 0.01)
+texture_normal = ExtResource("5_ab4ai")
+stretch_mode = 0
 
-[node name="Menu" type="TextureButton" parent="Panel/Panel2" unique_id=939051857]
-layout_mode = 0
-offset_right = 508.4746
-offset_bottom = 512.4999
-scale = Vector2(0.236, 0.24)
-texture_normal = ExtResource("5_65eop")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="Panel3" type="Panel" parent="Panel" unique_id=1873784925]
-self_modulate = Color(0.15127608, 0.15127608, 0.15127608, 1)
+[node name="Retry" type="TextureButton" parent="Panel" unique_id=804077612]
 z_index = 2
 layout_mode = 0
-offset_left = 84.0
-offset_top = 443.0
-offset_right = 205.0
-offset_bottom = 567.21106
-theme_override_styles/panel = ExtResource("4_ab4ai")
+offset_left = 85.0
+offset_top = 467.0
+offset_right = 13585.0
+offset_bottom = 14580.636
+scale = Vector2(0.01, 0.01)
+texture_normal = ExtResource("6_65eop")
+stretch_mode = 0
 
-[node name="Retry" type="TextureButton" parent="Panel/Panel3" unique_id=1094569701]
+[node name="NextLevel" type="TextureButton" parent="Panel" unique_id=469162208]
+z_index = 3
 layout_mode = 0
-offset_left = 121.409645
-offset_top = 0.9879184
-offset_right = 684.8335
-offset_bottom = 569.6935
-scale = Vector2(-0.215, 0.215)
-texture_normal = ExtResource("6_jk0d0")
-ignore_texture_size = true
-stretch_mode = 3
+offset_left = 401.0
+offset_top = 467.0
+offset_right = 13901.0
+offset_bottom = 14580.636
+scale = Vector2(0.01, 0.01)
+texture_normal = ExtResource("7_jk0d0")
+stretch_mode = 0
 
-[node name="Panel4" type="Panel" parent="Panel" unique_id=979229516]
-self_modulate = Color(0.15127608, 0.15127608, 0.15127608, 1)
-z_index = 2
+[node name="Time" type="RichTextLabel" parent="Panel" unique_id=656787795]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 443.0
-offset_right = 529.0
-offset_bottom = 567.21106
-theme_override_styles/panel = ExtResource("4_ab4ai")
+offset_left = 2.0
+offset_top = 296.0
+offset_right = 603.0
+offset_bottom = 380.0
+theme_override_fonts/normal_font = ExtResource("2_ab4ai")
+theme_override_font_sizes/normal_font_size = 61
+bbcode_enabled = true
+text = "[center][img=80]res://UI/Images/clock.png[/img] 00:00.00[/center]"
+fit_content = true
+scroll_active = false
 
-[node name="NextLevel" type="TextureButton" parent="Panel/Panel4" unique_id=825654257]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0000095
-offset_right = 305.0
-offset_bottom = 318.64612
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.28, 0.28)
-texture_normal = ExtResource("7_sucph")
-ignore_texture_size = true
-stretch_mode = 3
+[node name="Panel2" type="Panel" parent="." unique_id=1679491063]
+z_index = -4
+offset_right = 1154.0
+offset_bottom = 664.0
+mouse_filter = 2
 
-[connection signal="pressed" from="Panel/Panel2/Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Panel/Panel3/Retry" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="Panel/Panel4/NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Panel/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/NextLevel" to="." method="_on_next_level_pressed"]

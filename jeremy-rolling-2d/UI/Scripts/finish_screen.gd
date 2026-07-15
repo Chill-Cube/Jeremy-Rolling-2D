@@ -36,7 +36,7 @@ func _show_finish(time: float, current_level: String) -> void:
 	visible = true
 	$Panel/FinishSFX.play()
 
-	$Panel/Panel4.visible = get_next_level(current_level) != ""
+	$Panel/NextLevel.visible = get_next_level(current_level) != ""
 
 	update_save(time, current_level)
 
@@ -49,16 +49,21 @@ func _show_finish(time: float, current_level: String) -> void:
 		var ui: Sprite2D = children[i]
 		ui.modulate = ui.modulate * 0.1 if not level_data.collectables[i] else ui.modulate
 
-	$Panel/Time.text = "Time: " + format_time(time)
-	$Panel/BestTime.text = "Best Time: " + format_time(level_data.best_time)
+	$Panel/Time.text = "[center][img=80]res://UI/Images/clock.png[/img] %s[/center]" % format_time(time)
 
 func _on_retry_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Levels/%s.tscn" % level)
 
 func _on_next_level_pressed() -> void:
 	var next_level := get_next_level(level)
 	if next_level != "":
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 		get_tree().change_scene_to_file("res://Levels/%s.tscn" % next_level)
 
 func _on_menu_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://UI/menu.tscn")

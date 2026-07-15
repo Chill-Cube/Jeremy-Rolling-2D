@@ -10,21 +10,22 @@ config_version=5
 
 [application]
 
-config/name="jeremy rolling 2d"
+config/name="jeremy rolling 2d objects branch"
 run/main_scene="uid://dp0lgsqsc5uj8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/use_filter=false
-config/icon="uid://b84xpr6p7tsg8"
 
 [autoload]
 
 World1BGM="*uid://dwsqtq4kag3fx"
 SaveManager="*uid://c7p3buhqaimv0"
+TransitionScreen="*uid://cy4o366pwaea3"
 
 [display]
 
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
@@ -55,20 +56,13 @@ menu={
 ]
 }
 
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
-pointing/emulate_mouse_from_touch=false
-
 [physics]
 
-2d/run_on_separate_thread=true
-common/physics_ticks_per_second=240
 common/max_physics_steps_per_frame=16
 common/physics_jitter_fix=0.0
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=4096.0
-2d/solver/solver_iterations=64
+2d/solver/default_contact_bias=0.85
 
 [rendering]
 
