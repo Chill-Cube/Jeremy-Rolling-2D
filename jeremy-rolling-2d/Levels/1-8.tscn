@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://bo3jrdi8ui6dx"]
+[gd_scene format=3 uid="uid://b4rye7q8n25l0"]
 
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_dp1do"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_yqlc8"]
 [ext_resource type="Texture2D" uid="uid://dtyrvs4l20kov" path="res://Assets/Images/UntitledvbnvbnArtwork.png" id="3_16c64"]
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="3_52ad1"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="3_beld0"]
-[ext_resource type="PackedScene" uid="uid://y8vxbcxtqs87" path="res://level_kit/scenery/texture_rect.tscn" id="4_3deou"]
-[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="4_bov2p"]
-[ext_resource type="PackedScene" uid="uid://crclxsqalcwr" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="5_beld0"]
+[ext_resource type="PackedScene" path="res://level_kit/scenery/texture_rect.tscn" id="4_3deou"]
+[ext_resource type="Script" path="res://Assets/Scripts/fade_in.gd" id="4_bov2p"]
+[ext_resource type="PackedScene" uid="uid://b6xo2xf360v6i" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="5_beld0"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="5_ytcbe"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="6_16c64"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="7_bov2p"]
@@ -55,6 +55,7 @@ polygon = PackedVector2Array(1031.8794, -1289.4952, 1060.8467, -1279.1332, 2552.
 polygon = PackedVector2Array(-1327, 1014, -1049, 695, -679, 184, -878, -1000, -716, -1422, 979, -1096, 2356, -349, 1127, 428, 853, 1501, 1150, 2144, -240, 1275)
 
 [node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
+texture_scale = Vector2(0.59, 0.59)
 polygon = PackedVector2Array(-1327, 1014, -1049, 695, -679, 184, -878, -1000, -716, -1422, 979, -1096, 2356, -349, 1127, 428, 853, 1501, 1150, 2144, -240, 1275)
 
 [node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
@@ -72,6 +73,7 @@ polygon = PackedVector2Array(965.0963, -839.2355, 991.3171, -816.15784, 1206.029
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1107.0527, -351.41595, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Polygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(1157761329, 655161405) index="1" unique_id=292345145]
+texture_scale = Vector2(0.57, 0.57)
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1107.0527, -351.41595, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(1157761329, 655161405) index="2" unique_id=927314382]
@@ -89,6 +91,8 @@ polygon = PackedVector2Array(961.758, -841.2709, 982.7893, -824.1638, 1343.901, 
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1199.4795, -300.16846, 1504.1777, 10.651611, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Polygon2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(797125956, 655161405) index="1" unique_id=292345145]
+texture_scale = Vector2(0.57, 0.57)
+texture_rotation = -0.74700093
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1199.4795, -300.16846, 1504.1777, 10.651611, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(797125956, 655161405) index="2" unique_id=927314382]
@@ -106,6 +110,8 @@ polygon = PackedVector2Array(776.88654, -785.89594, 782.9435, -783.1226, 1232.66
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 200.08398, -810.3208, 696.65234, -602.66504, 1178.3232, -362.40454, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Polygon2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(1842885367, 655161405) index="1" unique_id=292345145]
+texture_scale = Vector2(0.57, 0.57)
+texture_rotation = 0.8709193
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 200.08398, -810.3208, 696.65234, -602.66504, 1178.3232, -362.40454, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(1842885367, 655161405) index="2" unique_id=927314382]
@@ -142,6 +148,8 @@ polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.3
 
 [node name="Polygon2D" parent="BreakableWall6/StaticBody2D" parent_id_path=PackedInt32Array(1061215675, 655161405) index="1" unique_id=292345145]
 position = Vector2(1661.3333, -1446.7156)
+texture_offset = Vector2(1500, 1495.14)
+texture_scale = Vector2(0.42, 0.42)
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 67.978516, -73.45117, 93.10547, -321.5586, 54.82617, -546.22656, 279.41992, -1080.3027, 303.28906, -1191.416, 336.12695, -1377.7148, 589.084, -1255.0859, 849.2637, -1040.8164, 1046.998, -925.8926, 1345.0742, -689.78516, 1604.4375, -620.8594, 1749.8184, -315.26172, 1382.292, 7.4994507, 1127, 428, 1223.3828, 915.7324, 853, 1501, 1025.1973, 2181.577, 642.06445, 2260.287, 255.59961, 1973.6953, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall6/StaticBody2D" parent_id_path=PackedInt32Array(1061215675, 655161405) index="2" unique_id=927314382]

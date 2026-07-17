@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="2_j2m7x"]
 
 [node name="Node2D" type="Node2D" unique_id=2039717938]
+z_index = -2
 
 [node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=1099299449]
 modulate = Color(1, 1, 1, 0.6431373)

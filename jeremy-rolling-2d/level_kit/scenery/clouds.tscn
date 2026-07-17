@@ -5,6 +5,7 @@
 
 [node name="Parallax2D2" type="Parallax2D" unique_id=2005652190]
 show_behind_parent = true
+z_index = -2
 scale = Vector2(25.2, 25.2)
 repeat_size = Vector2(1016.295, 0)
 autoscroll = Vector2(200, 6.22)
