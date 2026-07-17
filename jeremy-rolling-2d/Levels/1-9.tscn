@@ -1,3 +1,53 @@
 [gd_scene format=3 uid="uid://bxio5f4yu67b3"]
 
+[ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_d5fkm"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_v38bs"]
+[ext_resource type="PackedScene" uid="uid://b6xo2xf360v6i" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="3_v38bs"]
+[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="4_xh0t4"]
+
 [node name="19" type="Node2D" unique_id=222260503]
+
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_d5fkm")]
+position = Vector2(-143, -773)
+mass = 0.057
+
+[node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_v38bs")]
+position = Vector2(1300, 729)
+scale = Vector2(0.9885794, 1.4)
+
+[node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
+polygon = PackedVector2Array(-1729.7546, -4630, -1589, 340, -1494.103, 951.2112, -1437, 1319, -1026, 2210, -287, 2685, 756, 3089, 1665, 3148, 2609, 2908, 3454, 2343, 3985, 1532, 4221, 639, 4347, -143, 4281.902, -6224.2856, 8554.698, -5405.714, 7420, 5312, 3383, 5948, -1991, 7053, -5044, 6463, -3556, 1383, -3896.5, -4564.9995)
+
+[node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
+points = PackedVector2Array(-1729.7546, -4630, -1589, 340, -1494.103, 951.2112, -1437, 1319, -1026, 2210, -287, 2685, 756, 3089, 1665, 3148, 2609, 2908, 3454, 2343, 3985, 1532, 4221, 639, 4347, -143, 4281.902, -6224.2856, 8554.698, -5405.714, 7420, 5312, 3383, 5948, -1991, 7053, -5044, 6463, -3556, 1383, -3896.5, -4564.9995, -1729.7546, -4630)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(-1729.7546, -4630, -1589, 340, -1494.103, 951.2112, -1437, 1319, -1026, 2210, -287, 2685, 756, 3089, 1665, 3148, 2609, 2908, 3454, 2343, 3985, 1532, 4221, 639, 4347, -143, 4281.902, -6224.2856, 8554.698, -5405.714, 7420, 5312, 3383, 5948, -1991, 7053, -5044, 6463, -3556, 1383, -3896.5, -4564.9995)
+
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
+rect = Rect2(-5032, -6212.2856, 13574.698, 13253.285)
+
+[node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("3_v38bs")]
+
+[node name="CollisionPolygon2D" parent="BreakableWall" index="0" unique_id=1263546160]
+polygon = PackedVector2Array(5636.7817, -2631.355, 3523.6885, -1898.6638, 1744.9678, -1720.5981, 577.4299, -2027.5431, -388.2001, -2492.314, -575.65857, -2373.7163, -566.6234, -860.32996, -494.8844, -758.0212, -353.15594, -705.6907, -315.02744, -699.4923, 694.11786, -731.1828, 1685.7502, -469.18622, 1720.4587, -466.24362, 2943.587, -575.5735, 3962.7813, -172.81938, 4023.4375, -168.2908, 5752.147, -568.1211, 5839.3276, -679.96075, 5804.001, -2514.7588)
+
+[node name="CollisionPolygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1159883313]
+polygon = PackedVector2Array(-302, -900, 717, -932, 1720, -667, 2973, -779, 4008, -370, 5638, -747, 5606, -2409, 3567, -1702, 1729, -1518, 508, -1839, -375, -2264, -367, -924)
+
+[node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
+polygon = PackedVector2Array(-302, -900, 717, -932, 1720, -667, 2973, -779, 4008, -370, 5638, -747, 5606, -2409, 3567, -1702, 1729, -1518, 508, -1839, -375, -2264, -367, -924)
+
+[node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
+points = PackedVector2Array(-302, -900, 717, -932, 1720, -667, 2973, -779, 4008, -370, 5638, -747, 5606, -2409, 3567, -1702, 1729, -1518, 508, -1839, -375, -2264, -367, -924, -302, -900)
+
+[node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("4_xh0t4")]
+position = Vector2(174, -2773)
+rotation = -0.5013242
+
+[node name="Area2D2" parent="." unique_id=1821628751 instance=ExtResource("4_xh0t4")]
+position = Vector2(5067, -4410)
+rotation = -2.5747252
+
+[editable path="StaticBody2D"]
+[editable path="BreakableWall"]
