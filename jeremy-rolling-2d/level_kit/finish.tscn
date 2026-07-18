@@ -9,6 +9,7 @@
 size = Vector2(174, 2723)
 
 [node name="finish" type="Area2D" unique_id=521310803]
+z_index = -1
 script = ExtResource("1_v50nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1064482431]

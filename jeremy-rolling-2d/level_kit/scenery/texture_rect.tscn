@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c6u8w1v4qswnq"]
+
+[sub_resource type="Gradient" id="Gradient_d83n8"]
+offsets = PackedFloat32Array(0, 0.6744186, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49863547, 0.5829519, 0.9366737, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jkhrd"]
+gradient = SubResource("Gradient_d83n8")
+
+[node name="TextureRect" type="TextureRect" unique_id=243302608]
+z_index = -4
+offset_left = 139225.33
+offset_top = -34307.72
+offset_right = 274255.56
+offset_bottom = 218618.6
+rotation = 1.5707964
+scale = Vector2(0.5777088, 0.932762)
+texture = SubResource("GradientTexture2D_jkhrd")
+metadata/_edit_lock_ = true

@@ -54,6 +54,7 @@ point_count = 2
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=658010438]
+z_index = 1
 mass = 0.095
 physics_material_override = SubResource("PhysicsMaterial_8sa4y")
 gravity_scale = 3.188
@@ -63,6 +64,7 @@ contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_kpjcp")
 max_speed = 20000.0
+push_cooldown = 0.7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457438960]
 position = Vector2(-1, 0)

@@ -6,10 +6,8 @@ var broken := false
 @onready var AreaCollision := $CollisionPolygon2D
 @onready var StaticBodyCollision := $StaticBody2D/CollisionPolygon2D
 
-func _ready() -> void:
-	AreaCollision.polygon = StaticBodyCollision.polygon
-	AreaCollision.transform = StaticBodyCollision.transform
-	get_node("Explosion").position = StaticBodyCollision.position
+func _ready() -> void:	
+	get_node("Explosion").transform = StaticBodyCollision.transform
 
 func _on_body_entered(body: Node2D) -> void:
 	if !broken:
@@ -22,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 				get_node("Explosion").emitting = true
 				$break.play()
 				
-				body.on_break.emit()
+				body._on_break.emit()
 			else:
 				get_node("StaticBody2D").get_node("CollisionPolygon2D").set_deferred("disabled", false)
 
