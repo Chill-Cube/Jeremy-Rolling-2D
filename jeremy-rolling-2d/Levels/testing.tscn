@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d066fttcw7i8h"]
+[gd_scene format=3 uid="uid://bbujvkklvmlwb"]
 
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="1_xygf2"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_mui3k"]
@@ -96,7 +96,6 @@ scale = Vector2(26.295, 26.41037)
 
 [node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
 texture_repeat = 2
-color = Color(0.7411765, 0.78039217, 0.89411765, 1)
 texture = ExtResource("7_k5y3s")
 texture_offset = Vector2(80.815, -142.56)
 texture_scale = Vector2(3.445, 3.445)
@@ -131,7 +130,6 @@ scale = Vector2(26.295, 26.41037)
 [node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
 texture_repeat = 2
 position = Vector2(1384.8245, 342.69882)
-color = Color(0.7411765, 0.78039217, 0.89411765, 1)
 texture = ExtResource("7_k5y3s")
 texture_offset = Vector2(80.815, -152.82)
 texture_scale = Vector2(3.24, 3.24)
