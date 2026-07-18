@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b6xo2xf360v6i"]
+[gd_scene format=3 uid="uid://crclxsqalcwr"]
 
 [ext_resource type="Script" uid="uid://bjsh3e8qb70hf" path="res://level_kit/Gimmicks/Scripts/breakable_wall.gd" id="1_dvj1e"]
 [ext_resource type="Script" uid="uid://baf28w23d8pt8" path="res://Assets/Scripts/static_body_2d.gd" id="2_03ha7"]
@@ -25,6 +25,7 @@ script = ExtResource("2_03ha7")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1159883313]
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=292345145]
+texture_repeat = 2
 color = Color(0.6864717, 0.69625247, 0.9329489, 1)
 texture = ExtResource("3_c3bwd")
 texture_offset = Vector2(1500, 1500)

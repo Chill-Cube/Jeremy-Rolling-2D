@@ -14,7 +14,7 @@ func _process(_delta):
 
 	# Update collision automatically
 	collision.polygon = polygon.polygon
-	collision.global_position = polygon.global_position
+	collision.transform = polygon.transform
 
 	# Draw outline
 	var points := PackedVector2Array(polygon.polygon)
@@ -39,7 +39,7 @@ func _process(_delta):
 		else:
 			target_collision.polygon = polygon.polygon
 		
-		target_collision.global_position = polygon.global_position
+		target_collision.transform = polygon.transform
 
 
 func update_collision() -> void:
