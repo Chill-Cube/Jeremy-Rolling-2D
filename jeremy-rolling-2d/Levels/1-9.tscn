@@ -56,6 +56,7 @@ polygon = PackedVector2Array(-302, -900, 717, -932, 1720, -667, 2973, -779, 4008
 
 [node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
 position = Vector2(487, -227)
+color = Color(0.9098039, 0.91764706, 0.9843137, 1)
 texture_offset = Vector2(1500, 1650.12)
 texture_scale = Vector2(0.83, 0.83)
 texture_rotation = -0.858702
@@ -81,6 +82,7 @@ polygon = PackedVector2Array(12059.092, -3935.0251, 10536.982, -3125.485, 10482.
 polygon = PackedVector2Array(10695, -2983, 10937, -2230, 10946, -1380, 11349, -932, 11402, -842, 13157, -1442, 12602, -1881, 12280, -2356, 12584, -2791, 12443, -3333, 12092, -3726)
 
 [node name="Polygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(2035601162, 655161405) index="1" unique_id=292345145]
+color = Color(0.9098039, 0.91764706, 0.9843137, 1)
 polygon = PackedVector2Array(10695, -2983, 10937, -2230, 10946, -1380, 11349, -932, 11402, -842, 13157, -1442, 12602, -1881, 12280, -2356, 12584, -2791, 12443, -3333, 12092, -3726)
 
 [node name="Line2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(2035601162, 655161405) index="2" unique_id=927314382]
@@ -102,6 +104,7 @@ polygon = PackedVector2Array(11297, -3200, 11264, -2142, 11395, -1515, 11349, -9
 
 [node name="Polygon2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(410039984, 655161405) index="1" unique_id=292345145]
 position = Vector2(1976, -6908)
+color = Color(0.9098039, 0.91764706, 0.9843137, 1)
 polygon = PackedVector2Array(11297, -3200, 11264, -2142, 11395, -1515, 11349, -932, 11734, -2, 12127, -375, 12599, -1100, 12437, -1572, 12266, -1971, 12201, -2598, 12547, -3089, 12627, -3560, 12092, -3726, 11524, -3728)
 
 [node name="Line2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(410039984, 655161405) index="2" unique_id=927314382]
@@ -136,6 +139,7 @@ metadata/_edit_lock_ = true
 [node name="Node2D2" parent="." unique_id=1962459326 instance=ExtResource("7_phj60")]
 position = Vector2(-11300, 3407)
 scale = Vector2(-32.556965, 31.063705)
+metadata/_edit_lock_ = true
 
 [node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("8_phj60")]
 metadata/_edit_lock_ = true

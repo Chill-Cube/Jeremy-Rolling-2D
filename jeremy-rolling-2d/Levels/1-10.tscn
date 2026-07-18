@@ -60,6 +60,7 @@ bounce_force = 250.0
 
 [node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("3_de7ax")]
 position = Vector2(-26441.602, -6192.3184)
+break_speed = 4000.0
 
 [node name="CollisionPolygon2D" parent="BreakableWall" index="0" unique_id=1263546160]
 position = Vector2(3976.6016, -4578.6816)
