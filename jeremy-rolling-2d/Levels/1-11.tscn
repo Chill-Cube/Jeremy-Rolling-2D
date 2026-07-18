@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://demmf2l1unjvm"]
+
+[ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_tednq"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_02xqr"]
+[ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="3_n1u6t"]
+[ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="3_vkfdt"]
+[ext_resource type="PackedScene" uid="uid://crclxsqalcwr" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="4_02xqr"]
+[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="5_vkfdt"]
+[ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="7_2onrj"]
+[ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="8_l3j4h"]
+[ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="9_p6y2c"]
+[ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="10_b3nqi"]
+
+[node name="111" type="Node2D" unique_id=116009774]
+
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_tednq")]
+position = Vector2(414, 5930)
+
+[node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_02xqr")]
+position = Vector2(-16374, 2524)
+
+[node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
+texture_repeat = 2
+color = Color(0.7979717, 0.82902426, 0.9191232, 1)
+texture = ExtResource("3_n1u6t")
+texture_scale = Vector2(-0.1, -0.1)
+texture_rotation = -0.2443461
+polygon = PackedVector2Array(13422, -10880, 13120, -8008, 13288, -5816, 12726, -4018, 13092, -1910, 13326, 82, 13307, 1560, 13671, 2558, 13688, 3829, 13998, 3998, 14225, 4171, 15609, 4244, 16976, 4285, 19752, 4269, 20447, 4151, 20236, 1639, 20347, -2, 19934, -2170, 19640, -4853, 20003, -7024, 19818, -8998, 19980, -10833, 24997, -10833, 33753, -9904, 31012, -1032, 31105, 4728, 27180, 7120, 25719, 10028, 18053, 11203, 11190, 10646, 7480, 8544, 6199, 1807, 6368, -5521, 6924, -9231, 7140, -10653)
+
+[node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
+points = PackedVector2Array(13422, -10880, 13120, -8008, 13288, -5816, 12726, -4018, 13092, -1910, 13326, 82, 13307, 1560, 13671, 2558, 13688, 3829, 13998, 3998, 14225, 4171, 15609, 4244, 16976, 4285, 19752, 4269, 20447, 4151, 20236, 1639, 20347, -2, 19934, -2170, 19640, -4853, 20003, -7024, 19818, -8998, 19980, -10833, 24997, -10833, 33753, -9904, 31012, -1032, 31105, 4728, 27180, 7120, 25719, 10028, 18053, 11203, 11190, 10646, 7480, 8544, 6199, 1807, 6368, -5521, 6924, -9231, 7140, -10653, 13422, -10880)
+width = 64.275
+default_color = Color(0.18685868, 0.18649048, 0.30779403, 1)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(13422, -10880, 13120, -8008, 13288, -5816, 12726, -4018, 13092, -1910, 13326, 82, 13307, 1560, 13671, 2558, 13688, 3829, 13998, 3998, 14225, 4171, 15609, 4244, 16976, 4285, 19752, 4269, 20447, 4151, 20236, 1639, 20347, -2, 19934, -2170, 19640, -4853, 20003, -7024, 19818, -8998, 19980, -10833, 24997, -10833, 33753, -9904, 31012, -1032, 31105, 4728, 27180, 7120, 25719, 10028, 18053, 11203, 11190, 10646, 7480, 8544, 6199, 1807, 6368, -5521, 6924, -9231, 7140, -10653)
+
+[node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
+rect = Rect2(6211, -10868, 27530, 22059)
+
+[node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("3_vkfdt")]
+z_index = -1
+position = Vector2(576, 6376)
+rotation = -1.5460435
+scale = Vector2(4.404173, 5.7858963)
+
+[node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("4_02xqr")]
+position = Vector2(-20384, 1021)
+
+[node name="CollisionPolygon2D" parent="BreakableWall" index="0" unique_id=1263546160]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(21701.998, 157.21461, 21641.297, 171.67633, 20299.559, 982.1487, 18733.719, 627.7995, 18714.543, 625.37085, 17117.48, 578.367, 16993.596, 715.61017, 17100.363, 1521.9222, 17124.246, 2389.3547, 17235.068, 2501.6343, 18219.357, 2541.6108, 19526.31, 2667.3179, 19531.24, 2667.6692, 21135.584, 2742.29, 21157.32, 2740.934, 23248.795, 2379.5796, 24405.445, 2418.6272, 24525.656, 2309.32, 24575.492, 1496.0928, 24573.22, 1467.8499, 24340.613, 435.7238, 24240.838, 349.55103)
+
+[node name="CollisionPolygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="0" unique_id=1159883313]
+polygon = PackedVector2Array(17322, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24375, 1498, 24160, 544, 21718, 359, 20334, 1195, 18699, 825, 17204, 781, 17300, 1506)
+
+[node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
+color = Color(0.9799606, 0.9812879, 0.99603766, 1)
+texture_offset = Vector2(1500, 1501.61)
+texture_scale = Vector2(0.89, 0.89)
+texture_rotation = -2.1450098
+polygon = PackedVector2Array(17322, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24375, 1498, 24160, 544, 21718, 359, 20334, 1195, 18699, 825, 17204, 781, 17300, 1506)
+
+[node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
+points = PackedVector2Array(17322, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24375, 1498, 24160, 544, 21718, 359, 20334, 1195, 18699, 825, 17204, 781, 17300, 1506, 17322, 2305)
+
+[node name="BreakableWall2" parent="." unique_id=527280113 instance=ExtResource("4_02xqr")]
+position = Vector2(-20384, 1021)
+
+[node name="CollisionPolygon2D" parent="BreakableWall2" index="0" unique_id=1263546160]
+position = Vector2(-238, -3153)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(24229.678, 332.34634, 22371.045, 591.5683, 20073.338, 685.818, 18712.451, 625.4002, 16799.686, 452.37558, 16665.352, 613.16095, 16893.604, 1441.1327, 17023.564, 2404.1226, 17131.775, 2502.224, 18219.793, 2541.6526, 19526.31, 2667.3179, 19531.24, 2667.6692, 21135.584, 2742.29, 21157.32, 2740.934, 23248.795, 2379.5796, 24434.656, 2419.6133, 24558.541, 2236.6802, 24245.982, 1525.3397, 24370.105, 469.78345)
+
+[node name="CollisionPolygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(527280113, 655161405) index="0" unique_id=1159883313]
+position = Vector2(-238, -3153)
+polygon = PackedVector2Array(17212, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22389, 791, 20073, 886, 18699, 825, 16886, 661, 17090, 1401)
+
+[node name="Polygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(527280113, 655161405) index="1" unique_id=292345145]
+position = Vector2(-238, -3153)
+color = Color(0.9799606, 0.9812879, 0.99603766, 1)
+texture_offset = Vector2(1500, 1501.61)
+texture_scale = Vector2(0.89, 0.89)
+texture_rotation = -2.1450098
+polygon = PackedVector2Array(17212, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22389, 791, 20073, 886, 18699, 825, 16886, 661, 17090, 1401)
+
+[node name="Line2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(527280113, 655161405) index="2" unique_id=927314382]
+position = Vector2(-238, -3153)
+points = PackedVector2Array(17212, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22389, 791, 20073, 886, 18699, 825, 16886, 661, 17090, 1401, 17212, 2305)
+
+[node name="BreakableWall3" parent="." unique_id=1754216466 instance=ExtResource("4_02xqr")]
+position = Vector2(-20384, 1021)
+
+[node name="CollisionPolygon2D" parent="BreakableWall3" index="0" unique_id=1263546160]
+position = Vector2(0, -6532)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(24162.826, 308.1643, 23472.678, 728.108, 22738.662, 879.2557, 21750.945, 648.9493, 21739.879, 647.01636, 20173.086, 463.22534, 20136.488, 465.6485, 19127.408, 722.2287, 18518.955, 852.4812, 17801.24, 594.4049, 17781.787, 589.54114, 16807.734, 447.46823, 16664.42, 609.7812, 16878.77, 1387.3225, 16508.781, 2266.5493, 16575.32, 2422.46, 18170.123, 3033.2126, 18222.637, 3038.6558, 19916.959, 2766.6775, 21150.188, 2741.7134, 21174.23, 2738.2878, 22245.4, 2450.125, 23238.754, 2379.2407, 24434.656, 2419.6133, 24558.541, 2236.6802, 24245.982, 1525.3397, 24373.23, 443.2064)
+
+[node name="CollisionPolygon2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(1754216466, 655161405) index="0" unique_id=1159883313]
+position = Vector2(0, -6532)
+polygon = PackedVector2Array(16726, 2266, 18217, 2837, 19899, 2567, 21134, 2542, 22212, 2252, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 23547, 917, 22736, 1084, 21711, 845, 20168, 664, 19173, 917, 18505, 1060, 17743, 786, 16886, 661, 17090, 1401)
+
+[node name="Polygon2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(1754216466, 655161405) index="1" unique_id=292345145]
+position = Vector2(0, -6532)
+color = Color(0.9799606, 0.9812879, 0.99603766, 1)
+texture_offset = Vector2(1500, 1501.61)
+texture_scale = Vector2(0.89, 0.89)
+texture_rotation = -2.1450098
+polygon = PackedVector2Array(16726, 2266, 18217, 2837, 19899, 2567, 21134, 2542, 22212, 2252, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 23547, 917, 22736, 1084, 21711, 845, 20168, 664, 19173, 917, 18505, 1060, 17743, 786, 16886, 661, 17090, 1401)
+
+[node name="Line2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(1754216466, 655161405) index="2" unique_id=927314382]
+position = Vector2(0, -6532)
+points = PackedVector2Array(16726, 2266, 18217, 2837, 19899, 2567, 21134, 2542, 22212, 2252, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 23547, 917, 22736, 1084, 21711, 845, 20168, 664, 19173, 917, 18505, 1060, 17743, 786, 16886, 661, 17090, 1401, 16726, 2266)
+
+[node name="BreakableWall4" parent="." unique_id=622877114 instance=ExtResource("4_02xqr")]
+position = Vector2(-20384, 1021)
+
+[node name="CollisionPolygon2D" parent="BreakableWall4" index="0" unique_id=1263546160]
+position = Vector2(174, -10092)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(24181.16, 312.86746, 22556.908, 1079.2986, 20417.914, 951.1154, 18623.06, 916.5039, 16825.512, 437.92868, 16662.406, 602.4748, 16878.77, 1387.3225, 16513.955, 2254.2551, 16554.479, 2391.2253, 17518.822, 3046.9785, 17590.055, 3064.0305, 19913.756, 2766.7422, 21130.715, 2742.1074, 22218.496, 2799.8926, 22262.15, 2792.516, 23271.025, 2380.33, 24434.656, 2419.6133, 24558.541, 2236.6802, 24245.982, 1525.3397, 24372.385, 450.39178)
+
+[node name="CollisionPolygon2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(622877114, 655161405) index="0" unique_id=1159883313]
+position = Vector2(174, -10092)
+polygon = PackedVector2Array(16726, 2266, 17601, 2861, 19899, 2567, 21134, 2542, 22207, 2599, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22596, 1282, 20410, 1151, 18595, 1116, 16886, 661, 17090, 1401)
+
+[node name="Polygon2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(622877114, 655161405) index="1" unique_id=292345145]
+position = Vector2(174, -10092)
+color = Color(0.9799606, 0.9812879, 0.99603766, 1)
+texture_offset = Vector2(1500, 1501.61)
+texture_scale = Vector2(0.89, 0.89)
+texture_rotation = -2.1450098
+polygon = PackedVector2Array(16726, 2266, 17601, 2861, 19899, 2567, 21134, 2542, 22207, 2599, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22596, 1282, 20410, 1151, 18595, 1116, 16886, 661, 17090, 1401)
+
+[node name="Line2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(622877114, 655161405) index="2" unique_id=927314382]
+position = Vector2(174, -10092)
+points = PackedVector2Array(16726, 2266, 17601, 2861, 19899, 2567, 21134, 2542, 22207, 2599, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22596, 1282, 20410, 1151, 18595, 1116, 16886, 661, 17090, 1401, 16726, 2266)
+
+[node name="finish" parent="." unique_id=521310803 instance=ExtResource("5_vkfdt")]
+position = Vector2(1880.9999, -9018)
+rotation = -1.5686053
+scale = Vector2(10.067563, 10.067563)
+
+[node name="Area2D2" parent="." unique_id=1547374501 instance=ExtResource("7_2onrj")]
+position = Vector2(206, 1333)
+order = 1
+
+[node name="Area2D3" parent="." unique_id=575431752 instance=ExtResource("7_2onrj")]
+position = Vector2(-2325.0002, -2026.0005)
+order = 2
+
+[node name="Area2D4" parent="." unique_id=1876348140 instance=ExtResource("7_2onrj")]
+position = Vector2(2538.0002, -5613.0005)
+order = 3
+
+[node name="TextureRect" parent="." unique_id=243302608 instance=ExtResource("8_l3j4h")]
+offset_left = 126714.33
+offset_top = -27901.719
+offset_right = 261744.56
+offset_bottom = 225024.6
+
+[node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("9_p6y2c")]
+position = Vector2(-4310.0005, -2634.9998)
+scale = Vector2(28.197403, 28.197403)
+
+[node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("10_b3nqi")]
+scroll_offset = Vector2(6191, -1986.9999)
+
+[editable path="StaticBody2D"]
+[editable path="BreakableWall"]
+[editable path="BreakableWall2"]
+[editable path="BreakableWall3"]
+[editable path="BreakableWall4"]

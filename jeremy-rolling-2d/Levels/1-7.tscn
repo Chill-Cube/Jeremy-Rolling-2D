@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="5_atlrd"]
 [ext_resource type="PackedScene" uid="uid://da0yowdtaf55m" path="res://level_kit/Platforms/flat_ground.tscn" id="6_4k5i8"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="7_4k5i8"]
+[ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="8_p03dq"]
+[ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="9_bpux1"]
+[ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="10_wfwrm"]
+[ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="11_6df1e"]
 
 [node name="16" type="Node2D" unique_id=303574137]
 
@@ -36,7 +40,7 @@ polygon = PackedVector2Array(-21267, -11076, -19775, -11373, -18013, -10884, -14
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D" index="3" unique_id=593082635]
 position = Vector2(0, -37)
-rect = Rect2(-35057, -26361, 66194, 53869)
+rect = Rect2(-35049, -26353, 66178, 53853)
 
 [node name="StaticBody2D2" parent="." unique_id=108737421 instance=ExtResource("2_lo6iw")]
 position = Vector2(38094, 19738)
@@ -51,11 +55,10 @@ width = 39.47
 default_color = Color(0.34901962, 0.43529412, 0.6, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
-visible = false
 polygon = PackedVector2Array(-6237, -12405, -4159, -12503, -2287, -12087, 6, -11894, 3339, -10232, 5101, -7110, 5163, -2164, 4915, 4730, 3710, 9274, 3122, 10109, 11702, 10034, 22304, 10998, 28870, 10998, 35979, 11480, 37379, 9596, 41046, 8844, 43951, 7391, 46298, 4066, 45669, 4401, 44759, 4434, 43459, 4228, 41964, 3860, 40609, 3242, 38856, 2547, 37087, 1832, 31608, 182, 27370, -271, 24232, 95, 21160, 817, 18810, 938, 16039, 817, 14292, 215, 11099, -2435, 8027, -5026, 6943, -7917, 4774, -11170, 2184, -12978, -1160, -13425, -4392, -13381, -6496, -12852, -7320, -12279)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D2" index="3" unique_id=593082635]
-rect = Rect2(-7316, -13421, 53610, 24897)
+rect = Rect2(-7308, -13413, 53594, 24881)
 
 [node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("3_lo6iw")]
 position = Vector2(37414, 16978.998)
@@ -95,11 +98,10 @@ width = 39.47
 default_color = Color(0.34901962, 0.43529412, 0.6, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D3" index="2" unique_id=1552637217]
-visible = false
 polygon = PackedVector2Array(8121, 66, 10898, 0, 19277, 384, 23055, 3341, 24589, 5696, 27053, 6901, 29627, 5641, 33132, 1698, 34720, -1040, 35323, -4764, 23986, -6407, 20536, -8707, 12596, -8050, 9036, -5750, 4545, -2300, 2738, 1205, -219, 2300, 4217, 2191, 5565, 1233, 7125, 892)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D3" index="3" unique_id=593082635]
-rect = Rect2(-215, -8703, 35534, 15600)
+rect = Rect2(-207, -8695, 35518, 15584)
 
 [node name="Area2D3" parent="." unique_id=1547374501 instance=ExtResource("5_atlrd")]
 position = Vector2(121554.01, 15321)
@@ -129,6 +131,40 @@ order = 1
 [node name="finish" parent="." unique_id=868129391 instance=ExtResource("7_4k5i8")]
 position = Vector2(123531, 18675)
 scale = Vector2(16.955, 16.955)
+
+[node name="TextureRect" parent="." unique_id=243302608 instance=ExtResource("8_p03dq")]
+offset_left = 148341.33
+offset_top = -31565.719
+offset_right = 283371.56
+offset_bottom = 221360.6
+
+[node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("9_bpux1")]
+position = Vector2(5509.999, -1737)
+scale = Vector2(96.2517, 96.2517)
+
+[node name="Node2D2" parent="." unique_id=1514751592 instance=ExtResource("9_bpux1")]
+position = Vector2(61956, 13337)
+scale = Vector2(96.2517, 96.2517)
+
+[node name="Node2D3" parent="." unique_id=2143845956 instance=ExtResource("9_bpux1")]
+position = Vector2(120964, 13337)
+scale = Vector2(-119.470085, 126.47884)
+
+[node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("10_wfwrm")]
+scale = Vector2(47, 47)
+scroll_offset = Vector2(34818, 8391.999)
+
+[node name="CPUParticles2D" parent="." unique_id=490536070 instance=ExtResource("11_6df1e")]
+z_index = -1
+position = Vector2(20277, -11992)
+amount = 1000
+lifetime = 174.64999999999998
+
+[node name="CPUParticles2D2" parent="." unique_id=1083589837 instance=ExtResource("11_6df1e")]
+z_index = -1
+position = Vector2(102709, -10968)
+amount = 1000
+lifetime = 174.64999999999998
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

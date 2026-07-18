@@ -23,6 +23,7 @@ gradient = SubResource("Gradient_ubfli")
 
 [node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_nq6bd")]
 position = Vector2(-3616, -1890)
+gravity_scale = 4.022
 
 [node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_gb2ww")]
 position = Vector2(-350, 120)
@@ -182,7 +183,7 @@ default_color = Color(0.06570957, 0.2568215, 0.4827677, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D5" index="2" unique_id=1552637217]
 position = Vector2(-3267.9258, -475.38428)
-scale = Vector2(1.193, 1)
+scale = Vector2(1.1929975, 1)
 polygon = PackedVector2Array(-5047, 8116, 1622.3555, 8052.616, 4825.3555, 7631.616, 4151.3555, 8727.616, 1650.3555, 10216.616, 413.35547, 13307.616, 160.35547, 17213.617, -4476.6445, 17804.617, -12007.645, 17410.617, -14778, 17553, -16481.777, 17603, -17159.063, 17121, -18000.64, 16520, -18075.242, 15802, -18329.225, 15239, -18256.299, 14374, -18583.207, 12629, -18268.871, 13192, -17833.834, 13653, -17252.945, 14043, -16322.515, 14403, -15621.759, 14417, -14799.46, 14288, -14014.044, 14071, -13107.084, 13567, -11789.395, 12499, -10544.631, 11173, -9166.59, 9659, -7667.8438, 8721, -6443.6445, 8333.616)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D5" index="3" unique_id=593082635]
@@ -195,7 +196,7 @@ position = Vector2(4895.001, 17354)
 scale = Vector2(4.750458, 4.750458)
 
 [node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("5_3fvqv")]
-position = Vector2(6163.0005, 12637)
+position = Vector2(6019, 13344)
 scale = Vector2(2.8865912, 2.8865912)
 order = 3
 
@@ -234,19 +235,23 @@ texture = SubResource("GradientTexture2D_ubfli")
 metadata/_edit_lock_ = true
 
 [node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("7_6nsl0")]
+z_index = -1
 scroll_offset = Vector2(-15572.998, -6053)
 
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("8_3fvqv")]
+z_index = 0
 position = Vector2(13801, 5696.999)
 scale = Vector2(62.72, 62.72)
 metadata/_edit_lock_ = true
 
 [node name="Node2D2" parent="." unique_id=1657173147 instance=ExtResource("8_3fvqv")]
+z_index = 0
 position = Vector2(50345, 12384)
 scale = Vector2(62.72, 62.72)
 metadata/_edit_lock_ = true
 
 [node name="Node2D3" parent="." unique_id=2091562077 instance=ExtResource("8_3fvqv")]
+z_index = 0
 position = Vector2(32320.998, 11918.998)
 scale = Vector2(45.56, 45.56)
 metadata/_edit_lock_ = true
