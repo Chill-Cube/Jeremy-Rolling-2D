@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="9_ubfli"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="10_ubfli"]
 [ext_resource type="Texture2D" uid="uid://dkfof7hd7e3qn" path="res://Assets/Images/IMG_2847.png" id="11_tbva3"]
-[ext_resource type="Script" path="res://Assets/Scripts/fade_in.gd" id="12_d83n8"]
-[ext_resource type="PackedScene" path="res://level_kit/scenery/texture_rect.tscn" id="13_n5njp"]
+[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="12_d83n8"]
+[ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="13_n5njp"]
 
 [node name="12" type="Node2D" unique_id=328900603]
 
@@ -170,11 +170,10 @@ scale = Vector2(0.44, 0.44)
 skew = 0.41538838
 texture = ExtResource("9_ubfli")
 
-[node name="TextureRect" parent="." unique_id=243302608]
-
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("10_ubfli")]
 position = Vector2(6672, 347)
 scale = Vector2(37.56, 37.56)
+metadata/_edit_lock_ = true
 
 [node name="Node2D2" parent="." unique_id=1035557147 instance=ExtResource("10_ubfli")]
 position = Vector2(30892, -579)
