@@ -101,10 +101,11 @@ stream = ExtResource("5_5ncpa")
 [node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
 top_level = true
 script = ExtResource("9_7v5gs")
+follow_speed = 0.2
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=976802197]
 position = Vector2(0, -1)
-zoom = Vector2(0.12, 0.12)
+zoom = Vector2(0.1, 0.1)
 
 [node name="Rolling" type="AudioStreamPlayer" parent="." unique_id=2120997971]
 stream = ExtResource("6_tdg3f")
