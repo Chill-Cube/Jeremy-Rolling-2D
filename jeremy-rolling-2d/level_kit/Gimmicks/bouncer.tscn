@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://d3l45f0u0mj8c"]
 
 [ext_resource type="Script" uid="uid://dri781ftvwn0f" path="res://level_kit/Gimmicks/Scripts/bouncer.gd" id="1_5kbb7"]
-[ext_resource type="Texture2D" uid="uid://cop7dbgdlb3j1" path="res://Assets/Images/Untffgditled.png" id="2_oddqc"]
-[ext_resource type="Texture2D" uid="uid://ci3quff5blgi6" path="res://Assets/Images/Untffgditled - Copy.png" id="3_oddqc"]
+[ext_resource type="Texture2D" uid="uid://cr6fnutaxppfj" path="res://Assets/Images/Untitldfgdfgdfed_Artwork.png" id="3_mdedh"]
 [ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="4_4kipj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38d00"]
@@ -11,20 +10,11 @@ size = Vector2(115.71503, 1235)
 [node name="Area2D" type="Area2D" unique_id=1949349700]
 script = ExtResource("1_5kbb7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=913262321]
-position = Vector2(-29, 16)
-scale = Vector2(2.1363637, 2.0589395)
-texture = ExtResource("2_oddqc")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1539451030]
-position = Vector2(-82.49999, 16)
-scale = Vector2(0.38636354, 2.0589395)
-texture = ExtResource("3_oddqc")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=525528309]
+z_index = 1
 position = Vector2(-17.5, 18.5)
 rotation = -0.004842146
-scale = Vector2(0.9592532, 1)
+scale = Vector2(0.9592532, 0.99999994)
 shape = SubResource("RectangleShape2D_38d00")
 debug_color = Color(0, 0.6, 0.69803923, 0.08235294)
 
@@ -37,6 +27,13 @@ position = Vector2(29, -1)
 rect = Rect2(-118.055565, -602.25, 126.055565, 1239.25)
 show_rect = false
 script = ExtResource("4_4kipj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=671411770]
+
+[node name="UntitldfgdfgdfedArtwork" type="Sprite2D" parent="." unique_id=544101399]
+position = Vector2(-54.000004, 12.000001)
+scale = Vector2(0.56005865, 0.6230469)
+texture = ExtResource("3_mdedh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
