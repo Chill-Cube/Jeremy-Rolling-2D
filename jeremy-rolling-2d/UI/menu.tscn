@@ -44,50 +44,51 @@ anchor_right = 1.0250001
 anchor_bottom = 1.0
 offset_left = 193.25
 offset_top = 54.240005
-offset_right = 12015.416
-offset_bottom = 4500.0
-scale = Vector2(0.06, 0.06)
+offset_right = 4288.75
+offset_bottom = 1748.9998
+scale = Vector2(0.2, 0.2)
 mouse_filter = 2
-theme_override_constants/h_separation = 670
-theme_override_constants/v_separation = 980
+theme_override_constants/h_separation = 351
+theme_override_constants/v_separation = 283
 columns = 5
 
-[node name="Template" type="TextureButton" parent="Control/GridContainer" unique_id=879104870]
+[node name="Template" type="TextureButton" parent="Control/GridContainer" unique_id=1017326450]
 visible = false
 self_modulate = Color(1, 1, 1, 0.8901961)
 layout_mode = 2
 texture_normal = ExtResource("2_dhncy")
 script = ExtResource("2_kfjwn")
 
-[node name="Lobster" type="GridContainer" parent="Control/GridContainer/Template" unique_id=471892732]
+[node name="Lobster" type="GridContainer" parent="Control/GridContainer/Template" unique_id=1086557510]
 layout_mode = 0
-offset_left = -3.0
-offset_top = -6.0
-offset_right = 98.0
-offset_bottom = 129.0
-scale = Vector2(19.968521, 19.1744)
+offset_left = 3.0517578e-05
+offset_top = -4.999996
+offset_right = 101.00003
+offset_bottom = 130.0
+scale = Vector2(5.0755672, 4.8737187)
 
-[node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=727416151]
+[node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=2064787204]
 position = Vector2(19.500002, 121.30914)
-scale = Vector2(0.013, 0.014)
+scale = Vector2(0.05, 0.054)
 texture = ExtResource("3_kfjwn")
 
-[node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=1026703428]
+[node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=2029818440]
 position = Vector2(54, 121.30914)
-scale = Vector2(0.013, 0.014)
+scale = Vector2(0.05, 0.054)
 texture = ExtResource("3_kfjwn")
 
-[node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=1637647232]
+[node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=1728330179]
 position = Vector2(88, 121.30914)
-scale = Vector2(0.013, 0.014)
+scale = Vector2(0.05, 0.054)
 texture = ExtResource("3_kfjwn")
 
-[node name="Label" type="Label" parent="Control/GridContainer/Template" unique_id=1608448600]
+[node name="Label" type="Label" parent="Control/GridContainer/Template" unique_id=1633637366]
 layout_mode = 0
-offset_left = 16.666656
-offset_top = 66.66666
-offset_right = 2066.6667
-offset_bottom = 2066.6667
+offset_left = 35.000015
+offset_top = 45.000015
+offset_right = 2085.0
+offset_bottom = 2045.0001
+scale = Vector2(0.21532284, 0.21590517)
 theme_override_fonts/font = ExtResource("5_cvc1e")
 theme_override_font_sizes/font_size = 1112
 text = "1-2"
@@ -117,7 +118,7 @@ repeat_times = 14
 modulate = Color(1, 1, 1, 0.53333336)
 texture_repeat = 2
 position = Vector2(9.674995, 282)
-scale = Vector2(0.22, 0.22)
+scale = Vector2(0.81, 0.81)
 skew = 0.41538838
 texture = ExtResource("4_qmqfe")
 
@@ -133,7 +134,7 @@ repeat_times = 14
 z_index = -2
 texture_repeat = 2
 position = Vector2(6.805, 251.125)
-scale = Vector2(0.22, 0.22)
+scale = Vector2(0.81, 0.81)
 skew = 0.41538838
 texture = ExtResource("4_qmqfe")
 

@@ -24,17 +24,6 @@ friction = 0.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_xhfnw"]
 radius = 131.8
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kpjcp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_dm7nj")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="Curve" id="Curve_v0k0e"]
 _data = [Vector2(0.011869438, 1), 0.0, 0.0, 0, 0, Vector2(0.29721358, 0.17945552), 0.0, 0.0, 0, 0, Vector2(0.9999999, 0), 0.0, 0.0, 0, 0]
 point_count = 3
@@ -73,12 +62,6 @@ shape = SubResource("CircleShape2D_xhfnw")
 [node name="Visual" type="Node2D" parent="." unique_id=1690068538]
 script = ExtResource("4_8sa4y")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=1228906302]
-position = Vector2(-0.9999933, -1.0000086)
-scale = Vector2(0.12988281, 0.12988281)
-sprite_frames = SubResource("SpriteFrames_kpjcp")
-frame_progress = 0.76467
-
 [node name="Explosion" parent="Visual" unique_id=1058601225 instance=ExtResource("3_v0k0e")]
 unique_name_in_owner = true
 position = Vector2(2.9999998, 1.0000076)
@@ -92,6 +75,10 @@ initial_velocity_max = 148.26
 scale_amount_min = 0.0
 scale_amount_max = 2.57
 scale_amount_curve = SubResource("Curve_v0k0e")
+
+[node name="Sprite2D" type="Sprite2D" parent="Visual" unique_id=1392842579]
+scale = Vector2(0.5234375, 0.5234375)
+texture = ExtResource("4_dm7nj")
 
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=919060653]
 unique_name_in_owner = true

@@ -32,7 +32,7 @@ script = ExtResource("4_4kipj")
 
 [node name="UntitldfgdfgdfedArtwork" type="Sprite2D" parent="." unique_id=544101399]
 position = Vector2(-54.000004, 12.000001)
-scale = Vector2(0.56005865, 0.6230469)
+scale = Vector2(2.2400587, 2.4919918)
 texture = ExtResource("3_mdedh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -41,8 +41,8 @@ color = Color(0.553446, 0.196675, 0.09405204, 1)
 color_ramp = SubResource("Gradient_mf4it")
 
 [node name="BarHarborRevised" type="Sprite2D" parent="." unique_id=682169842]
-position = Vector2(7.6293945e-06, 3.8146973e-06)
-scale = Vector2(0.120915405, 0.120915405)
+position = Vector2(-19.292166, -0.34722328)
+scale = Vector2(0.4781145, 0.4810606)
 texture = ExtResource("7_rbrea")
 offset = Vector2(60.685, 0)
 

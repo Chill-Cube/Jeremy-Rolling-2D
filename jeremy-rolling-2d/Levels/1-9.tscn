@@ -129,7 +129,7 @@ offset_right = 242338.56
 offset_bottom = 225500.6
 
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("7_phj60")]
-position = Vector2(5152, -4002.0005)
+position = Vector2(4784.9995, -2706.9995)
 scale = Vector2(34.39084, 34.39084)
 metadata/_edit_lock_ = true
 
