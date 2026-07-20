@@ -17,7 +17,6 @@ var is_mobile := simulate_mobile or OS.has_feature("web_android") \
 var active_touch_index := -1
 var swipe_trail: Node2D
 var drag_pos := Vector2.ZERO
-var dragging := false
 
 signal on_push
 
@@ -34,7 +33,6 @@ func _input(event: InputEvent) -> void:
 		_handle_mouse_event(event)
 
 func _handle_mouse_event(event: InputEvent) -> void:
-	dragging = false
 	if event.is_action_pressed("left_click"):
 		start_player()
 		_reset_swipe_trail()
@@ -53,10 +51,8 @@ func _process_touch(event: InputEventScreenTouch) -> void:
 		_reset_swipe_trail()
 	elif not event.pressed and event.index == active_touch_index:
 		active_touch_index = -1
-		dragging = false
 
 func _process_drag(event: InputEventScreenDrag) -> void:
-	dragging = true
 	drag_pos = event.screen_relative
 	_update_swipe_trail_position(event.position)
 	start_player()

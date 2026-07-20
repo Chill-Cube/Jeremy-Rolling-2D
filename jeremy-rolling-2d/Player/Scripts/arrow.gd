@@ -1,6 +1,6 @@
 extends Sprite2D
 @onready var player: Player = get_parent() as Player
-@onready var InputNode := get_parent().get_node("Input")
+@onready var InputNode := %Input
 @export var arrow_transparency = 0.2
 
 var aim_direction := Vector2.RIGHT
