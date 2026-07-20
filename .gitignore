@@ -3,3 +3,4 @@
 *.bin
 *cache*
 jeremy-rolling-2d/.godot/
+.vscode/settings.json
