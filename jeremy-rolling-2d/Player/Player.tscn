@@ -80,6 +80,7 @@ sprite_frames = SubResource("SpriteFrames_kpjcp")
 frame_progress = 0.76467
 
 [node name="Explosion" parent="Visual" unique_id=1058601225 instance=ExtResource("3_v0k0e")]
+unique_name_in_owner = true
 position = Vector2(2.9999998, 1.0000076)
 rotation = -1.6065121
 amount = 60
@@ -93,12 +94,15 @@ scale_amount_max = 2.57
 scale_amount_curve = SubResource("Curve_v0k0e")
 
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=919060653]
+unique_name_in_owner = true
 stream = ExtResource("4_e80uo")
 
 [node name="boing" type="AudioStreamPlayer" parent="." unique_id=1144820005]
+unique_name_in_owner = true
 stream = ExtResource("5_5ncpa")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
+unique_name_in_owner = true
 top_level = true
 script = ExtResource("9_7v5gs")
 follow_speed = 0.2
@@ -108,12 +112,15 @@ position = Vector2(0, -1)
 zoom = Vector2(0.1, 0.1)
 
 [node name="Rolling" type="AudioStreamPlayer" parent="." unique_id=2120997971]
+unique_name_in_owner = true
 stream = ExtResource("6_tdg3f")
 
 [node name="falling" type="AudioStreamPlayer" parent="." unique_id=1536097744]
+unique_name_in_owner = true
 stream = ExtResource("7_dtqjt")
 
 [node name="Arrow" type="Sprite2D" parent="." unique_id=832494102]
+unique_name_in_owner = true
 position = Vector2(-1.5258789e-05, -0.73260057)
 rotation = -0.00014564738
 texture = ExtResource("3_kne1u")
@@ -124,6 +131,7 @@ script = ExtResource("14_3nb2p")
 visible = false
 
 [node name="Trail" parent="." unique_id=2059501058 instance=ExtResource("12_5wa8t")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(-38, 120)
 scale = Vector2(0.95975757, 1.5756078)
@@ -154,6 +162,7 @@ metadata/_custom_type_script = "uid://d0p5m0ruqfnd6"
 [node name="CanvasLayer2" parent="." unique_id=223765944 instance=ExtResource("15_3mea3")]
 
 [node name="Input" type="Node" parent="." unique_id=1010678454]
+unique_name_in_owner = true
 script = ExtResource("19_d7xyo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
