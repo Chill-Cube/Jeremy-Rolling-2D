@@ -16,7 +16,7 @@ screen_offset = Vector2(-14.445, 0)
 modulate = Color(1, 1, 1, 0.53333336)
 texture_repeat = 2
 position = Vector2(6.805, 256.44)
-scale = Vector2(0.44, 0.44)
+scale = Vector2(1.8, 1.8)
 skew = 0.26529005
 texture = ExtResource("1_pljtg")
 

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_05ewq"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_qm10c"]
 [ext_resource type="Texture2D" uid="uid://ctw0tb8ne636e" path="res://Assets/Images/IMG_2845.png" id="10_536hm"]
-[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="11_1mbfu"]
+[ext_resource type="Script" path="res://Assets/Scripts/fade_in.gd" id="11_1mbfu"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -34,7 +34,7 @@ screen_offset = Vector2(-14.445, 0)
 modulate = Color(1, 1, 1, 0.53333336)
 texture_repeat = 2
 position = Vector2(6.805, 256.44)
-scale = Vector2(0.44, 0.44)
+scale = Vector2(1.7, 1.7)
 skew = 0.26529005
 texture = ExtResource("1_1mbfu")
 
@@ -102,7 +102,6 @@ scale = Vector2(26.295, 26.41037)
 
 [node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
 texture_repeat = 2
-color = Color(0.7411765, 0.78039217, 0.89411765, 1)
 texture = ExtResource("7_ob4qv")
 texture_offset = Vector2(80.815, -142.56)
 texture_scale = Vector2(3.445, 3.445)
@@ -137,7 +136,6 @@ scale = Vector2(26.295, 26.41037)
 [node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
 texture_repeat = 2
 position = Vector2(1384.8245, 342.69882)
-color = Color(0.7411765, 0.78039217, 0.89411765, 1)
 texture = ExtResource("7_ob4qv")
 texture_offset = Vector2(80.815, -152.82)
 texture_scale = Vector2(3.24, 3.24)
@@ -161,7 +159,7 @@ width = 1.825
 default_color = Color(0.35951087, 0.3544208, 0.53957105, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
-position = Vector2(1384.8243, 342.6988)
+position = Vector2(1384.8245, 342.69882)
 polygon = PackedVector2Array(-25.902328, -325.7445, 28.333015, -330.95248, 118.839195, -322.8174, 181.80994, -325.40237, 714.2506, 67.89349, 836.69794, 121.189514, 945.3965, 129.13452, 1005.7086, 117.88229, 1054.8927, 106.40198, 1104.6084, 80.51422, 1126.2571, 63.065735, 1154.1343, 20.185608, 1142.7024, 76.522766, 1142.2085, 117.083984, 1161.4264, 165.17206, 1155.5796, 201.08594, 1183.8346, 231.39294, 1178.5554, 347.6787, 1125.6113, 482.0592, 1131.3083, 572.87537, 1106.0516, 655.4804, -77.40312, 655.4804, -74.70654, 348.9712, -34.59973, 195.6596, -34.59973, 97.772766, -9.760864, -2.584961, 8.545532, -150.08041, 12.001709, -270.5097)
 
 [node name="VisibleOnScreenNotifier2D" parent="StaticBody2D2" index="3" unique_id=593082635]
@@ -192,28 +190,28 @@ scale_amount_max = 102.49
 modulate = Color(0.9207, 0.94495505, 0.99, 0.62352943)
 z_index = -2
 position = Vector2(47313.582, 12632.976)
-scale = Vector2(8.332635, 8.332635)
+scale = Vector2(43.773, 43.773)
 texture = ExtResource("9_qm10c")
 
 [node name="UntitledArfgftwork3" type="Sprite2D" parent="." unique_id=1146179027]
 modulate = Color(0.9207, 0.94495505, 0.99, 0.5294118)
 z_index = -2
 position = Vector2(27245.055, 11164.163)
-scale = Vector2(13.938578, 13.938578)
+scale = Vector2(43.773, 43.773)
 texture = ExtResource("9_qm10c")
 
 [node name="UntitledArfgftwork4" type="Sprite2D" parent="." unique_id=2046273059]
 modulate = Color(0.9207, 0.94495505, 0.99, 0.3254902)
 z_index = -2
-position = Vector2(4669.84, 574.2718)
-scale = Vector2(10.213544, 10.213544)
+position = Vector2(6024.0522, 1999.9116)
+scale = Vector2(43.773, 43.773)
 texture = ExtResource("9_qm10c")
 
 [node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=112936079]
 modulate = Color(0.9207, 0.94495505, 0.99, 0.3254902)
 z_index = -2
 position = Vector2(57447.203, 18130.723)
-scale = Vector2(6.7020383, 6.7020383)
+scale = Vector2(43.773, 43.773)
 texture = ExtResource("9_qm10c")
 
 [node name="Img2845" type="Sprite2D" parent="." unique_id=202812056]

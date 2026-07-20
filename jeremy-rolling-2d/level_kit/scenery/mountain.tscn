@@ -9,7 +9,6 @@ z_index = -2
 [node name="UntitledArfgftwork2" type="Sprite2D" parent="." unique_id=1099299449]
 modulate = Color(1, 1, 1, 0.6431373)
 z_index = -1
-scale = Vector2(0.36094573, 0.36094573)
 texture = ExtResource("1_oswic")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=213313992]

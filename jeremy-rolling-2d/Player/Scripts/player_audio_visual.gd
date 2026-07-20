@@ -2,13 +2,13 @@ extends Node2D
 
 @onready var player: Player = get_parent() as Player
 
-@onready var Trail := get_parent().get_node("Trail")
+@onready var Trail := %Trail
 @onready var Explosion := $Explosion
-@onready var JumpSFX := get_parent().get_node("jump")
-@onready var BoingSFX := get_parent().get_node("boing")
-@onready var RollingSFX := get_parent().get_node("Rolling")
-@onready var FallingSFX := get_parent().get_node("falling")
-@onready var InputNode := get_parent().get_node("Input")
+@onready var JumpSFX := %jump
+@onready var BoingSFX := %boing
+@onready var RollingSFX := %Rolling
+@onready var FallingSFX := %falling
+@onready var InputNode := %Input
 
 var rotate_speed := 300.0
 

@@ -62,6 +62,7 @@ common/max_physics_steps_per_frame=16
 common/physics_jitter_fix=0.0
 3d/physics_engine="Jolt Physics"
 2d/default_gravity=4096.0
+2d/solver/solver_iterations=8
 2d/solver/default_contact_bias=0.85
 
 [rendering]
