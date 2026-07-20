@@ -17,6 +17,7 @@ var is_mobile := simulate_mobile or OS.has_feature("web_android") \
 var active_touch_index := -1
 var swipe_trail: Node2D
 var drag_pos := Vector2.ZERO
+var dragging := false
 
 signal on_push
 
@@ -47,9 +48,11 @@ func _handle_touch_event(event: InputEvent) -> void:
 
 func _process_touch(event: InputEventScreenTouch) -> void:
 	if event.pressed and active_touch_index == -1:
+		dragging = true
 		active_touch_index = event.index
 		_reset_swipe_trail()
 	elif not event.pressed and event.index == active_touch_index:
+		dragging = false
 		active_touch_index = -1
 
 func _process_drag(event: InputEventScreenDrag) -> void:
