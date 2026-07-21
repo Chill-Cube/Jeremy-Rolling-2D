@@ -27,7 +27,7 @@ click_push_force = 450.0
 max_speed = 200000.0
 
 [node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_7wgoq")]
-position = Vector2(-3707, -1400)
+position = Vector2(-3732, -1502)
 scale = Vector2(1.184695, 1.184695)
 
 [node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
