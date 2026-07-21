@@ -37,6 +37,7 @@ default_color = Color(0.2908784, 0.19913942, 0.41543117, 1)
 
 [node name="break" type="AudioStreamPlayer" parent="." unique_id=900406279]
 stream = ExtResource("4_h4blh")
+volume_db = -22.673
 
 [node name="Explosion" parent="." unique_id=1275942708 instance=ExtResource("5_c3bwd")]
 position = Vector2(2.9999998, 1.0000076)

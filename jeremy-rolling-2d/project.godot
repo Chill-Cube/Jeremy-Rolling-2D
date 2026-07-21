@@ -26,6 +26,7 @@ TransitionScreen="*uid://cy4o366pwaea3"
 
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
+window/emulate_touch_from_mouse=false
 
 [editor_plugins]
 

@@ -87,7 +87,7 @@ script = ExtResource("1_ihe44")
 
 [node name="crunch" type="AudioStreamPlayer" parent="." unique_id=745732519]
 stream = ExtResource("4_fdh3c")
-volume_db = -15.686
+volume_db = -20.615
 
 [node name="CPUParticles2D" parent="." unique_id=1275942708 instance=ExtResource("2_pn5yd")]
 z_index = 1

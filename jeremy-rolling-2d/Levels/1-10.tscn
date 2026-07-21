@@ -19,7 +19,7 @@ position = Vector2(-2, -2)
 push_cooldown = 0.5
 
 [node name="Camera2D" parent="RigidBody2D/Node2D" parent_id_path=PackedInt32Array(658010438, 2112882716) index="0" unique_id=976802197]
-zoom = Vector2(0.09, 0.09)
+zoom = Vector2(0.075, 0.075)
 
 [node name="Area2D" parent="." unique_id=1949349700 instance=ExtResource("2_de7ax")]
 position = Vector2(-125.000015, 833)

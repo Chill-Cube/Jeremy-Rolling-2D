@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://j68aq8xnkyjm" path="res://UI/Fonts/Jeremy-Regular(1).ttf" id="5_cvc1e"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="5_kfjwn"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="8_cvc1e"]
+[ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/Fonts/ElmsSans-Regular.ttf" id="9_cvc1e"]
 
 [sub_resource type="Gradient" id="Gradient_536hm"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -42,11 +43,11 @@ anchor_left = -0.025
 anchor_top = -0.24800001
 anchor_right = 1.0250001
 anchor_bottom = 1.0
-offset_left = 168.25
-offset_top = 32.240005
-offset_right = 2327.75
-offset_bottom = 1504.0
-scale = Vector2(0.25, 0.25)
+offset_left = 220.25
+offset_top = 73.240005
+offset_right = 2379.75
+offset_bottom = 1545.0
+scale = Vector2(0.225, 0.225)
 mouse_filter = 2
 theme_override_constants/h_separation = 186
 theme_override_constants/v_separation = 283
@@ -157,5 +158,24 @@ scale = Vector2(1.4559047, 1.4929898)
 z_index = 1
 position = Vector2(820, 393.00003)
 scale = Vector2(-1.4412644, 1.0996529)
+
+[node name="BarHarborRevised3" type="Sprite2D" parent="." unique_id=116282993]
+position = Vector2(532.00006, 34)
+scale = Vector2(0.111266986, 0.120696396)
+texture = ExtResource("3_kfjwn")
+
+[node name="Counter" type="Label" parent="BarHarborRevised3" unique_id=1689800807]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+offset_left = 368.48273
+offset_top = -182.27551
+offset_right = 6053.942
+offset_bottom = 1817.7246
+scale = Vector2(0.21532284, 0.21590517)
+theme_override_fonts/font = ExtResource("9_cvc1e")
+theme_override_font_sizes/font_size = 1435
+text = "1/??"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/GridContainer/Template" to="Control/GridContainer/Template" method="_on_pressed"]

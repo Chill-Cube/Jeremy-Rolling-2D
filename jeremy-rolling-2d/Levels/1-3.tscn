@@ -151,7 +151,7 @@ scale_amount_max = 102.49
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1562016320]
 show_behind_parent = true
 scale = Vector2(26.295, 26.295)
-scroll_offset = Vector2(-26480, -6400)
+scroll_offset = Vector2(-22769, -105)
 repeat_size = Vector2(1007.025, 0)
 autoscroll = Vector2(100, 0)
 repeat_times = 1598
@@ -161,7 +161,7 @@ screen_offset = Vector2(-13.605, 0)
 modulate = Color(1, 1, 1, 0.6627451)
 texture_repeat = 2
 position = Vector2(6.7968416, 3.4227142)
-scale = Vector2(0.44, 0.44)
+scale = Vector2(1.62, 1.62)
 skew = 0.41538838
 texture = ExtResource("9_ubfli")
 
