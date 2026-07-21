@@ -28,6 +28,9 @@ func _input(event: InputEvent) -> void:
 	if player.finished_level:
 		return
 
+	if event.is_action_pressed("menu"):
+		player.reset_level()
+
 	if is_mobile:
 		_handle_touch_event(event)
 	else:

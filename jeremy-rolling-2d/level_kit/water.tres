@@ -56,5 +56,5 @@ shader_parameter/size = 0.5
 shader_parameter/wobble_speed = 1.0
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_width = 1.0
-shader_parameter/frequency = 20.67
+shader_parameter/frequency = 32.91
 shader_parameter/amplitude = -0.01

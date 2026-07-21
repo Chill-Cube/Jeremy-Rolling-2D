@@ -42,6 +42,11 @@ func _process(delta: float) -> void:
 		level_time += delta
 		Hud._update_timer(level_time)
 
+func reset_level():
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	get_tree().reload_current_scene()
+
 # checks
 func is_grounded() -> bool:
 	return contact_count > 0

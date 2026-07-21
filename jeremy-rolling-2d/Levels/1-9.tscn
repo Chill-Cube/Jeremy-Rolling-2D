@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://crclxsqalcwr" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="3_v38bs"]
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="3_w3hp0"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="4_xh0t4"]
+[ext_resource type="PackedScene" uid="uid://dggoh8f6sm63e" path="res://level_kit/Gimmicks/water.tscn" id="5_hkprv"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="5_pty8s"]
 [ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="6_gmx3e"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="7_phj60"]
@@ -80,11 +81,14 @@ polygon = PackedVector2Array(10695, -2983, 10937, -2230, 10946, -1380, 11349, -9
 
 [node name="Polygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(2035601162, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
-texture_scale = Vector2(0.25, 0.25)
 polygon = PackedVector2Array(10695, -2983, 10937, -2230, 10946, -1380, 11349, -932, 11402, -842, 13157, -1442, 12602, -1881, 12280, -2356, 12584, -2791, 12443, -3333, 12092, -3726)
 
 [node name="Line2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(2035601162, 655161405) index="2" unique_id=927314382]
 points = PackedVector2Array(10695, -2983, 10937, -2230, 10946, -1380, 11349, -932, 11402, -842, 13157, -1442, 12602, -1881, 12280, -2356, 12584, -2791, 12443, -3333, 12092, -3726, 10695, -2983)
+
+[node name="Water" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(2035601162, 655161405) index="3" unique_id=1249748588 instance=ExtResource("5_hkprv")]
+position = Vector2(26001, -5841.0005)
+scale = Vector2(28.850386, 41.05039)
 
 [node name="BreakableWall3" parent="." unique_id=410039984 instance=ExtResource("3_v38bs")]
 position = Vector2(-22088, 9964)
