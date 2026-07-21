@@ -57,7 +57,7 @@ scale = Vector2(41.645016, 103.191284)
 texture = SubResource("GradientTexture2D_p71w4")
 
 [node name="StaticBody2D3" parent="." unique_id=153607042 instance=ExtResource("3_mlwlj")]
-position = Vector2(7889, 562.00006)
+position = Vector2(7881, 569.00006)
 scale = Vector2(41.645016, 103.191284)
 
 [node name="MeshInstance2D" parent="StaticBody2D3" index="1" unique_id=641065394]
