@@ -88,6 +88,7 @@ volume_db = -14.295
 [node name="boing" type="AudioStreamPlayer" parent="." unique_id=1144820005]
 unique_name_in_owner = true
 stream = ExtResource("5_5ncpa")
+volume_db = -19.223
 
 [node name="Node2D" type="Node2D" parent="." unique_id=2112882716]
 unique_name_in_owner = true

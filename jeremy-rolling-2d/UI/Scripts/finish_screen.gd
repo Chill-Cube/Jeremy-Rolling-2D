@@ -24,7 +24,8 @@ func update_save(time: float, current_level: String) -> void:
 	level_data.completed = true
 
 	if time < level_data.best_time:
-		$Panel/Time2.visible = true
+		$Panel/YouDidIt2.visible = true
+		$Panel/BestTime.modulate = Color(1.0, 1.0, 0.0, 1.0)
 		level_data.best_time = time
 
 	SaveManager.save_to_file()
@@ -50,6 +51,7 @@ func _show_finish(time: float, current_level: String) -> void:
 		ui.modulate = Color(0.0, 0.0, 0.0, 0.384) if not level_data.collectables[i] else ui.modulate
 
 	$Panel/Time.text = "[center][img=80]res://UI/Images/clock.png[/img] %s[/center]" % format_time(time)
+	$Panel/BestTime.text = "[center][img=80]res://UI/Images/crown.png[/img] %s[/center]" % format_time(level_data.best_time)
 
 func _on_retry_pressed() -> void:
 	TransitionScreen.transition()

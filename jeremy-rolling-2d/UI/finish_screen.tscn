@@ -35,17 +35,17 @@ text = "Finish!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Time2" type="Label" parent="Panel" unique_id=1583091778]
+[node name="YouDidIt2" type="Label" parent="Panel" unique_id=1909474842]
 visible = false
 layout_mode = 0
-offset_left = 2.0000153
-offset_top = 383.0
-offset_right = 606.0
-offset_bottom = 448.0
+offset_left = 100.0
+offset_top = 359.0
+offset_right = 529.0
+offset_bottom = 506.805
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_ab4ai")
-theme_override_font_sizes/font_size = 50
-text = "NEW RECORD!!"
+theme_override_font_sizes/font_size = 21
+text = "Personal Best!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -54,7 +54,7 @@ stream = ExtResource("2_72onr")
 volume_db = -17.251
 
 [node name="Lobsters" type="Node2D" parent="Panel" unique_id=1232955957]
-position = Vector2(27, 8)
+position = Vector2(27, -6)
 scale = Vector2(0.885, 0.885)
 
 [node name="BarHarborRevised1" type="Sprite2D" parent="Panel/Lobsters" unique_id=957737743]
@@ -108,13 +108,27 @@ stretch_mode = 0
 [node name="Time" type="RichTextLabel" parent="Panel" unique_id=656787795]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 296.0
+offset_top = 262.0
 offset_right = 603.0
-offset_bottom = 380.0
+offset_bottom = 346.0
 theme_override_fonts/normal_font = ExtResource("2_ab4ai")
 theme_override_font_sizes/normal_font_size = 61
 bbcode_enabled = true
 text = "[center][img=80]res://UI/Images/clock.png[/img] 00:00.00[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="BestTime" type="RichTextLabel" parent="Panel" unique_id=117491159]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 346.0
+offset_right = 604.0
+offset_bottom = 430.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_ab4ai")
+theme_override_font_sizes/normal_font_size = 61
+bbcode_enabled = true
+text = "[center][img=80]res://UI/Images/crown.png[/img] 00:00.00[/center]"
 fit_content = true
 scroll_active = false
 
@@ -123,6 +137,7 @@ z_index = -4
 offset_right = 1154.0
 offset_bottom = 664.0
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Panel/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Panel/Retry" to="." method="_on_retry_pressed"]
