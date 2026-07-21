@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://b7q1waq0t0gol" path="res://Assets/Scripts/finish.gd" id="1_v50nn"]
 [ext_resource type="Texture2D" uid="uid://dxqv5470oj075" path="res://Assets/Images/Frame 1 (1).png" id="2_ya6g1"]
 [ext_resource type="Script" uid="uid://cs8d6ku7valo1" path="res://Assets/scroll.gd" id="3_jm80v"]
-[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="4_k7nll"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bn1m"]
 size = Vector2(174, 2723)
@@ -26,11 +25,5 @@ region_enabled = true
 region_rect = Rect2(9.024414, -9.362671, 2012.8706, 34291.2)
 script = ExtResource("3_jm80v")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=106160174]
-rect = Rect2(-85, -1350.25, 173, 2723.25)
-show_rect = false
-script = ExtResource("4_k7nll")
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

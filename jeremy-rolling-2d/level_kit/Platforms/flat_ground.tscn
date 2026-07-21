@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://da0yowdtaf55m"]
 
-[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="1_ew0vt"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgmp4"]
 size = Vector2(20, 18.167915)
 
@@ -16,9 +14,4 @@ shape = SubResource("RectangleShape2D_mgmp4")
 scale = Vector2(20, 20)
 mesh = SubResource("QuadMesh_mgmp4")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=783335245]
-show_rect = false
-script = ExtResource("1_ew0vt")
-
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

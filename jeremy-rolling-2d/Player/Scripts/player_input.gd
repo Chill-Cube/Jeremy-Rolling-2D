@@ -71,11 +71,13 @@ func _update_swipe_trail_position(screen_position: Vector2) -> void:
 		+ camera_node.position
 
 func _reset_swipe_trail() -> void:
-	if swipe_trail and swipe_trail.is_inside_tree():
-		swipe_trail.queue_free()
+	if swipe_trail == null:
+		swipe_trail = SWIPE_TRAIL_SCENE.instantiate()
+		camera_node.add_child(swipe_trail)
+	elif not swipe_trail.is_inside_tree():
+		camera_node.add_child(swipe_trail)
 
-	swipe_trail = SWIPE_TRAIL_SCENE.instantiate()
-	camera_node.add_child(swipe_trail)
+	swipe_trail.visible = true
 	swipe_trail.get_node("Trail2D").clear_points()
 
 func start_player():

@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://y8h4ljm344b5" path="res://Assets/SFX/lobster_get.wav" id="3_s4u4s"]
 [ext_resource type="AudioStream" uid="uid://xg88i1arkb1i" path="res://Assets/SFX/608645__theplax__crunch-5.wav" id="4_fdh3c"]
 [ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="7_rbrea"]
-[ext_resource type="Script" uid="uid://cn36w1nhs5ub" path="res://level_kit/Platforms/visible_on_screen_notifier_2d.gd" id="8_0ypq3"]
 [ext_resource type="AudioStream" uid="uid://vv6bsp5nkgp5" path="res://Assets/SFX/Cartoon Chomp Sound Effect - be professional.wav" id="9_rbrea"]
 
 [sub_resource type="Gradient" id="Gradient_mf4it"]
@@ -58,11 +57,5 @@ stream = ExtResource("3_s4u4s")
 stream = ExtResource("9_rbrea")
 volume_db = -2.299
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=693416806]
-rect = Rect2(-118.055565, -86.111115, 249.30557, 165.97223)
-show_rect = false
-script = ExtResource("8_0ypq3")
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]
