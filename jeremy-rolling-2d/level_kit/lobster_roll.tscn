@@ -14,6 +14,73 @@ colors = PackedColorArray(0.41598046, 0.41598043, 0.4159804, 1, 1, 1, 1, 0.76470
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdh3c"]
 size = Vector2(249.30553, 166.66664)
 
+[sub_resource type="Animation" id="Animation_mf4it"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarHarborRevised:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60.685, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarHarborRevised:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.4781145, 0.4810606)]
+}
+
+[sub_resource type="Animation" id="Animation_0ypq3"]
+resource_name = "hover"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarHarborRevised:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9333334, 3.9666667),
+"transitions": PackedFloat32Array(1.0646319, 1.0646319, 1.0646319),
+"update": 0,
+"values": [Vector2(60.685, 0), Vector2(60.685, -115.575), Vector2(60.685, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rbrea"]
+resource_name = "shrink"
+length = 2.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarHarborRevised:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96),
+"transitions": PackedFloat32Array(0.15389332, 1),
+"update": 0,
+"values": [Vector2(0.4781145, 0.4810606), Vector2(0.001, 0.001)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fdh3c"]
+_data = {
+&"RESET": SubResource("Animation_mf4it"),
+&"hover": SubResource("Animation_0ypq3"),
+&"shrink": SubResource("Animation_rbrea")
+}
+
 [node name="Area2D" type="Area2D" unique_id=1547374501]
 scale = Vector2(1.44, 1.44)
 script = ExtResource("1_ihe44")
@@ -40,12 +107,13 @@ color = Color(0.553446, 0.196675, 0.09405204, 1)
 color_ramp = SubResource("Gradient_mf4it")
 
 [node name="BarHarborRevised" type="Sprite2D" parent="." unique_id=682169842]
-position = Vector2(-19.292166, -0.34722328)
+position = Vector2(0, -0.6944444)
 scale = Vector2(0.4781145, 0.4810606)
 texture = ExtResource("7_rbrea")
 offset = Vector2(60.685, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2081854112]
+visible = false
 position = Vector2(7.291667, -3.472224)
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_fdh3c")
@@ -57,5 +125,9 @@ volume_db = -10.844
 [node name="bite3" type="AudioStreamPlayer" parent="." unique_id=748818114]
 stream = ExtResource("9_rbrea")
 volume_db = -14.622
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2120396246]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_fdh3c")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

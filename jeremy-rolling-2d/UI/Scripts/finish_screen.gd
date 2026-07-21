@@ -47,7 +47,7 @@ func _show_finish(time: float, current_level: String) -> void:
 
 	for i in children.size():
 		var ui: Sprite2D = children[i]
-		ui.modulate = ui.modulate * 0.1 if not level_data.collectables[i] else ui.modulate
+		ui.modulate = Color(0.0, 0.0, 0.0, 0.384) if not level_data.collectables[i] else ui.modulate
 
 	$Panel/Time.text = "[center][img=80]res://UI/Images/clock.png[/img] %s[/center]" % format_time(time)
 

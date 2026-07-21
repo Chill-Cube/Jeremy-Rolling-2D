@@ -10,10 +10,9 @@ func _ready() -> void:
 	original_scale = $BarHarborRevised.scale
 	level = owner.scene_file_path.get_file().get_basename()
 	level_data = SaveManager.get_level_data(level)
+	$AnimationPlayer.play("hover")
 	if level_data.collectables[order - 1] == true:
-		$BarHarborRevised.modulate.a = 0.5
-
-var shrinking := false
+		$BarHarborRevised.modulate = Color(0.0, 0.0, 0.0, 0.384)
 
 func _on_body_entered(_body: Node2D) -> void:
 	if $BarHarborRevised.scale != original_scale:
@@ -24,10 +23,6 @@ func _on_body_entered(_body: Node2D) -> void:
 	$LobsterGet.play()
 	
 	$CPUParticles2D.emitting = true
-	shrinking = true
+	%AnimationPlayer.play("shrink")
 
 	level_data.collectables[order - 1] = true
-
-func _process(delta: float) -> void:
-	if shrinking:
-		$BarHarborRevised.scale = $BarHarborRevised.scale.lerp(Vector2.ONE * 0.004, 6.0 * delta)

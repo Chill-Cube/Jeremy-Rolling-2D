@@ -16,7 +16,7 @@ func _ready() -> void:
 
 		for i in children.size():
 			var ui: Sprite2D = children[i]
-			ui.modulate.a = 1.0 if level_data.collectables[i] else 0.3
+			ui.modulate = ui.modulate if level_data.collectables[i] else Color(0.0, 0.0, 0.0, 0.384)
 
 
 func _on_template_pressed() -> void:
