@@ -9,8 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://bowm1k6db6dbs" path="res://Assets/SFX/freesound_community-cartoon-jump-6462.mp3" id="4_e80uo"]
 [ext_resource type="AudioStream" uid="uid://clpk2dmxyogt4" path="res://Assets/SFX/140867__juskiddink__boing.wav" id="5_5ncpa"]
 [ext_resource type="AudioStream" uid="uid://cwx7c0xm5b86i" path="res://Assets/SFX/Rolling.wav" id="6_tdg3f"]
-[ext_resource type="AudioStream" uid="uid://j2iv7f6k7gcl" path="res://Assets/SFX/651545__nsstudios__wind-draft-loop-3.wav" id="7_dtqjt"]
 [ext_resource type="Script" uid="uid://i84hv3bqirbf" path="res://Player/Scripts/camera_follow.gd" id="9_7v5gs"]
+[ext_resource type="AudioStream" uid="uid://bqim21t3kadql" path="res://651545__nsstudios__wind-draft-loop-3.ogg" id="10_8sa4y"]
 [ext_resource type="PackedScene" uid="uid://ddt4g2myhow3f" path="res://Effects/trail.tscn" id="12_5wa8t"]
 [ext_resource type="Texture2D" uid="uid://bfci2u6e21gph" path="res://Assets/Images/Untidfgdfgled.png" id="13_p7tob"]
 [ext_resource type="Script" uid="uid://dpemnq1kxjkle" path="res://Player/Scripts/arrow.gd" id="14_3nb2p"]
@@ -104,7 +104,7 @@ stream = ExtResource("6_tdg3f")
 
 [node name="falling" type="AudioStreamPlayer" parent="." unique_id=1536097744]
 unique_name_in_owner = true
-stream = ExtResource("7_dtqjt")
+stream = ExtResource("10_8sa4y")
 
 [node name="Arrow" type="Sprite2D" parent="." unique_id=832494102]
 unique_name_in_owner = true
