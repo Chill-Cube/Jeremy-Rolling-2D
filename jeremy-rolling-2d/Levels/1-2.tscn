@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cq1t4xgordl8b"]
+[gd_scene format=3 uid="uid://c50t4ltfjpkcw"]
 
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_nq6bd"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_gb2ww"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="6_gb2ww"]
 [ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="7_6nsl0"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="8_3fvqv"]
+[ext_resource type="Texture2D" uid="uid://crnajixum1tha" path="res://Assets/Images/IMG_2846.png" id="10_jkhrd"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="10_ubfli"]
+[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="11_jkhrd"]
 
 [sub_resource type="Gradient" id="Gradient_ubfli"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -31,7 +33,7 @@ texture_repeat = 2
 position = Vector2(-747, -787)
 texture = ExtResource("3_3fvqv")
 texture_offset = Vector2(0, 28.175)
-texture_scale = Vector2(-0.035, -0.035)
+texture_scale = Vector2(-0.07, -0.07)
 texture_rotation = -1.2130039
 polygon = PackedVector2Array(-2030, -954, -1844.9785, -935.4977, -1380, -889, 484, -260, 2109, 921, 3615, 2037, 4703, 2462, 6089, 2657, 7219, 2388, 8046, 2001, 8658, 1335, 8463, 3476, 7990, 3998, 6472, 5297, 5052, 5642, 4130, 7351, 4169, 8656, 2077, 8867, -1014, 8617, -2031, 8502, -3103, 8157, -6669, 6489, -9077, 3909, -10144, 281, -10372, -4954, -7330, -5825, -4753, -6108, -2327, -6126, 98, -6108, 1834, -5339, 5022, -4790, 7293, -5105, 11222, -4833, 15982, -3739, 14562, -2261, 13256, -2991, 11049, -2799, 9053, -2223, 8842, -860, 8181, 1146, 7206, 1840, 6642, 2013, 6079, 2002, 4876, 1840, 3890, 1341, 2558, 431, 965, -847, 330, -1490, 221, -2225, -892, -2584, -2034, -2771, -2775, -2436, -3180, -1638, -2930, -1161)
 
@@ -63,7 +65,7 @@ texture_repeat = 2
 position = Vector2(243.62573, 878.7688)
 texture = ExtResource("3_3fvqv")
 texture_offset = Vector2(0, 28.175)
-texture_scale = Vector2(-0.035, -0.035)
+texture_scale = Vector2(-0.07, -0.07)
 texture_rotation = -1.2130039
 polygon = PackedVector2Array(10990, -595, 11828.626, -626.2312, 13411.626, -352.23117, 15649.626, 1231.7688, 15924.626, 2688.7688, 16241.626, 5010.769, 16156.626, 6509.769, 16241.626, 7713.769, 21223.625, 8304.769, 25425.625, 8452.769, 29162.625, 8283.769, 30535.625, 8051.769, 30924, 7892, 31258, 7833, 31543, 7757, 31849, 7558, 33108, 4998, 31868, 5907, 30807, 6341, 29818, 6544, 28578, 6496, 26791, 6103, 25349, 5197, 23764, 3683, 22453, 2277, 21499, 1180, 20617, 239, 19255, -776, 17816, -1442, 15987.626, -1724.2312, 12947.626, -1640.2312, 11162, -1272, 9253, -1198, 10229, -805)
 
@@ -94,7 +96,7 @@ texture_repeat = 2
 position = Vector2(2322.2783, 185.49023)
 texture = ExtResource("3_3fvqv")
 texture_offset = Vector2(0, 28.175)
-texture_scale = Vector2(-0.035, -0.035)
+texture_scale = Vector2(-0.07, -0.07)
 texture_rotation = -1.2130039
 polygon = PackedVector2Array(24242.277, 6081.49, 28049.277, 6209.49, 29454.277, 7333.49, 31370.277, 9632.49, 32264.277, 12110.49, 32443.277, 13797.49, 35586.277, 14384.49, 38498.277, 14154.49, 40465.277, 13337.49, 40644.277, 11293.49, 40618.277, 9581.49, 40542.277, 8074.49, 41359.277, 5723.49, 42330.277, 4139.49, 42946, 3648, 43399, 2456, 42589, 3219, 42100, 3564, 40932, 4053, 39001, 4554, 37369, 4768, 34651.277, 4952.49, 32986.277, 4793.49, 25768.277, 4856.49, 24245.277, 5142.49, 22437.277, 5380.49, 23468.277, 5808.49)
 
@@ -123,7 +125,7 @@ position = Vector2(39820, 13165)
 texture_repeat = 2
 texture = ExtResource("3_3fvqv")
 texture_offset = Vector2(0, 28.175)
-texture_scale = Vector2(-0.035, -0.035)
+texture_scale = Vector2(-0.07, -0.07)
 texture_rotation = -1.2130039
 polygon = PackedVector2Array(20530, -13574, 22025, -13233, 23045, -12488, 23852, -11392, 24372, -10079, 24934, -8551, 25121, -6705, 24704, -4616, 23937, -3199, 22869, -1480, 21777, -389, 20384, 470, 19269, 1190, 17666, 1934, 15971, 2538, 14810, 2863, 12789, 3374, 11001, 3652, 8771, 3768, 7262, 3792, 5476, 3702, 4758, 3518, 4269, 3307, 3891, 3046, 3285, 2495, 3635, 3369, 3783, 3822, 3438, 4708, 3921, 5831, 4213, 6887, 4041, 7411, 4444, 8200, 4411, 9592, 9719, 11814, 24737, 10950, 30744, 8769, 34406, 2268, 36422, -4685, 34488, -13449, 30876, -17552, 23157, -18776, 16628, -18538, 13194, -17790, 11052, -17144, 6554, -14778, 8665, -11304, 11832, -11707, 14918, -11353, 15952, -12092, 16809, -12801, 17488, -13166, 18789, -13570)
 
@@ -148,7 +150,7 @@ position = Vector2(-3267.9258, -475.38428)
 scale = Vector2(1.1929975, 1)
 texture = ExtResource("3_3fvqv")
 texture_offset = Vector2(0, 28.175)
-texture_scale = Vector2(-0.035, -0.035)
+texture_scale = Vector2(-0.07, -0.07)
 texture_rotation = -1.2130039
 polygon = PackedVector2Array(-5047, 8116, 1622.3555, 8052.616, 2995.752, 8023.3843, 3866.668, 7893.3843, 4567.426, 7864.3843, 4151.3555, 8727.616, 1650.3555, 10216.616, 413.35547, 13307.616, 160.35547, 17213.617, -4476.6445, 17804.617, -12007.645, 17410.617, -14778, 17553, -16481.777, 17603, -17159.063, 17121, -18000.64, 16520, -18075.242, 15802, -18329.225, 15239, -18256.299, 14374, -18583.207, 12629, -18268.871, 13192, -17833.834, 13653, -17252.945, 14043, -16322.515, 14403, -15621.759, 14417, -14799.46, 14288, -14014.044, 14071, -13107.084, 13567, -11789.395, 12499, -10544.631, 11173, -9166.59, 9659, -7667.8438, 8721, -6443.6445, 8333.616)
 
@@ -180,7 +182,7 @@ order = 3
 [node name="Area2D3" parent="." unique_id=2024134718 instance=ExtResource("5_3fvqv")]
 position = Vector2(10890, -2547)
 scale = Vector2(2.8865912, 2.8865912)
-order = 1
+order = 3
 
 [node name="Area2D3" parent="Area2D3" unique_id=1158230093 instance=ExtResource("5_3fvqv")]
 position = Vector2(6547, 14960)
@@ -217,7 +219,7 @@ scroll_offset = Vector2(-15840.999, -6052.9995)
 
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("8_3fvqv")]
 z_index = 0
-position = Vector2(13801.001, 8099)
+position = Vector2(13801, 5696.999)
 scale = Vector2(62.72, 62.72)
 metadata/_edit_lock_ = true
 
@@ -257,3 +259,15 @@ default_color = Color(0.3942875, 0.4571026, 0.65604687, 1)
 [node name="CollisionPolygon2D" parent="StaticBody2D6" index="2" unique_id=1552637217]
 polygon = PackedVector2Array(81, -634, -251, -281, 6183, -232, 5718, -606)
 
+[node name="Img2846" type="Sprite2D" parent="." unique_id=120509774]
+position = Vector2(-2039, -2426)
+scale = Vector2(1.8217773, 1.8217773)
+texture = ExtResource("10_jkhrd")
+script = ExtResource("11_jkhrd")
+
+[editable path="StaticBody2D"]
+[editable path="StaticBody2D2"]
+[editable path="StaticBody2D3"]
+[editable path="StaticBody2D4"]
+[editable path="StaticBody2D5"]
+[editable path="StaticBody2D6"]
