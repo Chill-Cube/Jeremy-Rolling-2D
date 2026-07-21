@@ -182,7 +182,7 @@ order = 3
 [node name="Area2D3" parent="." unique_id=2024134718 instance=ExtResource("5_3fvqv")]
 position = Vector2(10890, -2547)
 scale = Vector2(2.8865912, 2.8865912)
-order = 3
+order = 1
 
 [node name="Area2D3" parent="Area2D3" unique_id=1158230093 instance=ExtResource("5_3fvqv")]
 position = Vector2(6547, 14960)
@@ -219,7 +219,7 @@ scroll_offset = Vector2(-15840.999, -6052.9995)
 
 [node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("8_3fvqv")]
 z_index = 0
-position = Vector2(13801, 5696.999)
+position = Vector2(12925.001, 8599)
 scale = Vector2(62.72, 62.72)
 metadata/_edit_lock_ = true
 

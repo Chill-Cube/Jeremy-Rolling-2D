@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cydd1wuc0roq1"]
 
+[ext_resource type="Script" uid="uid://b2h118uy57jjw" path="res://Effects/cpu_particles_2d.gd" id="1_clfj8"]
+
 [node name="CPUParticles2D" type="CPUParticles2D" unique_id=490536070]
 scale = Vector2(420.89432, 7.246578)
 amount = 100
@@ -11,3 +13,4 @@ angular_velocity_min = -106.7
 angular_velocity_max = 616.04
 scale_amount_min = 24.81
 scale_amount_max = 54.57
+script = ExtResource("1_clfj8")

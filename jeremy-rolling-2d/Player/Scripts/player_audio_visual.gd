@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		should_update_trail = true
 
 	if should_update_trail:
-		Trail.emitting = grounded and speed > 500.0
+		Trail.emitting = grounded and speed > 500.0 and not InputNode.is_mobile
 		Trail.direction.x = -100 if velocity_x > 0 else 100
 		Trail.position.x = -38.0 if velocity_x > 0 else 38.0
 
@@ -63,6 +63,7 @@ func _spring_sfx() -> void:
 	BoingSFX.play()
 
 func _push_fx() -> void:
-	Explosion.emitting = true
-
 	JumpSFX.play()
+
+	if InputNode.is_mobile: return
+	Explosion.emitting = true
