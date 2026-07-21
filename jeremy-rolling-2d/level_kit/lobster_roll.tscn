@@ -20,7 +20,7 @@ script = ExtResource("1_ihe44")
 
 [node name="crunch" type="AudioStreamPlayer" parent="." unique_id=745732519]
 stream = ExtResource("4_fdh3c")
-volume_db = -6.321
+volume_db = -15.686
 
 [node name="CPUParticles2D" parent="." unique_id=1275942708 instance=ExtResource("2_pn5yd")]
 z_index = 1
@@ -52,10 +52,10 @@ shape = SubResource("RectangleShape2D_fdh3c")
 
 [node name="LobsterGet" type="AudioStreamPlayer" parent="." unique_id=868096822]
 stream = ExtResource("3_s4u4s")
+volume_db = -10.844
 
 [node name="bite3" type="AudioStreamPlayer" parent="." unique_id=748818114]
 stream = ExtResource("9_rbrea")
-volume_db = -2.299
+volume_db = -14.622
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

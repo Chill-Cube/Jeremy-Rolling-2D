@@ -83,6 +83,7 @@ texture = ExtResource("4_dm7nj")
 [node name="jump" type="AudioStreamPlayer" parent="." unique_id=919060653]
 unique_name_in_owner = true
 stream = ExtResource("4_e80uo")
+volume_db = -14.295
 
 [node name="boing" type="AudioStreamPlayer" parent="." unique_id=1144820005]
 unique_name_in_owner = true
@@ -101,10 +102,12 @@ zoom = Vector2(0.1, 0.1)
 [node name="Rolling" type="AudioStreamPlayer" parent="." unique_id=2120997971]
 unique_name_in_owner = true
 stream = ExtResource("6_tdg3f")
+volume_db = -8.872
 
 [node name="falling" type="AudioStreamPlayer" parent="." unique_id=1536097744]
 unique_name_in_owner = true
 stream = ExtResource("10_8sa4y")
+volume_db = -8.872
 
 [node name="Arrow" type="Sprite2D" parent="." unique_id=832494102]
 unique_name_in_owner = true

@@ -2,11 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_dp1do"]
 [ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_yqlc8"]
-[ext_resource type="Texture2D" uid="uid://dtyrvs4l20kov" path="res://Assets/Images/UntitledvbnvbnArtwork.png" id="3_16c64"]
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="3_52ad1"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="3_beld0"]
 [ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="4_3deou"]
-[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="4_bov2p"]
 [ext_resource type="PackedScene" uid="uid://crclxsqalcwr" path="res://level_kit/Gimmicks/breakable_wall.tscn" id="5_beld0"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="5_ytcbe"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="6_16c64"]
@@ -36,11 +34,6 @@ width = 25.94
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
 polygon = PackedVector2Array(-5741, -1656, -487, -1508, 1612, -1320, 3629, -833, 5357, 263, 7675, 1302, 9838, 3148, 11467, 4532, 13342, 6147, 14957, 7373, 16327, 8426, 18069, 9661, 19564, 10463, 21970, 11317, 24938, 11825, 28091, 11763, 29422, 11608, 30048, 11323, 30512, 10949, 30887, 10631, 29450, 13438, 28479, 14205, 28274, 14971, 27656, 15745, 27873, 16913, 29214, 18038, 31233, 18038, 32098, 17518, 32646, 16538, 33050, 15456, 33665, 13763, 34049, 11882, 33742, 9348, 35508, 6258, 34890, 5479, 33752, 5371, 33374, 4631, 33105, 3852, 32514, 3302, 36640, 1191, 37120, 807, 38330, -19, 40710, 7793, 38809, 12861, 34665, 19581, 31680, 20662, 26359, 19898, 23457, 15400, 22187, 17049, 18561, 14865, 16750, 15359, 13377, 15647, 4366, 14412, -4768, 14783, -12339, 13590, -15295, 9525, -14584, 2231, -15183, -2781, -10918, -6446, -6639, -6851, -4358, -6799, -726, -6209, 2892, -6380, 8673, -5095, 16862, 435, 18040, 1060, 18945, -27, 19366, 796, 19563, 1620, 19190, 2380, 18700, 4045, 19429, 4882, 21845, 5735, 25687, 6917, 27588, 7340, 28470, 7364, 29363, 7101, 29864, 6875, 30286, 6734, 29256, 9345, 26068, 10042, 22119, 9219, 20662, 8881, 18699, 7150, 16355, 5904, 15236, 5059, 14877, 4531, 13822, 3750, 12175, 2800, 11858, 2251, 11541, 1871, 10063, 879, 9303, 34, 6209, -2433, 4937, -3128, 3154, -3495, 1188, -4701, -2011, -5016, -4686, -5187, -7268, -3456, -7609, -2132)
-
-[node name="UntitledvbnvbnArtwork" type="Sprite2D" parent="." unique_id=1444609218]
-position = Vector2(1245, -901)
-texture = ExtResource("3_16c64")
-script = ExtResource("4_bov2p")
 
 [node name="BreakableWall" parent="." unique_id=900924851 instance=ExtResource("5_beld0")]
 position = Vector2(4486, -398)

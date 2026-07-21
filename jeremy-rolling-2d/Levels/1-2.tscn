@@ -8,9 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="6_gb2ww"]
 [ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="7_6nsl0"]
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="8_3fvqv"]
-[ext_resource type="Texture2D" uid="uid://crnajixum1tha" path="res://Assets/Images/IMG_2846.png" id="10_jkhrd"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="10_ubfli"]
-[ext_resource type="Script" uid="uid://d3duue0s000ju" path="res://Assets/Scripts/fade_in.gd" id="11_jkhrd"]
 
 [sub_resource type="Gradient" id="Gradient_ubfli"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -258,12 +256,6 @@ default_color = Color(0.3942875, 0.4571026, 0.65604687, 1)
 
 [node name="CollisionPolygon2D" parent="StaticBody2D6" index="2" unique_id=1552637217]
 polygon = PackedVector2Array(81, -634, -251, -281, 6183, -232, 5718, -606)
-
-[node name="Img2846" type="Sprite2D" parent="." unique_id=120509774]
-position = Vector2(-2039, -2426)
-scale = Vector2(1.8217773, 1.8217773)
-texture = ExtResource("10_jkhrd")
-script = ExtResource("11_jkhrd")
 
 [editable path="StaticBody2D"]
 [editable path="StaticBody2D2"]

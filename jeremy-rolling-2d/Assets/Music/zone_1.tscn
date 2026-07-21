@@ -4,5 +4,5 @@
 
 [node name="Zone1" type="AudioStreamPlayer" unique_id=2052296250]
 stream = ExtResource("1_32ev1")
-volume_db = -10.025
+volume_db = -20.375
 autoplay = true

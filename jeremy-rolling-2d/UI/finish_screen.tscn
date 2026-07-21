@@ -51,6 +51,7 @@ vertical_alignment = 1
 
 [node name="FinishSFX" type="AudioStreamPlayer" parent="Panel" unique_id=1087380609]
 stream = ExtResource("2_72onr")
+volume_db = -17.251
 
 [node name="Lobsters" type="Node2D" parent="Panel" unique_id=1232955957]
 position = Vector2(27, 8)
