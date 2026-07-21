@@ -57,7 +57,6 @@ polygon = PackedVector2Array(17322, 2305, 18233, 2342, 19543, 2468, 21134, 2542,
 [node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
 color = Color(0.9799606, 0.9812879, 0.99603766, 1)
 texture_offset = Vector2(1500, 1501.61)
-texture_scale = Vector2(0.89, 0.89)
 texture_rotation = -2.1450098
 polygon = PackedVector2Array(17322, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24375, 1498, 24160, 544, 21718, 359, 20334, 1195, 18699, 825, 17204, 781, 17300, 1506)
 
@@ -80,7 +79,6 @@ polygon = PackedVector2Array(17212, 2305, 18233, 2342, 19543, 2468, 21134, 2542,
 position = Vector2(-238, -3153)
 color = Color(0.9799606, 0.9812879, 0.99603766, 1)
 texture_offset = Vector2(1500, 1501.61)
-texture_scale = Vector2(0.89, 0.89)
 texture_rotation = -2.1450098
 polygon = PackedVector2Array(17212, 2305, 18233, 2342, 19543, 2468, 21134, 2542, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22389, 791, 20073, 886, 18699, 825, 16886, 661, 17090, 1401)
 
@@ -104,7 +102,6 @@ polygon = PackedVector2Array(16726, 2266, 18217, 2837, 19899, 2567, 21134, 2542,
 position = Vector2(0, -6532)
 color = Color(0.9799606, 0.9812879, 0.99603766, 1)
 texture_offset = Vector2(1500, 1501.61)
-texture_scale = Vector2(0.89, 0.89)
 texture_rotation = -2.1450098
 polygon = PackedVector2Array(16726, 2266, 18217, 2837, 19899, 2567, 21134, 2542, 22212, 2252, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 23547, 917, 22736, 1084, 21711, 845, 20168, 664, 19173, 917, 18505, 1060, 17743, 786, 16886, 661, 17090, 1401)
 
@@ -128,7 +125,6 @@ polygon = PackedVector2Array(16726, 2266, 17601, 2861, 19899, 2567, 21134, 2542,
 position = Vector2(174, -10092)
 color = Color(0.9799606, 0.9812879, 0.99603766, 1)
 texture_offset = Vector2(1500, 1501.61)
-texture_scale = Vector2(0.89, 0.89)
 texture_rotation = -2.1450098
 polygon = PackedVector2Array(16726, 2266, 17601, 2861, 19899, 2567, 21134, 2542, 22207, 2599, 23235, 2179, 24331, 2216, 24041, 1556, 24160, 544, 22596, 1282, 20410, 1151, 18595, 1116, 16886, 661, 17090, 1401)
 

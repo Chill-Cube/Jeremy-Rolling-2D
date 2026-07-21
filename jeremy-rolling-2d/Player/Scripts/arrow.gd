@@ -7,8 +7,6 @@ var aim_direction := Vector2.RIGHT
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(player.get_node("Input"))
-	print(player.get_node("Input").is_mobile)
 	visible = player.get_node("Input").is_mobile == false
 
 

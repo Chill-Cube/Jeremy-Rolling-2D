@@ -70,7 +70,6 @@ polygon = PackedVector2Array(6395, -3933, 6952, -3627, 7808, -3768, 8718, -3931,
 
 [node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
 color = Color(0.88443905, 0.8929069, 0.9785728, 1)
-texture_scale = Vector2(1.025, 1.025)
 texture_rotation = -0.980875
 polygon = PackedVector2Array(6395, -3933, 6952, -3627, 7808, -3768, 8718, -3931, 9421, -3952, 9784, -4104, 10621, -4109, 11297, -1298, 10939, -474, 9379, -442, 8350, -301, 7028, -269, 6367, -518, 6401, -2718, 6420, -3233, 6405, -3675)
 
