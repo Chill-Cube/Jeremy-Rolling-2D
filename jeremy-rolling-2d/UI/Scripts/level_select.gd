@@ -2,8 +2,10 @@ extends Control
 var levels : Array
 var lobster_count := 0
 
+@export var World := 1
+
 func _ready() -> void:
-	for level_name in LevelList.LEVELS:
+	for level_name in LevelList.LEVELS[World]:
 		var level := $GridContainer/Template.duplicate()
 
 		level.name = level_name
