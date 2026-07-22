@@ -6,6 +6,10 @@ var lobster_count := 0
 
 func _ready() -> void:
 	for level_name in LevelList.LEVELS[str(World)]:
+		if !ResourceLoader.exists("res://Levels/%s.tscn" % level_name):
+			continue
+
+		
 		var level := $GridContainer/Template.duplicate()
 
 		level.name = level_name
