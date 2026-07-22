@@ -95,7 +95,13 @@ func _finish():
 	finished_level = true
 	
 	Hud.visible = false
-	FinishScreen._show_finish(level_time, owner.scene_file_path.get_file().get_basename())
+
+	var world := ""
+	var level := owner.scene_file_path.get_file().get_basename()
+	for w in LevelList.LEVELS.keys():
+		if level in LevelList.LEVELS[w]:
+			world = w
+	FinishScreen._show_finish(level_time, level, world)
 
 # ground checks
 func _on_body_entered(_body: Node) -> void:

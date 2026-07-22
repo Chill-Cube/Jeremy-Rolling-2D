@@ -2,8 +2,14 @@ extends Control
 var levels : Array
 var lobster_count := 0
 
+@export var World := 1
+
 func _ready() -> void:
-	for level_name in LevelList.LEVELS:
+	for level_name in LevelList.LEVELS[str(World)]:
+		if !ResourceLoader.exists("res://Levels/%s.tscn" % level_name):
+			continue
+
+		
 		var level := $GridContainer/Template.duplicate()
 
 		level.name = level_name
@@ -21,7 +27,7 @@ func _ready() -> void:
 			var ui: Sprite2D = children[i]
 			ui.modulate = ui.modulate if level_data.collectables[i] else Color(0.0, 0.0, 0.0, 0.384)
 	
-	%Counter.text = str(lobster_count)+"/"+str(LevelList.LEVELS.size() * 3)
+	%Counter.text = str(lobster_count)+"/"+str(LevelList.LEVELS[str(World)].size() * 3)
 
 
 func _on_template_pressed() -> void:

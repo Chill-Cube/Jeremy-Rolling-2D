@@ -2,14 +2,15 @@ class_name Finish
 extends CanvasLayer
 
 var level := ""
+var world := ""
 
-func get_next_level(current_level: String) -> String:
-	var index := LevelList.LEVELS.find(current_level)
+func get_next_level(current_level: String, world: String) -> String:
+	var index = LevelList.LEVELS[world].find(current_level)
 
-	if index == -1 or index >= LevelList.LEVELS.size() - 1:
+	if index == -1 or index >= LevelList.LEVELS[world].size() - 1:
 		return ""
 
-	return LevelList.LEVELS[index + 1]
+	return LevelList.LEVELS[world][index + 1]
 
 func format_time(total_seconds: float) -> String:
 	var minutes := int(total_seconds / 60) % 60
@@ -30,18 +31,19 @@ func update_save(time: float, current_level: String) -> void:
 
 	SaveManager.save_to_file()
 
-func _show_finish(time: float, current_level: String) -> void:
+func _show_finish(time: float, current_level: String, current_world: String) -> void:
 	if visible:
 		return
 
 	visible = true
 	$Panel/FinishSFX.play()
 
-	$Panel/NextLevel.visible = get_next_level(current_level) != ""
+	$Panel/NextLevel.visible = get_next_level(current_level, current_world) != ""
 
 	update_save(time, current_level)
 
 	level = current_level
+	world = current_world
 	var level_data := SaveManager.get_level_data(level)
 
 	var children := $Panel/Lobsters.get_children()
@@ -59,7 +61,7 @@ func _on_retry_pressed() -> void:
 	get_tree().change_scene_to_file("res://Levels/%s.tscn" % level)
 
 func _on_next_level_pressed() -> void:
-	var next_level := get_next_level(level)
+	var next_level := get_next_level(level, world)
 	if next_level != "":
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished
