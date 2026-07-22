@@ -13,5 +13,3 @@ shape = SubResource("RectangleShape2D_mgmp4")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=641065394]
 scale = Vector2(20, 20)
 mesh = SubResource("QuadMesh_mgmp4")
-
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="VisibleOnScreenNotifier2D" method="_on_screen_exited"]

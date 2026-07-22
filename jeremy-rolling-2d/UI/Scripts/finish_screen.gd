@@ -5,12 +5,22 @@ var level := ""
 var world := ""
 
 func get_next_level(current_level: String, world: String) -> String:
-	var index = LevelList.LEVELS[world].find(current_level)
-
-	if index == -1 or index >= LevelList.LEVELS[world].size() - 1:
+	if not LevelList.LEVELS.has(world):
 		return ""
 
-	return LevelList.LEVELS[world][index + 1]
+	var world_levels: Array = LevelList.LEVELS[world]
+	var index: int = world_levels.find(current_level)
+
+	if index == -1:
+		return ""
+
+	if index + 1 >= world_levels.size():
+		return ""
+
+	if ResourceLoader.exists("res://Levels/%s.tscn" % world_levels[index]):
+		return ""
+
+	return world_levels[index + 1]
 
 func format_time(total_seconds: float) -> String:
 	var minutes := int(total_seconds / 60) % 60
@@ -38,7 +48,7 @@ func _show_finish(time: float, current_level: String, current_world: String) -> 
 	visible = true
 	$Panel/FinishSFX.play()
 
-	$Panel/NextLevel.visible = get_next_level(current_level, current_world) != ""
+	$Panel/NextLevel.visible = get_next_level(current_level, world) != ""
 
 	update_save(time, current_level)
 
