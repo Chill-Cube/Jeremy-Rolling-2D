@@ -9,8 +9,45 @@
 [ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="5_ytcbe"]
 [ext_resource type="PackedScene" uid="uid://d3l45f0u0mj8c" path="res://level_kit/Gimmicks/bouncer.tscn" id="6_16c64"]
 [ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="7_bov2p"]
+[ext_resource type="FontFile" uid="uid://byvj4ulao66h8" path="res://UI/Fonts/Ldfcomicsanslight-6dZo.ttf" id="8_ytcbe"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="9_0swkg"]
 [ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="13_guxh0"]
+
+[sub_resource type="Animation" id="Animation_ubfli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkhrd"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52ad1"]
+_data = {
+&"RESET": SubResource("Animation_ubfli"),
+&"fade": SubResource("Animation_jkhrd")
+}
 
 [node name="18" type="Node2D" unique_id=718669118]
 
@@ -24,7 +61,7 @@ position = Vector2(626, 1707)
 texture_repeat = 2
 texture = ExtResource("3_52ad1")
 texture_offset = Vector2(0, 7.51)
-texture_scale = Vector2(-0.135, -0.135)
+texture_scale = Vector2(-0.08, -0.08)
 texture_rotation = -0.5078908
 polygon = PackedVector2Array(-5741, -1656, -487, -1508, 1612, -1320, 3629, -833, 5357, 263, 7675, 1302, 9838, 3148, 11467, 4532, 13342, 6147, 14957, 7373, 16327, 8426, 18069, 9661, 19564, 10463, 21970, 11317, 24938, 11825, 28091, 11763, 29422, 11608, 30048, 11323, 30512, 10949, 30887, 10631, 29450, 13438, 28479, 14205, 28274, 14971, 27656, 15745, 27873, 16913, 29214, 18038, 31233, 18038, 32098, 17518, 32646, 16538, 33050, 15456, 33665, 13763, 34049, 11882, 33742, 9348, 35508, 6258, 34890, 5479, 33752, 5371, 33374, 4631, 33105, 3852, 32514, 3302, 36640, 1191, 37120, 807, 38330, -19, 40710, 7793, 38809, 12861, 34665, 19581, 31680, 20662, 26359, 19898, 23457, 15400, 22187, 17049, 18561, 14865, 16750, 15359, 13377, 15647, 4366, 14412, -4768, 14783, -12339, 13590, -15295, 9525, -14584, 2231, -15183, -2781, -10918, -6446, -6639, -6851, -4358, -6799, -726, -6209, 2892, -6380, 8673, -5095, 16862, 435, 18040, 1060, 18945, -27, 19366, 796, 19563, 1620, 19190, 2380, 18700, 4045, 19429, 4882, 21845, 5735, 25687, 6917, 27588, 7340, 28470, 7364, 29363, 7101, 29864, 6875, 30286, 6734, 29256, 9345, 26068, 10042, 22119, 9219, 20662, 8881, 18699, 7150, 16355, 5904, 15236, 5059, 14877, 4531, 13822, 3750, 12175, 2800, 11858, 2251, 11541, 1871, 10063, 879, 9303, 34, 6209, -2433, 4937, -3128, 3154, -3495, 1188, -4701, -2011, -5016, -4686, -5187, -7268, -3456, -7609, -2132)
 
@@ -47,7 +84,6 @@ polygon = PackedVector2Array(-1327, 1014, -1049, 695, -679, 184, -878, -1000, -7
 
 [node name="Polygon2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
-texture_scale = Vector2(0.59, 0.59)
 polygon = PackedVector2Array(-1327, 1014, -1049, 695, -679, 184, -878, -1000, -716, -1422, 979, -1096, 2356, -349, 1127, 428, 853, 1501, 1150, 2144, -240, 1275)
 
 [node name="Line2D" parent="BreakableWall/StaticBody2D" parent_id_path=PackedInt32Array(900924851, 655161405) index="2" unique_id=927314382]
@@ -67,7 +103,7 @@ polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.3
 
 [node name="Polygon2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(1157761329, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
-texture_scale = Vector2(0.57, 0.57)
+texture_offset = Vector2(0, 1500)
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1107.0527, -351.41595, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall2/StaticBody2D" parent_id_path=PackedInt32Array(1157761329, 655161405) index="2" unique_id=927314382]
@@ -87,7 +123,7 @@ polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.3
 
 [node name="Polygon2D" parent="BreakableWall3/StaticBody2D" parent_id_path=PackedInt32Array(797125956, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
-texture_scale = Vector2(0.57, 0.57)
+texture_offset = Vector2(0, 1500)
 texture_rotation = -0.74700093
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1199.4795, -300.16846, 1504.1777, 10.651611, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
@@ -108,7 +144,7 @@ polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.3
 
 [node name="Polygon2D" parent="BreakableWall4/StaticBody2D" parent_id_path=PackedInt32Array(1842885367, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
-texture_scale = Vector2(0.57, 0.57)
+texture_offset = Vector2(1463.835, 1859.575)
 texture_rotation = 0.8709193
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 200.08398, -810.3208, 696.65234, -602.66504, 1178.3232, -362.40454, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
@@ -129,6 +165,7 @@ polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.3
 
 [node name="Polygon2D" parent="BreakableWall5/StaticBody2D" parent_id_path=PackedInt32Array(776768708, 655161405) index="1" unique_id=292345145]
 color = Color(0.9098039, 0.91764706, 0.9843137, 1)
+texture_offset = Vector2(0, 1500)
 polygon = PackedVector2Array(-327.61914, 1252.8347, -133.50488, 669.17096, 281.39844, 226.6883, 366.29004, -508.0625, 25.357422, -675.67584, 276.57324, -1024.7837, 846.0703, -677.5635, 1107.0527, -351.41595, 1522.5479, -335.78113, 1382.292, 7.4994507, 1127, 428, 853, 1501, 1025.1973, 2181.577, -68.038086, 1400.27)
 
 [node name="Line2D" parent="BreakableWall5/StaticBody2D" parent_id_path=PackedInt32Array(776768708, 655161405) index="2" unique_id=927314382]
@@ -210,6 +247,22 @@ offset_bottom = 228846.6
 position = Vector2(21280.002, 3809.0005)
 rotation = 0.35752958
 scale = Vector2(2.6603134, 2.2295794)
+
+[node name="Label" type="Label" parent="." unique_id=802047195]
+offset_left = 465.0
+offset_top = -944.0
+offset_right = 1976.0
+offset_bottom = -319.0
+theme_override_colors/font_color = Color(1.4439226e-07, 0.13636729, 0.37616652, 1)
+theme_override_fonts/font = ExtResource("8_ytcbe")
+theme_override_font_sizes/font_size = 226
+text = "Get a
+running start"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=269524514]
+libraries/ = SubResource("AnimationLibrary_52ad1")
+autoplay = &"fade"
 
 [editable path="StaticBody2D"]
 [editable path="BreakableWall"]

@@ -11,6 +11,43 @@
 [ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="8_phj60"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="10_20m2h"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="11_x4fbq"]
+[ext_resource type="FontFile" uid="uid://byvj4ulao66h8" path="res://UI/Fonts/Ldfcomicsanslight-6dZo.ttf" id="12_hkprv"]
+
+[sub_resource type="Animation" id="Animation_ubfli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkhrd"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g8w7n"]
+_data = {
+&"RESET": SubResource("Animation_ubfli"),
+&"fade": SubResource("Animation_jkhrd")
+}
 
 [node name="19" type="Node2D" unique_id=222260503]
 
@@ -160,6 +197,22 @@ order = 2
 position = Vector2(-5034, 918)
 scale = Vector2(2.0879445, 2.0879445)
 order = 3
+
+[node name="Label" type="Label" parent="." unique_id=911068064]
+offset_left = 3165.0
+offset_top = 4700.0
+offset_right = 4908.0
+offset_bottom = 5325.0
+theme_override_colors/font_color = Color(1.4439226e-07, 0.13636729, 0.37616652, 1)
+theme_override_fonts/font = ExtResource("12_hkprv")
+theme_override_font_sizes/font_size = 226
+text = "Push up from the 
+peak of a slope"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=2067715705]
+libraries/ = SubResource("AnimationLibrary_g8w7n")
+autoplay = &"fade"
 
 [editable path="RigidBody2D"]
 [editable path="StaticBody2D"]

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="7_ob4qv"]
 [ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="8_05ewq"]
 [ext_resource type="Texture2D" uid="uid://b2hf8ewi5cvw7" path="res://Assets/Textures/Untitled_Arfgftwork.png" id="9_qm10c"]
+[ext_resource type="FontFile" uid="uid://byvj4ulao66h8" path="res://UI/Fonts/Ldfcomicsanslight-6dZo.ttf" id="10_536hm"]
 
 [sub_resource type="Gradient" id="Gradient_sajpy"]
 offsets = PackedFloat32Array(0, 0.6744186, 1)
@@ -16,6 +17,42 @@ colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_sajpy"]
 gradient = SubResource("Gradient_sajpy")
+
+[sub_resource type="Animation" id="Animation_ubfli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkhrd"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_536hm"]
+_data = {
+&"RESET": SubResource("Animation_ubfli"),
+&"fade": SubResource("Animation_jkhrd")
+}
 
 [node name="Node2D" type="Node2D" unique_id=1785804454]
 scale = Vector2(1.0013193, 0.9960441)
@@ -201,6 +238,23 @@ z_index = -2
 position = Vector2(57447.203, 18130.723)
 scale = Vector2(43.773, 43.773)
 texture = ExtResource("9_qm10c")
+
+[node name="Label" type="Label" parent="." unique_id=790929720]
+offset_left = -1066.5928
+offset_top = -983.8922
+offset_right = 783.4072
+offset_bottom = -389.8922
+theme_override_colors/font_color = Color(1.4439226e-07, 0.13636729, 0.37616652, 1)
+theme_override_fonts/font = ExtResource("10_536hm")
+theme_override_font_sizes/font_size = 172
+text = "Click in the 
+direction you 
+want to push Jeremy"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=2078524412]
+libraries/ = SubResource("AnimationLibrary_536hm")
+autoplay = &"fade"
 
 [editable path="StaticBody2D5"]
 [editable path="StaticBody2D"]

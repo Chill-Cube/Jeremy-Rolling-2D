@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dftf6nor8oalr" path="res://Assets/Textures/Untitled_Artwork 5.png" id="9_h1110"]
 [ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="9_w6bx2"]
 [ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="10_3p2d0"]
+[ext_resource type="FontFile" uid="uid://byvj4ulao66h8" path="res://UI/Fonts/Ldfcomicsanslight-6dZo.ttf" id="12_xwvci"]
 
 [node name="110" type="Node2D" unique_id=483979764]
 
@@ -149,6 +150,17 @@ order = 2
 [node name="Area2D10" parent="." unique_id=1786363791 instance=ExtResource("10_3p2d0")]
 position = Vector2(47001, -1795.9995)
 order = 3
+
+[node name="Label" type="Label" parent="." unique_id=2121236915]
+offset_left = 372.0
+offset_top = -545.0
+offset_right = 2115.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(1.4439226e-07, 0.13636729, 0.37616652, 1)
+theme_override_fonts/font = ExtResource("12_xwvci")
+theme_override_font_sizes/font_size = 226
+text = "Don't look down!"
+horizontal_alignment = 1
 
 [editable path="RigidBody2D"]
 [editable path="BreakableWall"]

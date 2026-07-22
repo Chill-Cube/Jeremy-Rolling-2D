@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0blupm2tqys1"]
 
 [ext_resource type="Script" uid="uid://dg17lts3q64pt" path="res://UI/Scripts/finish_screen.gd" id="1_beg00"]
+[ext_resource type="FontFile" uid="uid://dsipnrdgcyyu7" path="res://UI/Fonts/FredokaOne-Regular.ttf" id="2_65eop"]
 [ext_resource type="AudioStream" uid="uid://docc33ruml1ol" path="res://UI/Audio/626950__maikkihapsis__tadaa.wav" id="2_72onr"]
 [ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/Fonts/ElmsSans-Regular.ttf" id="2_ab4ai"]
 [ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="3_72onr"]
@@ -25,13 +26,13 @@ grow_vertical = 2
 
 [node name="YouDidIt" type="Label" parent="Panel" unique_id=1548698008]
 layout_mode = 0
-offset_left = -0.99998474
-offset_top = -2.0
+offset_left = 1.0000153
+offset_top = 7.0
 offset_right = 602.0
-offset_bottom = 157.0
-theme_override_fonts/font = ExtResource("2_ab4ai")
-theme_override_font_sizes/font_size = 102
-text = "Finish!!!"
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("2_65eop")
+theme_override_font_sizes/font_size = 115
+text = "Finish!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -125,6 +126,7 @@ offset_left = 3.0
 offset_top = 346.0
 offset_right = 604.0
 offset_bottom = 430.0
+scale = Vector2(1.004439, 1)
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("2_ab4ai")
 theme_override_font_sizes/normal_font_size = 61
