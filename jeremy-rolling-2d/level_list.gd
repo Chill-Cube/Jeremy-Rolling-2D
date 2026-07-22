@@ -1,8 +1,8 @@
 extends RefCounted
 class_name LevelList
 
-const LEVELS: Array[String] = [
-	[1] = [
+const LEVELS: Dictionary = {
+	"1" = [
 		"1-1",
 		"1-2",
 		"1-3",
@@ -19,7 +19,7 @@ const LEVELS: Array[String] = [
 		"1-14",
 		"1-15",
 	],
-	[2] = [
+	"2" = [
 		"2-1",
 		"2-2",
 		"2-3",
@@ -36,4 +36,4 @@ const LEVELS: Array[String] = [
 		"2-14",
 		"2-15",
 	],
-]
+}
