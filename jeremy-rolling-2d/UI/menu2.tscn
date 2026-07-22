@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://cy8je31bpc8o7"]
+
+[ext_resource type="Script" uid="uid://bjv5cwqjxeh45" path="res://UI/Scripts/level_select.gd" id="1_k1gor"]
+[ext_resource type="Texture2D" uid="uid://cnyeocg2okvm7" path="res://UI/Images/IMG_2837.png" id="2_kqed1"]
+[ext_resource type="Script" uid="uid://cagp2x5bian8s" path="res://UI/Scripts/level_teleport.gd" id="3_cpbqh"]
+[ext_resource type="Texture2D" uid="uid://dv8lpkmf48hte" path="res://Assets/Images/vecteezy_lobster-roll-with-dill-on-a-transparent-background_52244726.png" id="4_onehq"]
+[ext_resource type="FontFile" uid="uid://j68aq8xnkyjm" path="res://UI/Fonts/Jeremy-Regular(1).ttf" id="5_5tu3u"]
+[ext_resource type="Texture2D" uid="uid://jiprh6u4qdvx" path="res://Assets/Textures/IMG_2813.png" id="6_jpmc7"]
+[ext_resource type="PackedScene" uid="uid://cydd1wuc0roq1" path="res://Effects/cpu_particles_2d.tscn" id="7_fvmql"]
+[ext_resource type="PackedScene" uid="uid://v3ec3ip35r4s" path="res://level_kit/scenery/mountain.tscn" id="8_8a85l"]
+[ext_resource type="FontFile" uid="uid://b3hndla3wd1m" path="res://UI/Fonts/ElmsSans-Regular.ttf" id="9_we066"]
+
+[sub_resource type="Gradient" id="Gradient_536hm"]
+offsets = PackedFloat32Array(0, 0.6744186, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49863547, 0.5829519, 0.9366737, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e05sn"]
+gradient = SubResource("Gradient_536hm")
+
+[node name="CanvasLayer2" type="CanvasLayer" unique_id=1086129096]
+
+[node name="Control" type="Control" parent="." unique_id=1636746392]
+z_index = 2
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 133.0
+offset_right = -36.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_k1gor")
+World = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control" unique_id=1860454881]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.025
+anchor_top = -0.24800001
+anchor_right = 1.0250001
+anchor_bottom = 1.0
+offset_left = 220.25
+offset_top = 73.240005
+offset_right = 2379.75
+offset_bottom = 1545.0
+scale = Vector2(0.225, 0.225)
+mouse_filter = 2
+theme_override_constants/h_separation = 186
+theme_override_constants/v_separation = 283
+columns = 5
+
+[node name="Template" type="TextureButton" parent="Control/GridContainer" unique_id=1017326450]
+visible = false
+self_modulate = Color(1, 1, 1, 0.8901961)
+layout_mode = 2
+texture_normal = ExtResource("2_kqed1")
+script = ExtResource("3_cpbqh")
+
+[node name="Lobster" type="GridContainer" parent="Control/GridContainer/Template" unique_id=1086557510]
+layout_mode = 0
+offset_left = 3.0517578e-05
+offset_top = -4.999996
+offset_right = 101.00003
+offset_bottom = 130.0
+scale = Vector2(5.0755672, 4.8737187)
+
+[node name="BarHarborRevised" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=2064787204]
+position = Vector2(15.66851, 121.21699)
+scale = Vector2(0.059, 0.064)
+texture = ExtResource("4_onehq")
+
+[node name="BarHarborRevised2" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=2029818440]
+position = Vector2(50.16851, 121.21699)
+scale = Vector2(0.059, 0.064)
+texture = ExtResource("4_onehq")
+
+[node name="BarHarborRevised3" type="Sprite2D" parent="Control/GridContainer/Template/Lobster" unique_id=1728330179]
+position = Vector2(84.16851, 121.21699)
+scale = Vector2(0.059, 0.064)
+texture = ExtResource("4_onehq")
+
+[node name="Label" type="Label" parent="Control/GridContainer/Template" unique_id=1633637366]
+layout_mode = 0
+offset_left = 52.000008
+offset_top = 45.000015
+offset_right = 2023.0488
+offset_bottom = 2045.0001
+scale = Vector2(0.21532284, 0.21590517)
+theme_override_fonts/font = ExtResource("5_5tu3u")
+theme_override_font_sizes/font_size = 1272
+text = "1-2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=883742794]
+z_index = -6
+layout_mode = 0
+offset_left = 1505.9998
+offset_top = -209.0
+offset_right = 10487.828
+offset_bottom = 9013.96
+rotation = 1.5707964
+scale = Vector2(0.116, 0.188)
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_e05sn")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1788709645]
+z_index = -1
+scroll_offset = Vector2(4, -35)
+repeat_size = Vector2(456.675, 0)
+autoscroll = Vector2(2.9, 0)
+repeat_times = 14
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" unique_id=1332045298]
+modulate = Color(1, 1, 1, 0.53333336)
+texture_repeat = 2
+position = Vector2(9.674995, 282)
+scale = Vector2(0.81, 0.81)
+skew = 0.41538838
+texture = ExtResource("6_jpmc7")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1996354721]
+z_index = 3
+scale = Vector2(1.31, 1.31)
+scroll_offset = Vector2(-233, 203)
+repeat_size = Vector2(456.675, 0)
+autoscroll = Vector2(2.9, 0)
+repeat_times = 14
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D2" unique_id=859477226]
+z_index = -2
+texture_repeat = 2
+position = Vector2(6.805, 251.125)
+scale = Vector2(0.81, 0.81)
+skew = 0.41538838
+texture = ExtResource("6_jpmc7")
+
+[node name="CPUParticles2D" parent="." unique_id=490536070 instance=ExtResource("7_fvmql")]
+z_index = -1
+position = Vector2(551, -50.999996)
+rotation = -0.0065419674
+scale = Vector2(48.78496, 1.3686401)
+speed_scale = 0.1
+emission_rect_extents = Vector2(10, 34.775)
+scale_amount_min = 0.0
+scale_amount_max = 13.21
+
+[node name="Node2D" parent="." unique_id=2039717938 instance=ExtResource("8_8a85l")]
+z_index = -1
+position = Vector2(347, 268)
+scale = Vector2(1.4559047, 1.4929898)
+
+[node name="Node2D2" parent="." unique_id=14706414 instance=ExtResource("8_8a85l")]
+z_index = 1
+position = Vector2(820, 393.00003)
+scale = Vector2(-1.4412644, 1.0996529)
+
+[node name="BarHarborRevised3" type="Sprite2D" parent="." unique_id=116282993]
+position = Vector2(532.00006, 34)
+scale = Vector2(0.111266986, 0.120696396)
+texture = ExtResource("4_onehq")
+
+[node name="Counter" type="Label" parent="BarHarborRevised3" unique_id=1689800807]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+offset_left = 368.48273
+offset_top = -182.27551
+offset_right = 6053.942
+offset_bottom = 1817.7246
+scale = Vector2(0.21532284, 0.21590517)
+theme_override_fonts/font = ExtResource("9_we066")
+theme_override_font_sizes/font_size = 1435
+text = "1/??"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/GridContainer/Template" to="Control/GridContainer/Template" method="_on_pressed"]
