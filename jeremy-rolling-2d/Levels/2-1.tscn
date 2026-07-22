@@ -1,0 +1,281 @@
+[gd_scene format=3 uid="uid://bvdat5v8q5owq"]
+
+[ext_resource type="PackedScene" uid="uid://ddhgb6e33v5h3" path="res://Player/Player.tscn" id="1_wtiiq"]
+[ext_resource type="PackedScene" uid="uid://j7tqwhs4lf7o" path="res://level_kit/Platforms/ground.tscn" id="2_8hh8a"]
+[ext_resource type="PackedScene" uid="uid://c6u8w1v4qswnq" path="res://level_kit/scenery/texture_rect.tscn" id="3_8hh8a"]
+[ext_resource type="Texture2D" uid="uid://btjbwldlua6q3" path="res://Assets/Textures/dfdgArtwork.png" id="3_b1mfr"]
+[ext_resource type="FontFile" uid="uid://byvj4ulao66h8" path="res://UI/Fonts/Ldfcomicsanslight-6dZo.ttf" id="4_66x82"]
+[ext_resource type="PackedScene" uid="uid://dyphg5uumqh1l" path="res://level_kit/Gimmicks/water.tscn" id="5_b1mfr"]
+[ext_resource type="PackedScene" uid="uid://b4hlr78grhtco" path="res://level_kit/lobster_roll.tscn" id="7_prper"]
+[ext_resource type="Texture2D" uid="uid://dno7md6nk4ebj" path="res://Assets/Images/plam_tree.png" id="8_8da7u"]
+[ext_resource type="PackedScene" uid="uid://bbjeyrajycwnb" path="res://level_kit/scenery/clouds.tscn" id="9_56m54"]
+[ext_resource type="PackedScene" uid="uid://bgvc0sqn2e4h8" path="res://level_kit/finish.tscn" id="10_sba37"]
+[ext_resource type="PackedScene" uid="uid://btqjbow82dx6g" path="res://level_kit/death.tscn" id="11_vih3m"]
+[ext_resource type="Texture2D" uid="uid://byqs23apfig2v" path="res://Assets/Textures/water.png" id="12_6wshv"]
+
+[sub_resource type="Gradient" id="Gradient_56m54"]
+colors = PackedColorArray(0.4883231, 0.8582061, 0.9978842, 1, 0.6480788, 0.51902676, 1.0842435, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kdpat"]
+gradient = SubResource("Gradient_56m54")
+
+[sub_resource type="Animation" id="Animation_ubfli"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jkhrd"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_prper"]
+_data = {
+&"RESET": SubResource("Animation_ubfli"),
+&"fade": SubResource("Animation_jkhrd")
+}
+
+[node name="21" type="Node2D" unique_id=195985904]
+
+[node name="RigidBody2D" parent="." unique_id=658010438 instance=ExtResource("1_wtiiq")]
+position = Vector2(-49, -2)
+
+[node name="StaticBody2D" parent="." unique_id=470789971 instance=ExtResource("2_8hh8a")]
+position = Vector2(-2088, -857)
+
+[node name="Polygon2D" parent="StaticBody2D" index="0" unique_id=615349608]
+texture_repeat = 2
+color = Color(0.98511106, 0.94638354, 0.8919087, 1)
+texture = ExtResource("3_b1mfr")
+texture_offset = Vector2(0, 0.065)
+texture_scale = Vector2(0.18, 0.18)
+texture_rotation = -0.055850536
+polygon = PackedVector2Array(1318, 1004, 2254, 990, 3065, 1052, 3873, 1156, 4101, 1156, 4280, 1166, 5706, 1203, 5955, 1320, 6049, 1507, 6083, 1791, 6007, 4928, 5695, 12508, -603, 12523, -1935, 9668, -3918, 6337, -4449, 3485, -3936, 1375, -3453, 933, 1001, 1028)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/Polygon2D" index="0" unique_id=842626498]
+color = Color(0.9647059, 0, 0.972549, 0.21568628)
+polygon = PackedVector2Array(-318, 991, 410, 1204, 899, 1583, 1294, 1866, 1811, 2200, 2422, 2422, 3022, 2453, 3626, 2559, 4265, 2620, 5217, 2684, 5755, 2620, 5938, 2502, 6097, 2253, 6061, 4978, 5727, 12476, -571, 12539, -2189, 9240, -3870, 6495, -4453, 3523, -3957, 1350, -3452, 894)
+
+[node name="Polygon2D2" type="Polygon2D" parent="StaticBody2D/Polygon2D" index="1" unique_id=204755771]
+color = Color(18.892157, 18.892157, 11.807116, 0.62)
+polygon = PackedVector2Array(-123, 992, 132, 1088, 984, 1088, 1794, 1071, 2467, 1100, 3123, 1155, 4154, 1263, 4873, 1305, 5424, 1288, 5725, 1330, 5959, 1489, 6038, 1731, 6051, 1919, 6093, 1614, 5963, 1292, 5615, 1174, 5525, 1174, 5017, 1164, 3971, 1134, 3820, 1134, 2927, 1023, 2120, 962, 1248, 986, 976, 1008)
+
+[node name="Line2D" parent="StaticBody2D" index="1" unique_id=1715767360]
+points = PackedVector2Array(1318, 1004, 2254, 990, 3065, 1052, 3873, 1156, 4101, 1156, 4280, 1166, 5706, 1203, 5955, 1320, 6049, 1507, 6083, 1791, 6007, 4928, 5695, 12508, -603, 12523, -1935, 9668, -3918, 6337, -4449, 3485, -3936, 1375, -3453, 933, 1001, 1028, 1318, 1004)
+width = 59.465
+default_color = Color(0.91487324, 0.43373382, 0.3064755, 1)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(1318, 1004, 2254, 990, 3065, 1052, 3873, 1156, 4101, 1156, 4280, 1166, 5706, 1203, 5955, 1320, 6049, 1507, 6083, 1791, 6007, 4928, 5695, 12508, -603, 12523, -1935, 9668, -3918, 6337, -4449, 3485, -3936, 1375, -3453, 933, 1001, 1028)
+
+[node name="TextureRect" parent="." unique_id=243302608 instance=ExtResource("3_8hh8a")]
+offset_left = 68524.71
+offset_top = -27372.887
+offset_right = 294229.13
+offset_bottom = 620271.06
+scale = Vector2(0.17275292, 0.1772562)
+texture = SubResource("GradientTexture2D_kdpat")
+
+[node name="Label" type="Label" parent="." unique_id=335268259]
+offset_left = 344.0
+offset_top = -1764.0
+offset_right = 2252.0
+offset_bottom = -1139.0
+theme_override_colors/font_color = Color(1.4439226e-07, 0.13636729, 0.37616652, 1)
+theme_override_fonts/font = ExtResource("4_66x82")
+theme_override_font_sizes/font_size = 226
+text = "Blue Water pushes 
+you up"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=844490428]
+libraries/ = SubResource("AnimationLibrary_prper")
+autoplay = &"fade"
+
+[node name="Water" parent="." unique_id=1249748588 instance=ExtResource("5_b1mfr")]
+position = Vector2(5649, -961)
+scale = Vector2(34.18238, 76.30289)
+effect_rate = 1.25
+
+[node name="Water2" parent="." unique_id=1177894665 instance=ExtResource("5_b1mfr")]
+position = Vector2(24287, -3706)
+scale = Vector2(34.18238, 76.30289)
+
+[node name="Water3" parent="." unique_id=105798676 instance=ExtResource("5_b1mfr")]
+position = Vector2(29065, -8816)
+scale = Vector2(34.18238, 76.30289)
+effect_rate = 1.25
+
+[node name="StaticBody2D2" parent="." unique_id=851460221 instance=ExtResource("2_8hh8a")]
+position = Vector2(2175, 4776)
+
+[node name="Polygon2D" parent="StaticBody2D2" index="0" unique_id=615349608]
+texture_repeat = 2
+color = Color(0.9843137, 0.94509804, 0.8901961, 1)
+texture = ExtResource("3_b1mfr")
+texture_scale = Vector2(-0.18, -0.18)
+polygon = PackedVector2Array(5780, -9492, 5126, -9439, 4850, -9360, 4850, -8980, 4955, -8324, 4995, -7407, 5113, -6122, 5126, -3684, 5798, 6613, 6181, 6892, 16686, 6822, 19391, 6805, 19635, 1832, 19687, -894, 19937, -1413, 20148, -2372, 20218, -2883, 20108, -2720, 19888, -2523, 19668, -2353, 19257, -2139, 18747, -1969, 18155, -1848, 17256, -1811, 16125, -1854, 14883, -2056, 13807, -2526, 13036, -3144, 12321, -3792, 11400, -4652, 10512, -5547, 9792, -6334, 8551, -7669, 7959, -8220, 7515, -8638, 6789, -9135, 6345, -9364)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/Polygon2D" index="0" unique_id=1669562333]
+color = Color(0.9647059, 0, 0.972549, 0.21568628)
+polygon = PackedVector2Array(4853, -9057, 5592, -9215, 6035, -9146, 6577, -8890, 7384, -8111, 8084, -7146, 9433, -5058, 10093, -4329, 10999, -3393, 12181, -2458, 13363, -1886, 14870, -1226, 16220, -921, 17687, -892, 18475, -1177, 19371, -1433, 19756, -1877, 19923, -2290, 20179, -2704, 20110, -2152, 19953, -1404, 19726, -931, 19674, -299, 19663, 1879, 19373, 6770, 6304, 6962, 5815, 6752, 5100, -3508, 5116, -6258)
+
+[node name="Line2D" parent="StaticBody2D2" index="1" unique_id=1715767360]
+points = PackedVector2Array(5780, -9492, 5126, -9439, 4850, -9360, 4850, -8980, 4955, -8324, 4995, -7407, 5113, -6122, 5126, -3684, 5798, 6613, 6181, 6892, 16686, 6822, 19391, 6805, 19635, 1832, 19687, -894, 19937, -1413, 20148, -2372, 20218, -2883, 20108, -2720, 19888, -2523, 19668, -2353, 19257, -2139, 18747, -1969, 18155, -1848, 17256, -1811, 16125, -1854, 14883, -2056, 13807, -2526, 13036, -3144, 12321, -3792, 11400, -4652, 10512, -5547, 9792, -6334, 8551, -7669, 7959, -8220, 7515, -8638, 6789, -9135, 6345, -9364, 5780, -9492)
+width = 56.025
+default_color = Color(0.9137255, 0.43529412, 0.30588236, 1)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D2" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(5780, -9492, 5126, -9439, 4850, -9360, 4850, -8980, 4955, -8324, 4995, -7407, 5113, -6122, 5126, -3684, 5798, 6613, 6181, 6892, 16686, 6822, 19391, 6805, 19635, 1832, 19687, -894, 19937, -1413, 20148, -2372, 20218, -2883, 20108, -2720, 19888, -2523, 19668, -2353, 19257, -2139, 18747, -1969, 18155, -1848, 17256, -1811, 16125, -1854, 14883, -2056, 13807, -2526, 13036, -3144, 12321, -3792, 11400, -4652, 10512, -5547, 9792, -6334, 8551, -7669, 7959, -8220, 7515, -8638, 6789, -9135, 6345, -9364)
+
+[node name="Area2D" parent="." unique_id=1547374501 instance=ExtResource("7_prper")]
+position = Vector2(5606, -6366)
+order = 2
+
+[node name="Area2D3" parent="." unique_id=1396953166 instance=ExtResource("7_prper")]
+position = Vector2(-4843.001, -138.99854)
+order = 1
+
+[node name="Area2D2" parent="." unique_id=1780497835 instance=ExtResource("7_prper")]
+position = Vector2(26583, -7105.9995)
+order = 3
+
+[node name="PlamTree" type="Sprite2D" parent="." unique_id=1883917685]
+z_index = -1
+position = Vector2(1613, -448.00006)
+scale = Vector2(6.3730464, 6.3730464)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree2" type="Sprite2D" parent="." unique_id=350420549]
+z_index = -1
+position = Vector2(-3386, -549)
+scale = Vector2(6.3730464, 6.3730464)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree3" type="Sprite2D" parent="." unique_id=1132669157]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(-830, -714)
+scale = Vector2(-7.209062, 6.7060494)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree4" type="Sprite2D" parent="." unique_id=1941616193]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(3334, -585)
+scale = Vector2(-8.10256, 7.5372033)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree6" type="Sprite2D" parent="." unique_id=301484851]
+z_index = -1
+position = Vector2(19328.75, 2170.3743)
+scale = Vector2(6.3730464, 6.3730464)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree10" type="Sprite2D" parent="." unique_id=1720293713]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(16885.75, 1904.3743)
+scale = Vector2(-7.209062, 6.7060494)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree11" type="Sprite2D" parent="." unique_id=488513407]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(21049.75, 2033.374)
+scale = Vector2(-8.10256, 7.5372033)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree5" type="Sprite2D" parent="." unique_id=1816087521]
+z_index = -1
+position = Vector2(35137.75, -13936.626)
+scale = Vector2(6.3730464, 6.3730464)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree7" type="Sprite2D" parent="." unique_id=740607123]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(32694.75, -14202.626)
+scale = Vector2(-7.209062, 6.7060494)
+texture = ExtResource("8_8da7u")
+
+[node name="PlamTree8" type="Sprite2D" parent="." unique_id=1480055096]
+modulate = Color(0.7411765, 0.84705883, 1, 0.92156863)
+z_index = -1
+position = Vector2(36858.75, -14073.625)
+scale = Vector2(-8.10256, 7.5372033)
+texture = ExtResource("8_8da7u")
+
+[node name="Parallax2D2" parent="." unique_id=2005652190 instance=ExtResource("9_56m54")]
+rotation = -0.0051747216
+scale = Vector2(15.86, 15.86)
+scroll_offset = Vector2(-2564, -2537.0002)
+
+[node name="Sprite2D2" parent="Parallax2D2" index="0" unique_id=1959803675]
+position = Vector2(147.47795, -122.88779)
+scale = Vector2(1.8, 1.395)
+
+[node name="StaticBody2D3" parent="." unique_id=1750309126 instance=ExtResource("2_8hh8a")]
+
+[node name="Polygon2D" parent="StaticBody2D3" index="0" unique_id=615349608]
+texture_repeat = 2
+color = Color(0.9843137, 0.94509804, 0.8901961, 1)
+texture = ExtResource("3_b1mfr")
+texture_scale = Vector2(-0.135, -0.135)
+texture_rotation = 0.06283186
+polygon = PackedVector2Array(30786, -14188, 31354, -13345, 31525, -12332, 31548, -10985, 31455, -7664, 31409, -4343, 31385, 349, 31455, 3740, 31478, 4297, 36565, 4227, 40490, 4413, 43207, 4390, 43254, 2462, 43230, -1997, 42928, -7106, 42696, -11566, 42441, -13191, 42547, -16579, 40369, -16958, 37649, -17814, 33727, -17381, 32178, -16676, 31297, -16202, 30776, -15714, 32119, -15706, 33007, -15869, 34042, -15712, 35201, -15994, 36338, -16221, 36826, -16156, 37238, -15940, 37563, -15441, 37747, -14553, 37422, -13784, 36669, -13254, 35124, -13187, 34474, -13150, 33488, -13312, 32784, -13583, 32145, -13648, 31624, -13619, 31281, -13760)
+
+[node name="Line2D" parent="StaticBody2D3" index="1" unique_id=1715767360]
+points = PackedVector2Array(30786, -14188, 31354, -13345, 31525, -12332, 31548, -10985, 31455, -7664, 31409, -4343, 31385, 349, 31455, 3740, 31478, 4297, 36565, 4227, 40490, 4413, 43207, 4390, 43254, 2462, 43230, -1997, 42928, -7106, 42696, -11566, 42441, -13191, 42547, -16579, 40369, -16958, 37649, -17814, 33727, -17381, 32178, -16676, 31297, -16202, 30776, -15714, 32119, -15706, 33007, -15869, 34042, -15712, 35201, -15994, 36338, -16221, 36826, -16156, 37238, -15940, 37563, -15441, 37747, -14553, 37422, -13784, 36669, -13254, 35124, -13187, 34474, -13150, 33488, -13312, 32784, -13583, 32145, -13648, 31624, -13619, 31281, -13760, 30786, -14188)
+width = 66.64
+default_color = Color(0.9137255, 0.43529412, 0.30588236, 1)
+
+[node name="CollisionPolygon2D" parent="StaticBody2D3" index="2" unique_id=1552637217]
+polygon = PackedVector2Array(30786, -14188, 31354, -13345, 31525, -12332, 31548, -10985, 31455, -7664, 31409, -4343, 31385, 349, 31455, 3740, 31478, 4297, 36565, 4227, 40490, 4413, 43207, 4390, 43254, 2462, 43230, -1997, 42928, -7106, 42696, -11566, 42441, -13191, 42547, -16579, 40369, -16958, 37649, -17814, 33727, -17381, 32178, -16676, 31297, -16202, 30776, -15714, 32119, -15706, 33007, -15869, 34042, -15712, 35201, -15994, 36338, -16221, 36826, -16156, 37238, -15940, 37563, -15441, 37747, -14553, 37422, -13784, 36669, -13254, 35124, -13187, 34474, -13150, 33488, -13312, 32784, -13583, 32145, -13648, 31624, -13619, 31281, -13760)
+
+[node name="finish" parent="." unique_id=521310803 instance=ExtResource("10_sba37")]
+position = Vector2(36654, -14688)
+scale = Vector2(-4.269193, -4.269193)
+
+[node name="death" parent="." unique_id=1400891468 instance=ExtResource("11_vih3m")]
+position = Vector2(19744.002, 8813)
+scale = Vector2(723.4254, 9.504857)
+skew = 4.8279762e-05
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1193338216]
+scale = Vector2(0.9389872, 0.9389872)
+scroll_offset = Vector2(0, 329)
+repeat_size = Vector2(9000, 0)
+repeat_times = 100
+
+[node name="Water4" type="Sprite2D" parent="Parallax2D" unique_id=582658511]
+self_modulate = Color(1, 1, 1, 0.89800006)
+z_index = -2
+position = Vector2(-1142, -30.999939)
+scale = Vector2(36.976563, 25.464844)
+texture = ExtResource("12_6wshv")
+
+[editable path="StaticBody2D"]
+[editable path="StaticBody2D2"]
+[editable path="Parallax2D2"]
+[editable path="StaticBody2D3"]

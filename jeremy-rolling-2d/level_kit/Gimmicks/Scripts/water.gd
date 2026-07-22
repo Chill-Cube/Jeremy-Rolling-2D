@@ -2,6 +2,7 @@ extends Area2D
 
 @export var push_force := 1800.0
 @export var direction := Vector2.UP
+@export var effect_rate := 1.0
 
 var bodies: Array[Node2D] = []
 
@@ -19,7 +20,7 @@ func _physics_process(delta):
 			bodies.remove_at(i)
 			continue
 
-		body.apply_central_impulse((direction * push_force) * delta)
+		body.apply_central_impulse((direction * push_force) * (delta*effect_rate))
 
 func _on_body_exited(body: Node2D) -> void:
 	if bodies.has(body):

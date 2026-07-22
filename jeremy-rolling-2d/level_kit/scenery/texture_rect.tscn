@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c6u8w1v4qswnq"]
 
 [sub_resource type="Gradient" id="Gradient_d83n8"]
-offsets = PackedFloat32Array(0, 0.6744186, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.55526805, 0.6300603, 0.94382685, 1, 0.49863547, 0.5829519, 0.9366737, 1)
+offsets = PackedFloat32Array(0, 0.66759)
+colors = PackedColorArray(0.37254903, 0.8666667, 1, 1, 0.3235549, 0.39023095, 0.82875127, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jkhrd"]
 gradient = SubResource("Gradient_d83n8")
